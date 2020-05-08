@@ -1,0 +1,373 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{BD07F6CA-134D-4B84-897D-7C141FC73953}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Prod_Provee_Marc_Categ</RootNamespace>
+    <AssemblyName>Prod_Provee_Marc_Categ</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="BouncyCastle.Crypto, Version=1.8.3.0, Culture=neutral, PublicKeyToken=0e99375e54769942">
+      <HintPath>..\packages\BouncyCastle.1.8.3.1\lib\BouncyCastle.Crypto.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu_UI_v1.52, Version=1.3.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Bunifu_UI_v1.52.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.Protobuf, Version=3.6.1.0, Culture=neutral, PublicKeyToken=a7d26565bac4d604, processorArchitecture=MSIL">
+      <HintPath>..\packages\Google.Protobuf.3.6.1\lib\net45\Google.Protobuf.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="Microsoft.VisualBasic.PowerPacks, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="MySql.Data, Version=8.0.19.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <HintPath>..\packages\MySql.Data.8.0.19\lib\net452\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Renci.SshNet, Version=2016.1.0.0, Culture=neutral, PublicKeyToken=1cee9f8bde3db106, processorArchitecture=MSIL">
+      <HintPath>..\packages\SSH.NET.2016.1.0\lib\net40\Renci.SshNet.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Configuration.Install" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing.Design" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Ubiety.Dns.Core, Version=2.2.1.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <HintPath>..\packages\MySql.Data.8.0.19\lib\net452\Ubiety.Dns.Core.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Formularios de Categoria\FrmMenuCategorias.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios de Categoria\FrmMenuCategorias.Designer.cs">
+      <DependentUpon>FrmMenuCategorias.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios De Productos\FrmBusqueda-Interna_Categoria.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios De Productos\FrmBusqueda-Interna_Categoria.Designer.cs">
+      <DependentUpon>FrmBusqueda-Interna_Categoria.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios De Productos\FrmBusqueda-Interna_Marca.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios De Productos\FrmBusqueda-Interna_Marca.Designer.cs">
+      <DependentUpon>FrmBusqueda-Interna_Marca.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios De Productos\FrmBusqueda-Interna_Proveedores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios De Productos\FrmBusqueda-Interna_Proveedores.Designer.cs">
+      <DependentUpon>FrmBusqueda-Interna_Proveedores.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios De Productos\FrmNuevoProducto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios De Productos\FrmNuevoProducto.Designer.cs">
+      <DependentUpon>FrmNuevoProducto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios De Proveedores\FrmAgregarNuevoProveedor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios De Proveedores\FrmAgregarNuevoProveedor.Designer.cs">
+      <DependentUpon>FrmAgregarNuevoProveedor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios De Productos\FrmMenuProductos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios De Productos\FrmMenuProductos.Designer.cs">
+      <DependentUpon>FrmMenuProductos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios De Proveedores\FrmMenuProveedores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios De Proveedores\FrmMenuProveedores.Designer.cs">
+      <DependentUpon>FrmMenuProveedores.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios De Proveedores\FrmModificarConBoton.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios De Proveedores\FrmModificarConBoton.Designer.cs">
+      <DependentUpon>FrmModificarConBoton.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios De Proveedores\FrmModificarSinBoton.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios De Proveedores\FrmModificarSinBoton.Designer.cs">
+      <DependentUpon>FrmModificarSinBoton.cs</DependentUpon>
+    </Compile>
+    <Compile Include="modulo.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Formularios de Categoria\FrmMenuCategorias.resx">
+      <DependentUpon>FrmMenuCategorias.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios De Productos\FrmBusqueda-Interna_Categoria.resx">
+      <DependentUpon>FrmBusqueda-Interna_Categoria.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios De Productos\FrmBusqueda-Interna_Marca.resx">
+      <DependentUpon>FrmBusqueda-Interna_Marca.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios De Productos\FrmBusqueda-Interna_Proveedores.resx">
+      <DependentUpon>FrmBusqueda-Interna_Proveedores.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios De Productos\FrmNuevoProducto.resx">
+      <DependentUpon>FrmNuevoProducto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios De Proveedores\FrmAgregarNuevoProveedor.resx">
+      <DependentUpon>FrmAgregarNuevoProveedor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios De Productos\FrmMenuProductos.resx">
+      <DependentUpon>FrmMenuProductos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios De Proveedores\FrmMenuProveedores.resx">
+      <DependentUpon>FrmMenuProveedores.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios De Proveedores\FrmModificarConBoton.resx">
+      <DependentUpon>FrmModificarConBoton.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios De Proveedores\FrmModificarSinBoton.resx">
+      <DependentUpon>FrmModificarSinBoton.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\MensajesPersonalizados\MensajesPersonalizados.csproj">
+      <Project>{69d3f89c-9228-41ea-a159-92729348265e}</Project>
+      <Name>MensajesPersonalizados</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\close %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fondoaggProveedores.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fondoaggProveedores1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fondoaggProveedores2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\a68832c79725180370fa5e147b19b8c5.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\gif-icons-menu-transition-animations-animated-3-dotted.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\close %28white%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\close white 250x250px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\close white 25x25px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\779b9dc3928c2dbc304bcf6702bef6df.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\plus.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\news.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\minus.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MODIFICAR PROVEEDOR.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flecha-abajo.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\giphy.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\prueba1grupu.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\gif-flecha-abajo.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pngocean.com %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pngocean.com %283%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\barrasuperiorProductos.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\barrasuperiorProductos1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\barrasuperiorProductos2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\barrasuperiorProductos3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\barrasuperiorProductos4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\barrasuperiorProductos5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\barritaPequeParteSuperiorMenuProducto1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\barrasuperiorProductos21.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FondoAggProducto.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FondoAggProducto1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FondoAggProducto2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FondoAggProducto3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bar-code-scanner.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\a68832c79725180370fa5e147b19b8c51.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\category.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1253360.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\12533601.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bar-code-scanner1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\barcode.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icono-proveedor-png-5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\barcode1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\textura-inconsútil-con-los-iconos-estación-44873609.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\category1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\product.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\shopping-cart.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cash-register.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bar-code-scanner2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icono-proveedor-png-51.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fechadevencimiento.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fechaddevencimiento.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ffechaddevencimiento.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fechaddevencimientoOFICIAL.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FechaNac.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ffechaddevencimientooooo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ffffffff.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Sin título-3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ParteSuperiorMenuProductos.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
