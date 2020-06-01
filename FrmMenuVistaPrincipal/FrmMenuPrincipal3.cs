@@ -12,6 +12,9 @@ using Usuarios.Formularios;
 using Clientes;
 using Prod_Provee_Marc_Categ.Formularios;
 using Prod_Provee_Marc_Categ.Formularios_de_Categoria;
+using MySql.Data.MySqlClient;
+using Sis_Supermercado_TallerV.RegistroUsers;
+using MensajesPersonalizados;
 
 namespace MenuPrincipal
 {
@@ -201,6 +204,7 @@ namespace MenuPrincipal
         {
             lblTitulodeFormulario.Text = "COTIZACION";
             hideSubMenu();//siempre al final de todo
+          
         }
 
         private void btnReportes_Click(object sender, EventArgs e)
@@ -231,6 +235,83 @@ namespace MenuPrincipal
             AbrirFormulario<FrmMenuCategorias>();
             lblTitulodeFormulario.Text = "CATEGORIA";
             hideSubMenu();//siempre al final de todo
+        }
+
+        /*ESTIRAR DATOS DE LA TABLA USUARIOS PARA SU POSTERIOR VERIFICACION O CONDICION*/
+        public string EstadoActivoVariable;
+        public void RECUPERAR_ESTADOS_ACTIVOS_DE_LOS_USUARIOS(string condicion)
+        {
+            string sql;
+            string passEncrip;
+            
+            sql = "select * from db_usuarios where Activo = '1'" + condicion;
+
+
+            MySqlCommand comando;
+            MySqlDataAdapter consulta = new MySqlDataAdapter();
+            DataSet resultado = new DataSet();
+            try
+            {
+                modulo.AbrirConexion();
+
+                consulta = new MySqlDataAdapter(sql, modulo.conexion);
+                consulta.Fill(resultado, "rsProveedor");
+                string TipoDeAcceso;
+
+
+                comando = new MySqlCommand(sql, modulo.conexion);
+                MySqlDataReader leer = comando.ExecuteReader();
+                if (leer.HasRows)
+                {
+                    while (leer.Read())
+                    {
+                        TipoDeAcceso = Convert.ToString(resultado.Tables["rsProveedor"].Rows[0]["Accesos"]);
+                        EstadoActivoVariable = Convert.ToString(resultado.Tables["rsProveedor"].Rows[0]["id"]);
+
+                    }
+                }
+
+                else
+                {
+                    MensajeDeError show = new MensajeDeError();
+                    show.ShowDialog();
+                }
+            }
+            catch (MySqlException ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        /*ESTADO INACTIVO*/
+        //para editar
+        public void EstadoInactivo(string id)
+        {
+            string sql;
+            //MySqlCommand comando;
+            sql = "update db_usuarios set Activo=@Activo where id=@id";
+            MySqlCommand comando;
+            try
+            {
+                modulo.AbrirConexion();
+                comando = new MySqlCommand(sql, modulo.conexion);
+
+                comando.Parameters.AddWithValue("@Activo", "0".ToString());
+                comando.Parameters.AddWithValue("@id", id);
+                comando.ExecuteNonQuery();
+
+            }
+            catch (MySqlException ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void FrmMenuPrincipal3_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            RECUPERAR_ESTADOS_ACTIVOS_DE_LOS_USUARIOS("");
+
+            EstadoInactivo(EstadoActivoVariable);
         }
     }
 }

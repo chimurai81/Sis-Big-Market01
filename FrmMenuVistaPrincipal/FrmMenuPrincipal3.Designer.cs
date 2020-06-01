@@ -228,8 +228,7 @@
             this.bunifuTransition2.SetDecoration(this.pictureBox8, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransition1.SetDecoration(this.pictureBox8, BunifuAnimatorNS.DecorationType.None);
             this.pictureBox8.Image = global::FrmMenuVistaPrincipal.Properties.Resources.REPORTEINICIAL6;
-            FrmMenuPrincipal3 frmMenuPrincipal3 = this;
-            frmMenuPrincipal3.pictureBox8.Location = new System.Drawing.Point(951, 150);
+            this.pictureBox8.Location = new System.Drawing.Point(951, 150);
             this.pictureBox8.Name = "pictureBox8";
             this.pictureBox8.Size = new System.Drawing.Size(167, 186);
             this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -1236,6 +1235,7 @@
             this.Name = "FrmMenuPrincipal3";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Infoteach";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FrmMenuPrincipal3_FormClosing);
             this.Load += new System.EventHandler(this.FrmMenuPrincipal_Load);
             this.PanelContenedor.ResumeLayout(false);
             this.PanelContenedor.PerformLayout();

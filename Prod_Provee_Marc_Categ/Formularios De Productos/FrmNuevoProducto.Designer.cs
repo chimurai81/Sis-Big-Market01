@@ -59,6 +59,11 @@
             this.bunifuTileButton2 = new Bunifu.Framework.UI.BunifuTileButton();
             this.cbxIva = new Bunifu.Framework.UI.BunifuDropdown();
             this.cbxTipo = new Bunifu.Framework.UI.BunifuDropdown();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.txtCategoria2 = new Bunifu.Framework.UI.BunifuMaterialTextbox();
+            this.txtmarca2 = new Bunifu.Framework.UI.BunifuMaterialTextbox();
+            this.txtProveedor2 = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             ((System.ComponentModel.ISupportInitialize)(this.ptbImagenProducto)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnElegirCategoria)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -202,7 +207,7 @@
             this.txtCategoria.Location = new System.Drawing.Point(13, 243);
             this.txtCategoria.Margin = new System.Windows.Forms.Padding(4);
             this.txtCategoria.Name = "txtCategoria";
-            this.txtCategoria.Size = new System.Drawing.Size(511, 55);
+            this.txtCategoria.Size = new System.Drawing.Size(129, 55);
             this.txtCategoria.TabIndex = 2;
             this.txtCategoria.Text = "Categoria";
             this.txtCategoria.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -226,7 +231,7 @@
             this.txtMarca.Location = new System.Drawing.Point(13, 302);
             this.txtMarca.Margin = new System.Windows.Forms.Padding(4);
             this.txtMarca.Name = "txtMarca";
-            this.txtMarca.Size = new System.Drawing.Size(511, 55);
+            this.txtMarca.Size = new System.Drawing.Size(129, 55);
             this.txtMarca.TabIndex = 3;
             this.txtMarca.Text = "Marca";
             this.txtMarca.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -249,7 +254,7 @@
             this.txtProveedor.Location = new System.Drawing.Point(13, 361);
             this.txtProveedor.Margin = new System.Windows.Forms.Padding(4);
             this.txtProveedor.Name = "txtProveedor";
-            this.txtProveedor.Size = new System.Drawing.Size(511, 55);
+            this.txtProveedor.Size = new System.Drawing.Size(129, 55);
             this.txtProveedor.TabIndex = 4;
             this.txtProveedor.Text = "Proveedor";
             this.txtProveedor.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -560,6 +565,91 @@
             this.cbxTipo.Size = new System.Drawing.Size(511, 55);
             this.cbxTipo.TabIndex = 39;
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label2.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(963, 575);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(41, 21);
+            this.label2.TabIndex = 40;
+            this.label2.Text = "IVA";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label3.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(963, 642);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(44, 21);
+            this.label3.TabIndex = 41;
+            this.label3.Text = "Tipo";
+            // 
+            // txtCategoria2
+            // 
+            this.txtCategoria2.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.txtCategoria2.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtCategoria2.Enabled = false;
+            this.txtCategoria2.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.txtCategoria2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtCategoria2.HintForeColor = System.Drawing.Color.Empty;
+            this.txtCategoria2.HintText = "";
+            this.txtCategoria2.isPassword = false;
+            this.txtCategoria2.LineFocusedColor = System.Drawing.Color.Blue;
+            this.txtCategoria2.LineIdleColor = System.Drawing.Color.Gray;
+            this.txtCategoria2.LineMouseHoverColor = System.Drawing.Color.Blue;
+            this.txtCategoria2.LineThickness = 3;
+            this.txtCategoria2.Location = new System.Drawing.Point(139, 243);
+            this.txtCategoria2.Margin = new System.Windows.Forms.Padding(4);
+            this.txtCategoria2.Name = "txtCategoria2";
+            this.txtCategoria2.Size = new System.Drawing.Size(385, 55);
+            this.txtCategoria2.TabIndex = 42;
+            this.txtCategoria2.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            // 
+            // txtmarca2
+            // 
+            this.txtmarca2.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.txtmarca2.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtmarca2.Enabled = false;
+            this.txtmarca2.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.txtmarca2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtmarca2.HintForeColor = System.Drawing.Color.Empty;
+            this.txtmarca2.HintText = "";
+            this.txtmarca2.isPassword = false;
+            this.txtmarca2.LineFocusedColor = System.Drawing.Color.Blue;
+            this.txtmarca2.LineIdleColor = System.Drawing.Color.Gray;
+            this.txtmarca2.LineMouseHoverColor = System.Drawing.Color.Blue;
+            this.txtmarca2.LineThickness = 3;
+            this.txtmarca2.Location = new System.Drawing.Point(139, 302);
+            this.txtmarca2.Margin = new System.Windows.Forms.Padding(4);
+            this.txtmarca2.Name = "txtmarca2";
+            this.txtmarca2.Size = new System.Drawing.Size(385, 55);
+            this.txtmarca2.TabIndex = 43;
+            this.txtmarca2.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            // 
+            // txtProveedor2
+            // 
+            this.txtProveedor2.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.txtProveedor2.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtProveedor2.Enabled = false;
+            this.txtProveedor2.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.txtProveedor2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtProveedor2.HintForeColor = System.Drawing.Color.Empty;
+            this.txtProveedor2.HintText = "";
+            this.txtProveedor2.isPassword = false;
+            this.txtProveedor2.LineFocusedColor = System.Drawing.Color.Blue;
+            this.txtProveedor2.LineIdleColor = System.Drawing.Color.Gray;
+            this.txtProveedor2.LineMouseHoverColor = System.Drawing.Color.Blue;
+            this.txtProveedor2.LineThickness = 3;
+            this.txtProveedor2.Location = new System.Drawing.Point(139, 361);
+            this.txtProveedor2.Margin = new System.Windows.Forms.Padding(4);
+            this.txtProveedor2.Name = "txtProveedor2";
+            this.txtProveedor2.Size = new System.Drawing.Size(385, 55);
+            this.txtProveedor2.TabIndex = 44;
+            this.txtProveedor2.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            // 
             // FrmNuevoProductos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -567,6 +657,11 @@
             this.BackgroundImage = global::Prod_Provee_Marc_Categ.Properties.Resources.FondoAggProducto3;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1174, 812);
+            this.Controls.Add(this.txtProveedor2);
+            this.Controls.Add(this.txtmarca2);
+            this.Controls.Add(this.txtCategoria2);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.cbxTipo);
             this.Controls.Add(this.cbxIva);
             this.Controls.Add(this.bunifuTileButton2);
@@ -634,8 +729,6 @@
         private System.Windows.Forms.ToolTip toolTip1;
         private System.Windows.Forms.ToolTip toolTip2;
         private System.Windows.Forms.Label label1;
-        private Bunifu.Framework.UI.BunifuMaterialTextbox txtCostoMedio;
-        private Bunifu.Framework.UI.BunifuMaterialTextbox txtCosto;
         private Bunifu.Framework.UI.BunifuTileButton bunifuTileButton1;
         private Bunifu.Framework.UI.BunifuElipse bunifuElipse2;
         private Bunifu.Framework.UI.BunifuTileButton bunifuTileButton2;
@@ -645,5 +738,12 @@
         private Bunifu.Framework.UI.BunifuDropdown cbxIva;
         private Bunifu.Framework.UI.BunifuDropdown cbxTipo;
         public Bunifu.Framework.UI.BunifuImageButton bunifuImageButton2;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label2;
+        public Bunifu.Framework.UI.BunifuMaterialTextbox txtCostoMedio;
+        public Bunifu.Framework.UI.BunifuMaterialTextbox txtCosto;
+        public Bunifu.Framework.UI.BunifuMaterialTextbox txtCategoria2;
+        public Bunifu.Framework.UI.BunifuMaterialTextbox txtmarca2;
+        public Bunifu.Framework.UI.BunifuMaterialTextbox txtProveedor2;
     }
 }

@@ -1,4 +1,5 @@
-﻿using MySql.Data.MySqlClient;
+﻿using MensajesPersonalizados;
+using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -23,9 +24,71 @@ namespace Prod_Provee_Marc_Categ.Formularios_De_Productos
 
         }
 
+        /*VERIFICACION DE USUARIO*/
+        private int EstadoActivoVariable;
+        private string TipoDeAcceso;
+        public void RECUPERAR_ESTADOS_ACTIVOS_DE_LOS_USUARIOS(string condicion)
+        {
+            string sql;
+
+            sql = "select * from db_usuarios where Activo = '1'" + condicion;
+
+
+            MySqlCommand comando;
+            MySqlDataAdapter consulta = new MySqlDataAdapter();
+            DataSet resultado = new DataSet();
+            try
+            {
+                modulo.AbrirConexion();
+
+                consulta = new MySqlDataAdapter(sql, modulo.conexion);
+                consulta.Fill(resultado, "rsProveedor");
+                
+
+
+                comando = new MySqlCommand(sql, modulo.conexion);
+                MySqlDataReader leer = comando.ExecuteReader();
+                if (leer.HasRows)
+                {
+                    while (leer.Read())
+                    {
+
+                        TipoDeAcceso = Convert.ToString(resultado.Tables["rsProveedor"].Rows[0]["Accesos"]);
+                        EstadoActivoVariable = Convert.ToInt32(resultado.Tables["rsProveedor"].Rows[0]["Activo"]);
+
+                    }
+                }
+
+                else
+                {
+                    MensajeDeError show = new MensajeDeError();
+                    show.ShowDialog();
+                }
+            }
+            catch (MySqlException ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
         private void FrmNuevoProducto_Load(object sender, EventArgs e)
         {
+            RECUPERAR_ESTADOS_ACTIVOS_DE_LOS_USUARIOS("");
 
+            if (TipoDeAcceso == "ADMINISTRADOR" && EstadoActivoVariable == 1)
+            {
+                txtCosto.Enabled = true;
+                txtCostoMedio.Enabled = true;
+                txtPrecioMayorista.Enabled = true;
+                txtPrecioUnitario.Enabled = true;
+            }
+            else
+            {
+                txtCosto.Enabled = false;
+                txtCostoMedio.Enabled = false;
+                txtPrecioMayorista.Enabled = false;
+                txtPrecioUnitario.Enabled = false;
+            }
         }
 
         private void pictureBox2_Click(object sender, EventArgs e)

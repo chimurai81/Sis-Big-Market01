@@ -1,18 +1,11 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Runtime.InteropServices;
-using MenuPrincipal;
 using Sis_Supermercado_TallerV.RegistroUsers;
 using MySql.Data.MySqlClient;
-using Sis_Supermercado_TallerV.Login;
 using MensajesPersonalizados;
+using MenuPrincipal;
 using Prod_Provee_Marc_Categ.Formularios_De_Productos;
 
 namespace Sis_Supermercado_TallerV
@@ -106,7 +99,7 @@ namespace Sis_Supermercado_TallerV
             SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
 
-      
+        public string EstadoActivoVariable;
         public void InicioDeSesion_db_usuarios(string condicion)
         {
             string sql;
@@ -126,7 +119,7 @@ namespace Sis_Supermercado_TallerV
                 consulta = new MySqlDataAdapter(sql, modulo.conexion);
                 consulta.Fill(resultado, "rsProveedor");
                 string TipoDeAcceso;
-                
+             
       
                 comando = new MySqlCommand(sql, modulo.conexion);
                 MySqlDataReader leer = comando.ExecuteReader();
@@ -135,6 +128,7 @@ namespace Sis_Supermercado_TallerV
                     while (leer.Read())
                     {
                         TipoDeAcceso = Convert.ToString(resultado.Tables["rsProveedor"].Rows[0]["Accesos"]);
+                        EstadoActivoVariable = Convert.ToString(resultado.Tables["rsProveedor"].Rows[0]["id"]);
                         if (TipoDeAcceso == "ADMINISTRADOR")
                         {
                        
@@ -144,11 +138,12 @@ namespace Sis_Supermercado_TallerV
                         }
                         else if (TipoDeAcceso == "VENDEDOR")
                         {
-
+                            FrmNuevoProductos nuevoproducto = new FrmNuevoProductos();
                             FrmMenuPrincipal3 menu = new FrmMenuPrincipal3(txtusuario.Text.ToUpperInvariant());
                             
                             menu.Show();
                             menu.btnUsuarios.Enabled = false;
+                            nuevoproducto.txtCosto.Enabled = false;
                             this.Hide();
                         }
                         else if (TipoDeAcceso == "CAJERO")
@@ -175,12 +170,46 @@ namespace Sis_Supermercado_TallerV
                 MessageBox.Show(ex.Message);
             }
         }
-        
+
+        //insertar si esta activo el usuario
+        //para editar
+        public void EstadoActivo(string id)
+        {
+            string sql;
+            //MySqlCommand comando;
+            sql = "update db_usuarios set Activo=@Activo where id=@id";
+            MySqlCommand comando;
+            try
+            {
+                modulo.AbrirConexion();
+                comando = new MySqlCommand(sql, modulo.conexion);
+
+                comando.Parameters.AddWithValue("@Activo", "1".ToString());
+                comando.Parameters.AddWithValue("@id", id);
+                comando.ExecuteNonQuery();
+
+            }
+            catch (MySqlException ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
         private void bunifuFlatButton1_Click(object sender, EventArgs e)
         {
             InicioDeSesion_db_usuarios("");
+            EstadoActivo(EstadoActivoVariable);
         }
 
-
+        private void pictureBox6_Click(object sender, EventArgs e)
+        {
+           if(txtpass.PasswordChar == '*')
+            {
+                txtpass.PasswordChar = '\0';
+            }
+            else
+            {
+                txtpass.PasswordChar = '*';
+            }
+        }
     }
 }

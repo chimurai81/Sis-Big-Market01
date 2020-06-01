@@ -74,6 +74,7 @@ namespace Prod_Provee_Marc_Categ.Formularios_De_Productos
         {
             FrmNuevoProductos FrmPadre = (FrmNuevoProductos)Owner;
             FrmPadre.txtProveedor.Text = Convert.ToString(DataGridView1.CurrentRow.Cells[0].Value);
+            FrmPadre.txtProveedor2.Text = Convert.ToString(DataGridView1.CurrentRow.Cells[1].Value);
             this.Close();
         }
     }
