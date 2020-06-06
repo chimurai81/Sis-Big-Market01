@@ -643,6 +643,16 @@ namespace FrmMenuVistaPrincipal.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        public static System.Drawing.Bitmap product__1_ {
+            get {
+                object obj = ResourceManager.GetObject("product (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         public static System.Drawing.Bitmap REPORTEINICIAL1 {
             get {
                 object obj = ResourceManager.GetObject("REPORTEINICIAL1", resourceCulture);
@@ -706,6 +716,16 @@ namespace FrmMenuVistaPrincipal.Properties {
         public static System.Drawing.Bitmap shopping_cart {
             get {
                 object obj = ResourceManager.GetObject("shopping_cart", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap shopping_cart__1_ {
+            get {
+                object obj = ResourceManager.GetObject("shopping-cart (1)", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

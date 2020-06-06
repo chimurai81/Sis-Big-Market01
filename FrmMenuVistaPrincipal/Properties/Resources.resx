@@ -118,208 +118,214 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="calendar" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\calendar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="cash_register" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\cash-register.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="category" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\category.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="cerrarColorGris" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\cerrarColorGris.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="close" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\close.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="expand" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\expand.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="FondoLogin" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\FondoLogin.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="FondoLogin2ConLetras" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\FondoLogin2ConLetras.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="FondoLogin3ConLetras" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\FondoLogin3ConLetras.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="gender" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\gender.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="home" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\home.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="home1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\home1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="IcoCaja" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\IcoCaja.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="IcoClientes" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\IcoClientes.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="IcoCotizaciones" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\IcoCotizaciones.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="IcoDevolucion" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\IcoDevolucion.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="IcoDevolucion1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\IcoDevolucion1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="icono_proveedor_png_5" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\icono-proveedor-png-5.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="icono_proveedor_png_51" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\icono-proveedor-png-51.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="IcoPoductos" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\IcoPoductos.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="IcoPoductos1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\IcoPoductos1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Icoreportes" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Icoreportes.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="IcoSlide" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\IcoSlide.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="IcoSlide1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\IcoSlide1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="IcoUsers" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\IcoUsers.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="IcoVentas" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\IcoVentas.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="IcoVentas1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\IcoVentas1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="id_card" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\id-card.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="ImagenLogin" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\ImagenLogin.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="INFOTEACHPERFILYOUTUBE" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\INFOTEACHPERFILYOUTUBE.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="INFOTEACHPERFILYOUTUBE1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\INFOTEACHPERFILYOUTUBE1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="INFOTEACHPERFILYOUTUBE2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\INFOTEACHPERFILYOUTUBE2.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="inicioReporteIniciaP1l" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\inicioReporteIniciaP1l.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="key" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\key.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="letrasLogin" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\letrasLogin.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="letrasLogin1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\letrasLogin1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="password" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\password.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="loginminimalista1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\loginminimalista1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="loginminimalista2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\loginminimalista2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="logo_para_uso" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\logo para uso.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="logo_para_uso1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\logo para uso1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="market" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\market.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="market1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\market1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="menuoficial" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\menuoficial.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="menuoficial2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\menuoficial2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="menu__1_" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\menu (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="menu__1_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\menu (1)1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="menu__2_" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\menu (2).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="minimizarColorGris" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\minimizarColorGris.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="minimize" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\minimize.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="minimize__1_" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\minimize (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="package__1_" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\package (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="paraelSliderIzquierdo" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\paraelSliderIzquierdo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="paraelSliderIzquierdo2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\paraelSliderIzquierdo2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="key" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\key.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="passcolorgris" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\passcolorgris.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="password" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\password.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="icono_proveedor_png_51" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icono-proveedor-png-51.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="password__1_" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\password (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="_1253360" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\_1253360.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="perfil_infoteach" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\perfil infoteach.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="letrasLogin1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\letrasLogin1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="REPORTEINICIAL1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\REPORTEINICIAL1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="IcoVentas" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\IcoVentas.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="REPORTEINICIAL2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\REPORTEINICIAL2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="REPORTEINICIAL3" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\REPORTEINICIAL3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="REPORTEINICIAL4" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\REPORTEINICIAL4.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="REPORTEINICIAL5" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\REPORTEINICIAL5.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="REPORTEINICIAL6" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\REPORTEINICIAL6.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="shopping_cart" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\shopping-cart.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="user" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\user.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="IcoPoductos1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\IcoPoductos1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="usersGris" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\usersGris.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="product (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\product (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="inicioReporteIniciaP1l" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\inicioReporteIniciaP1l.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="menu__2_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\menu (2).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="market1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\market1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="INFOTEACHPERFILYOUTUBE2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\INFOTEACHPERFILYOUTUBE2.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="IcoSlide" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\IcoSlide.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="id_card" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\id-card.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="home1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\home1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="minimize" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\minimize.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="expand" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\expand.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="REPORTEINICIAL1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\REPORTEINICIAL1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="IcoPoductos" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\IcoPoductos.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="loginminimalista2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\loginminimalista2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="loginminimalista1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\loginminimalista1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icono_proveedor_png_5" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icono-proveedor-png-5.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="menuoficial" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\menuoficial.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="home" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\home.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="IcoCotizaciones" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\IcoCotizaciones.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="paraelSliderIzquierdo2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\paraelSliderIzquierdo2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="FondoLogin" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\FondoLogin.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="IcoClientes" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\IcoClientes.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="market" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\market.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="password__1_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\password (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="IcoDevolucion" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\IcoDevolucion.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="INFOTEACHPERFILYOUTUBE1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\INFOTEACHPERFILYOUTUBE1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="menu__1_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\menu (1)1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="menuoficial2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\menuoficial2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="REPORTEINICIAL2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\REPORTEINICIAL2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Icoreportes" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Icoreportes.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="REPORTEINICIAL3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\REPORTEINICIAL3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="IcoSlide1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\IcoSlide1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="FondoLogin3ConLetras" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\FondoLogin3ConLetras.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="REPORTEINICIAL4" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\REPORTEINICIAL4.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="category" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\category.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="INFOTEACHPERFILYOUTUBE" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\INFOTEACHPERFILYOUTUBE.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="shopping_cart" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\shopping-cart.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="minimizarColorGris" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\minimizarColorGris.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="menu__1_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\menu (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="logo_para_uso1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\logo para uso1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="calendar" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\calendar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="close" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\close.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="user__1_" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\user (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="_1253360" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\_1253360.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="cash_register" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\cash-register.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="cerrarColorGris" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\cerrarColorGris.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="logo_para_uso" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\logo para uso.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="REPORTEINICIAL5" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\REPORTEINICIAL5.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="IcoUsers" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\IcoUsers.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="gender" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\gender.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="REPORTEINICIAL6" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\REPORTEINICIAL6.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="IcoVentas1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\IcoVentas1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="FondoLogin2ConLetras" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\FondoLogin2ConLetras.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="package__1_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\package (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="user" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\user.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="perfil_infoteach" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\perfil infoteach.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="paraelSliderIzquierdo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\paraelSliderIzquierdo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="minimize__1_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\minimize (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="IcoCaja" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\IcoCaja.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ImagenLogin" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ImagenLogin.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="shopping-cart (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\shopping-cart (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

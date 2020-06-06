@@ -15,6 +15,7 @@ using Prod_Provee_Marc_Categ.Formularios_de_Categoria;
 using MySql.Data.MySqlClient;
 using Sis_Supermercado_TallerV.RegistroUsers;
 using MensajesPersonalizados;
+using ModuloCompra;
 
 namespace MenuPrincipal
 {
@@ -312,6 +313,14 @@ namespace MenuPrincipal
             RECUPERAR_ESTADOS_ACTIVOS_DE_LOS_USUARIOS("");
 
             EstadoInactivo(EstadoActivoVariable);
+        }
+
+        private void bunifuFlatButton1_Click_1(object sender, EventArgs e)
+        {
+            AbrirFormulario<FrmMenuCompra>();
+            lblTitulodeFormulario.Text = "COMPRAS";
+            hideSubMenu();//siempre al final de todo
+
         }
     }
 }
