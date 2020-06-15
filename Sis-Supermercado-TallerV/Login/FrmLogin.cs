@@ -211,5 +211,16 @@ namespace Sis_Supermercado_TallerV
                 txtpass.PasswordChar = '*';
             }
         }
+
+        private void txtpass_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)Keys.Enter)
+            {
+                InicioDeSesion_db_usuarios("");
+                EstadoActivo(EstadoActivoVariable);
+                e.Handled = true;
+            }
+           
+        }
     }
 }

@@ -120,6 +120,7 @@
     <Compile Include="modProducto.cs" />
     <Compile Include="modProveedor.cs" />
     <Compile Include="modSesion.cs" />
+    <Compile Include="modUsuario.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="frmBuscarProducto.resx">

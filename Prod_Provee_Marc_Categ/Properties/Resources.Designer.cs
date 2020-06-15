@@ -473,6 +473,16 @@ namespace Prod_Provee_Marc_Categ.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap fondoEditarNuevoProducto {
+            get {
+                object obj = ResourceManager.GetObject("fondoEditarNuevoProducto", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap gif_flecha_abajo {
             get {
                 object obj = ResourceManager.GetObject("gif-flecha-abajo", resourceCulture);

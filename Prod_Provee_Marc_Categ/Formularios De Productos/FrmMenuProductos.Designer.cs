@@ -180,6 +180,7 @@
             this.lblModificarProducto.Size = new System.Drawing.Size(164, 21);
             this.lblModificarProducto.TabIndex = 20;
             this.lblModificarProducto.Text = "Modificar Producto";
+            this.lblModificarProducto.Click += new System.EventHandler(this.lblModificarProducto_Click);
             this.lblModificarProducto.MouseEnter += new System.EventHandler(this.lblModificarProducto_MouseEnter);
             this.lblModificarProducto.MouseLeave += new System.EventHandler(this.lblModificarProducto_MouseLeave);
             // 

@@ -1,13 +1,7 @@
 ﻿using MySql.Data.MySqlClient;
 using Prod_Provee_Marc_Categ.Formularios_De_Proveedores;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Prod_Provee_Marc_Categ.Formularios
@@ -120,7 +114,7 @@ namespace Prod_Provee_Marc_Categ.Formularios
 
             if (comboBox1.SelectedItem.ToString() == "PROVEEDOR")
             {
-                condicion = " where Nombre like '%" + txtBuscar.Text.ToUpperInvariant() + "%'";
+                condicion = " where RazonSocial like '%" + txtBuscar.Text.ToUpperInvariant() + "%'";
             }
 
 

@@ -124,7 +124,7 @@ namespace Prod_Provee_Marc_Categ.Formularios_De_Productos
 
         private void bunifuImageButton3_Click(object sender, EventArgs e)
         {
-            this.Close();
+            limpiar();
         }
 
         private void btnElegirCategoria_Click(object sender, EventArgs e)
@@ -328,7 +328,7 @@ namespace Prod_Provee_Marc_Categ.Formularios_De_Productos
         {
             string sql;
             //MySqlCommand comando;
-            sql = "insert into db_productos (Descripcion, Costo, PrecioUnitario, FechaDeVencimiento, ImagenDelProducto, CodigoDeBarra, Id_Proveedor, Id_Marca, Id_Categoria, CodigoProducto, Tipo, Iva, PrecioMayorista, CostoMedio) values (@Descripcion, @Costo, @PrecioUnitario, @FechaDeVencimiento, @ImagenDelProducto, @CodigoDeBarra, @Id_Proveedor, @Id_Marca, @Id_Categoria, @CodigoProducto, @Tipo, @Iva, @PrecioMayorista, @CostoMedio)";
+            sql = "insert into db_productos (Descripcion, Costo, PrecioUnitario, FechaDeVencimiento, ImagenDelProducto, CodigoDeBarra, Id_Proveedor, Id_Marca, Id_Categoria, CodigoProducto, Tipo, Iva, PrecioMayorista, CostoMedio, id_usuario_Producto) values (@Descripcion, @Costo, @PrecioUnitario, @FechaDeVencimiento, @ImagenDelProducto, @CodigoDeBarra, @Id_Proveedor, @Id_Marca, @Id_Categoria, @CodigoProducto, @Tipo, @Iva, @PrecioMayorista, @CostoMedio, @id_usuario)";
             MySqlCommand comando;
             try
             {
@@ -339,7 +339,11 @@ namespace Prod_Provee_Marc_Categ.Formularios_De_Productos
                 comando.Parameters.AddWithValue("@PrecioUnitario", Convert.ToDecimal(txtPrecioUnitario.Text));
                 comando.Parameters.AddWithValue("@FechaDeVencimiento", dtpFechaVencimiento.Value);
                 comando.Parameters.AddWithValue("@ImagenDelProducto", Image2Bytes(ptbImagenProducto.Image));
-                comando.Parameters.AddWithValue("@CodigoDeBarra", Convert.ToDecimal(txtCodigoDeBarra.Text));
+                if(txtCodigoDeBarra.Text == "Codigo de Barra")
+                {
+                    txtCodigoDeBarra.Text = "0";
+                }
+                comando.Parameters.AddWithValue("@CodigoDeBarra", Convert.ToString(txtCodigoDeBarra.Text));
                 comando.Parameters.AddWithValue("@Id_Proveedor", int.Parse(txtProveedor.Text));
                 comando.Parameters.AddWithValue("@Id_Marca", int.Parse(txtMarca.Text));
                 comando.Parameters.AddWithValue("@Id_Categoria", int.Parse(txtCategoria.Text));
@@ -348,6 +352,7 @@ namespace Prod_Provee_Marc_Categ.Formularios_De_Productos
                 comando.Parameters.AddWithValue("@Iva", (cbxIva.selectedValue.ToString()));
                 comando.Parameters.AddWithValue("@PrecioMayorista", Convert.ToDecimal(txtPrecioMayorista.Text));
                 comando.Parameters.AddWithValue("@CostoMedio", Convert.ToDecimal(txtCostoMedio.Text));
+                comando.Parameters.AddWithValue("@id_usuario", 1);
 
                 comando.ExecuteNonQuery();
 
@@ -357,11 +362,34 @@ namespace Prod_Provee_Marc_Categ.Formularios_De_Productos
                 MessageBox.Show(ex.Message);
             }
         }
-
+        public void limpiar()
+        {
+            txtCodigoProducto.Text = "Codigo";
+            txtDescripcion.Text = "Descripcion";
+            txtCategoria.Text = "Categoria";
+            txtCategoria2.Text = "";
+            txtMarca.Text = "Marca";
+            txtmarca2.Text = "";
+            txtProveedor.Text = "Proveedor";
+            txtProveedor2.Text = "";
+            txtCodigoDeBarra.Text = "Codigo de Barra";
+            dtpFechaVencimiento.Value = DateTime.Today;
+            txtCosto.Text = "Costo";
+            txtCostoMedio.Text = "Costo Medio";
+            ptbImagenProducto.Image = null;
+            txtPrecioUnitario.Text = "Precio Unitario";
+            txtPrecioMayorista.Text = "Precio Mayorista";
+            cbxIva.Clear();
+            cbxTipo.Clear();
+        }
         private void bunifuImageButton2_Click(object sender, EventArgs e)
         {
            
             InsertarProducto();
+            MensajeDeCheck mensajeDeCheck = new MensajeDeCheck();
+            mensajeDeCheck.ShowDialog();
+            limpiar();
+
         }
     }
 }

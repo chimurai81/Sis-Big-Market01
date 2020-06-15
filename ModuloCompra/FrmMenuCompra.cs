@@ -1,4 +1,5 @@
 ﻿using Microsoft.VisualBasic;
+using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -39,6 +40,7 @@ namespace ModuloCompra
         }
         private void cargarItem()
         {
+           
             modSesion modSesion = new modSesion();
             int n;
             decimal subtotalProducto;
@@ -164,22 +166,12 @@ namespace ModuloCompra
             }
         }
 
-        private void txtCodigoProducto_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (e.KeyChar == (char)Keys.Enter)
-            {
-                if (txtCodigoProducto.Text != "")
-                {
-                    buscarProducto();
-                    e.Handled = true;
-                }
-            }
-        }
+
         /*modulo buscar producto*/
         modSesion modSesion;
         public void buscarProducto()
         {
-            modProducto modProducto = new modProducto();
+            modProducto modProducto = new modProducto(); 
             
             productoAComprar = new DataSet();
             string condicion = "";
@@ -213,17 +205,7 @@ namespace ModuloCompra
             }
         }
 
-        private void txtCodigoProducto_KeyUp(object sender, KeyEventArgs e)
-        {
-            frmBuscarProducto x = new frmBuscarProducto();
 
-            if ((e.KeyCode == Keys.F6))
-            {
-
-                AddOwnedForm(x);
-                x.ShowDialog();
-            }
-        }
 
         private void txtCantidad_KeyPress(object sender, KeyPressEventArgs e)
         {
@@ -246,11 +228,254 @@ namespace ModuloCompra
             }
         }
 
+        /*FUNCION PROCESAR COMPRA*/
+        
+        public bool procesarCompra()
+        {
+            string sqlCompra;
+            string sqlCompraItems;
+            string sqlActualizarItem;
+            MySqlTransaction transaccion;
+            MySqlCommand comando;
+            modSesion modSesion = new modSesion(); // estan las mascaras de conversion numericos
+            modUsuario modUsuario = new modUsuario();
+            Conexion_DB.AbrirConexion(); // se abre una conexion con la base de datos
+            MySqlConnection con = Conexion_DB.conexion;
+            transaccion = Conexion_DB.conexion.BeginTransaction();  // se inicia una transaccion con la base de datos, acontinuacion se inicia procesos multiples
+
+            try
+            {
+                
+
+
+                // se inicia proceso 1 :  actualizar tabla compra
+                sqlCompra = "update db_Compras set FacturaNro=@fac, Id_Proveedor=@prov, TipoDeCompra=@tipo ,FechaDeCompra=@fecha ,SubTotal=@sub ,Iva0=@iva0 ,Iva5=@iva5 ,Iva10=@iva10 ,TotalNeto=@total ,Saldo=@saldo,Id_Usuario=@user,estado=@estado where id=@id";
+                comando = new MySqlCommand(sqlCompra, con);
+                comando.Parameters.AddWithValue("@fac", Convert.ToString(txtFactura.Text));
+                comando.Parameters.AddWithValue("@prov", Convert.ToInt32(txtIdProveedor.Text));
+                string cbx = cbxCondicion.selectedValue.ToString();
+                comando.Parameters.AddWithValue("@tipo", cbx);
+                comando.Parameters.AddWithValue("@fecha", cbxfecha.Value);
+                comando.Parameters.AddWithValue("@sub", modSesion.convertirDecimal(txtSubtotal.Text));  
+                comando.Parameters.AddWithValue("@iva0", modSesion.convertirDecimal(txtIva0.Text));
+                comando.Parameters.AddWithValue("@iva5", modSesion.convertirDecimal(txtIva5.Text));
+                comando.Parameters.AddWithValue("@iva10", modSesion.convertirDecimal(txtIva10.Text));
+                comando.Parameters.AddWithValue("@total", modSesion.convertirDecimal(txtTotalNeto.Text));
+                comando.Parameters.AddWithValue("@saldo", modSesion.convertirDecimal(txtTotalNeto.Text));
+                int usr = Convert.ToInt32(modUsuario.VerificarIdUsuarioActivo());
+                comando.Parameters.AddWithValue("@user",  usr);
+                comando.Parameters.AddWithValue("@estado", 1); 
+                comando.Parameters.AddWithValue("@id", Convert.ToInt32(txtCompraID.Text));
+                comando.ExecuteNonQuery();
+
+                
+                // inicia proceso 2 :  insertar registros en tabla compra_items
+                int c=0;
+                while (c < Convert.ToInt32(grilla.Rows.Count))
+                {
+
+                    sqlCompraItems = "Insert into db_compraitem (Id_Compras,Id_Productos,Costo,CostoMedio,Cantidad,Iva,Estado) values (@idcom,@idprod,@costo,@costomedio,@cantidad,@iva,@estado)";
+
+                    comando = new MySqlCommand(sqlCompraItems, con);
+
+                    comando.Parameters.AddWithValue("@idcom", Convert.ToInt32(txtCompraID.Text));
+                    int idprocut1 = Convert.ToInt32(grilla[1, c].Value);
+                    comando.Parameters.AddWithValue("@idprod", idprocut1);
+                    comando.Parameters.AddWithValue("@costo", modSesion.convertirDecimal(grilla[4, c].Value));
+                    comando.Parameters.AddWithValue("@costomedio", modSesion.convertirDecimal(grilla[6, c].Value));
+                    comando.Parameters.AddWithValue("@cantidad", modSesion.convertirDecimal(grilla[3, c].Value));
+                    comando.Parameters.AddWithValue("@iva", Convert.ToInt32(grilla[7, c].Value));
+                    comando.Parameters.AddWithValue("@estado", 1);
+                    comando.ExecuteNonQuery();
+                    c = c + 1;
+                }
+
+                // inicia proceso 3 : actualiza stock en tabla producto
+                c = 0;
+                while (c < grilla.Rows.Count)
+                {
+
+                    sqlActualizarItem = "update db_productos set Stock = Stock + @cantidad, Costo=@costo, CostoMedio=@costomedio where id= @idproducto ";
+                    comando = new MySqlCommand(sqlActualizarItem, con);
+                    comando.Parameters.AddWithValue("@cantidad", modSesion.convertirDecimal(grilla[3, c].Value));
+                    comando.Parameters.AddWithValue("@idproducto", Convert.ToInt32(grilla[1, c].Value));
+                    comando.Parameters.AddWithValue("@costo", modSesion.convertirDecimal(grilla[4, c].Value));
+                    comando.Parameters.AddWithValue("@costomedio", modSesion.convertirDecimal(grilla[6, c].Value));
+                    comando.ExecuteNonQuery();
+                    c = c + 1;
+                }
+
+                // finaliza transaccion y aplica cambios en todas las tablas 
+                transaccion.Commit();
+                return true;
+            }
+            catch (MySqlException ex)
+            {
+                MessageBox.Show("Error al procesar Compra, No se efectuaron cambios " + ex.Message);
+                transaccion.Rollback();
+                return false;
+            }
+        }
+
+
+
+        private void bunifuThinButton21_Click(object sender, EventArgs e)
+        {
+            if (procesarCompra() == true)
+            {
+                MessageBox.Show("Compra procesada con exito");
+                limpiarCompra();
+                iniciarCompra();
+                txtFactura.Focus();
+            }
+            else
+            {
+                MessageBox.Show("Error al processar compra");
+            }
+        }
+
+        /*LIMPIAR LOS CAMPOS DEL FRMCOMPRA  */
+        private void limpiarCompra()
+        {
+            // limpiando caja de textos-------------------
+            txtCodigoProducto.Text = "";
+            txtCantidad.Text = "";
+            txtCosto.Text = "";
+            txtCostoMedio.Text = "";
+            txtCostoReal.Text = "";
+            txtStock.Text = "";
+            lblCodigo.Text = "";
+            lblDescricion.Text = "";
+            txtTotalIva.Text = "";
+            txtSubtotal.Text = "";
+            txtTotalNeto.Text = "";
+            txtIva0.Text = "";
+            txtIva5.Text = "";
+            txtIva10.Text = "";
+            txtCompraID.Text = "";
+            txtFactura.Text = "";
+            txtIdProveedor.Text = "";
+            txtNombreProveedor.Text = "";
+            grilla.Rows.Clear();
+
+            // limpiando variables globales-------------
+            vSubtotal = 0;
+            vTotalNeto = 0;
+            vTotalIVa = 0;
+            vIva5 = 0;
+            vIva10 = 0;
+            vIva0 = 0;
+            productoAComprar = new DataSet();
+        }
+
+        private void bunifuThinButton22_Click(object sender, EventArgs e)
+        {
+            //limpiando caja de textos-------------------
+            txtCodigoProducto.Text = "";
+            txtCantidad.Text = "";
+            txtCosto.Text = "";
+            txtCostoMedio.Text = "";
+            txtCostoReal.Text = "";
+            txtStock.Text = "";
+            lblCodigo.Text = "";
+            lblDescricion.Text = "";
+            txtTotalIva.Text = "";
+            txtSubtotal.Text = "";
+            txtTotalNeto.Text = "";
+            txtIva0.Text = "";
+            txtIva5.Text = "";
+            txtIva10.Text = "";
+           //txtCompraID.Text = "";
+            txtFactura.Text = "";
+            txtIdProveedor.Text = "";
+            txtNombreProveedor.Text = "";
+            grilla.Rows.Clear();
+        
+            //limpiando variables globales-------------
+            vSubtotal = 0;
+            vTotalNeto = 0;
+            vTotalIVa = 0;
+            vIva5 = 0;
+            vIva10 = 0;
+            vIva0 = 0;
+            productoAComprar = new DataSet();
+        }
+
+        private void bunifuCustomTextbox1_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)Keys.Enter)
+            {
+                if (txtCodigoProducto.Text != "")
+                {
+                    buscarProducto();
+                    e.Handled = true;
+                }
+            }
+        }
+
+        private void txtCodigoProducto_KeyUp(object sender, KeyEventArgs e)
+        {
+            frmBuscarProducto x = new frmBuscarProducto();
+
+            if ((e.KeyCode == Keys.F6))
+            {
+                AddOwnedForm(x);
+                x.ShowDialog();
+            }
+        }
+
+        private void txtCodigoProducto_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)Keys.Enter)
+            {
+                if (txtCodigoProducto.Text != "")
+                {
+                    buscarProducto();
+                    e.Handled = true;
+                }
+            }
+        }
+
+        private void txtCodigoProducto_KeyUp_1(object sender, KeyEventArgs e)
+        {
+            frmBuscarProducto x = new frmBuscarProducto();
+
+            if ((e.KeyCode == Keys.F6))
+            {
+                AddOwnedForm(x);
+                x.ShowDialog();
+            }
+        }
+
+        private void txtCodigoProducto_Leave(object sender, EventArgs e)
+        {
+            if (txtCodigoProducto.Text != "")
+            {
+               buscarProducto();
+            }
+        }
+
+        private void txtCantidad_Leave(object sender, EventArgs e)
+        {
+            modSesion modSesion = new modSesion();
+            if (IsNumeric(txtCantidad.Text))
+            {
+                txtCantidad.Text = Convert.ToString(modSesion.mascaraCantidad(txtCantidad.Text));
+                txtCosto.Focus();
+            }
+            else
+            {
+                MessageBox.Show("Ingrese Cantidad en numeros");
+                txtCantidad.Text = "";
+                txtCantidad.Focus();
+            }
+        }
+
         private void txtCosto_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (e.KeyChar == (char)Keys.Enter)
             {
-                if (Information.IsNumeric(txtCosto.Text))
+                if (IsNumeric(txtCosto.Text))
                 {
                     cargarItem();
                     e.Handled = true;

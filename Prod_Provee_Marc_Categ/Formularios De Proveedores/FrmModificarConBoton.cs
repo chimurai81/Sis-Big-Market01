@@ -66,8 +66,8 @@ namespace Prod_Provee_Marc_Categ.Formularios_De_Proveedores
 
                 txtId.Text = Convert.ToString(resultado.Tables["rsProveedor"].Rows[0]["id"]);
                 txtNombreProveedor.Text = Convert.ToString(resultado.Tables["rsProveedor"].Rows[0]["RazonSocial"]);
-                txtRuc.Text = Convert.ToString(resultado.Tables["rsProveedor"].Rows[0]["NroTelef"]);
-                txtNroTelef.Text = Convert.ToString(resultado.Tables["rsProveedor"].Rows[0]["Ruc"]);
+                txtRuc.Text = Convert.ToString(resultado.Tables["rsProveedor"].Rows[0]["Ruc"]);
+                txtNroTelef.Text = Convert.ToString(resultado.Tables["rsProveedor"].Rows[0]["NroTelef"]);
                 txtDireccion.Text = Convert.ToString(resultado.Tables["rsProveedor"].Rows[0]["Direccion"]);
 
 

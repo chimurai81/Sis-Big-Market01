@@ -141,6 +141,7 @@ namespace Prod_Provee_Marc_Categ.Formularios
         {
             FrmNuevoProductos frm = new FrmNuevoProductos();
             frm.ShowDialog();
+            GetAll("");
         }
 
 
@@ -148,6 +149,13 @@ namespace Prod_Provee_Marc_Categ.Formularios
         private void lblCerrar_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void lblModificarProducto_Click(object sender, EventArgs e)
+        {
+            FrmEditarConBotonProductos frm10 = new FrmEditarConBotonProductos();
+            AddOwnedForm(frm10);
+            frm10.ShowDialog();
         }
     }
 }
