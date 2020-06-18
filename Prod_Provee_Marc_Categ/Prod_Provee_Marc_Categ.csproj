@@ -75,40 +75,88 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Formularios de Categoria\FrmAgregarNuevaCategoria.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios de Categoria\FrmAgregarNuevaCategoria.Designer.cs">
+      <DependentUpon>FrmAgregarNuevaCategoria.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios de Categoria\FrmEditarCategoriaConboton.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios de Categoria\FrmEditarCategoriaConboton.Designer.cs">
+      <DependentUpon>FrmEditarCategoriaConboton.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formularios de Categoria\FrmMenuCategorias.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Formularios de Categoria\FrmMenuCategorias.Designer.cs">
       <DependentUpon>FrmMenuCategorias.cs</DependentUpon>
     </Compile>
-    <Compile Include="Formularios De Productos\FrmBusqueda-Interna_Categoria.cs">
+    <Compile Include="Formularios de Marca\FrmAgregarNuevaMarca.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Formularios De Productos\FrmBusqueda-Interna_Categoria.Designer.cs">
+    <Compile Include="Formularios de Marca\FrmAgregarNuevaMarca.Designer.cs">
+      <DependentUpon>FrmAgregarNuevaMarca.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios de Marca\FrmEditarMarca.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios de Marca\FrmEditarMarca.Designer.cs">
+      <DependentUpon>FrmEditarMarca.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios de Marca\FrmMenuMarca.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios de Marca\FrmMenuMarca.Designer.cs">
+      <DependentUpon>FrmMenuMarca.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios De Producto\FrmBusqueda-Interna_Categoria.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios De Producto\FrmBusqueda-Interna_Categoria.Designer.cs">
       <DependentUpon>FrmBusqueda-Interna_Categoria.cs</DependentUpon>
     </Compile>
-    <Compile Include="Formularios De Productos\FrmBusqueda-Interna_Marca.cs">
+    <Compile Include="Formularios De Producto\FrmBusqueda-Interna_EditarCategoria.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Formularios De Productos\FrmBusqueda-Interna_Marca.Designer.cs">
+    <Compile Include="Formularios De Producto\FrmBusqueda-Interna_EditarCategoria.Designer.cs">
+      <DependentUpon>FrmBusqueda-Interna_EditarCategoria.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios De Producto\FrmBusqueda-Interna_EditarMarca.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios De Producto\FrmBusqueda-Interna_EditarMarca.Designer.cs">
+      <DependentUpon>FrmBusqueda-Interna_EditarMarca.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios De Producto\FrmBusqueda-Interna_EditarProveedor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios De Producto\FrmBusqueda-Interna_EditarProveedor.Designer.cs">
+      <DependentUpon>FrmBusqueda-Interna_EditarProveedor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios De Producto\FrmBusqueda-Interna_Marca.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios De Producto\FrmBusqueda-Interna_Marca.Designer.cs">
       <DependentUpon>FrmBusqueda-Interna_Marca.cs</DependentUpon>
     </Compile>
-    <Compile Include="Formularios De Productos\FrmBusqueda-Interna_Proveedores.cs">
+    <Compile Include="Formularios De Producto\FrmBusqueda-Interna_Proveedores.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Formularios De Productos\FrmBusqueda-Interna_Proveedores.Designer.cs">
+    <Compile Include="Formularios De Producto\FrmBusqueda-Interna_Proveedores.Designer.cs">
       <DependentUpon>FrmBusqueda-Interna_Proveedores.cs</DependentUpon>
     </Compile>
-    <Compile Include="Formularios De Productos\FrmEditarConBotonProductos.cs">
+    <Compile Include="Formularios De Producto\FrmEditarConBotonProductos.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Formularios De Productos\FrmEditarConBotonProductos.Designer.cs">
+    <Compile Include="Formularios De Producto\FrmEditarConBotonProductos.Designer.cs">
       <DependentUpon>FrmEditarConBotonProductos.cs</DependentUpon>
     </Compile>
-    <Compile Include="Formularios De Productos\FrmNuevoProducto.cs">
+    <Compile Include="Formularios De Producto\FrmNuevoProducto.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Formularios De Productos\FrmNuevoProducto.Designer.cs">
+    <Compile Include="Formularios De Producto\FrmNuevoProducto.Designer.cs">
       <DependentUpon>FrmNuevoProducto.cs</DependentUpon>
     </Compile>
     <Compile Include="Formularios De Proveedores\FrmAgregarNuevoProveedor.cs">
@@ -117,10 +165,10 @@
     <Compile Include="Formularios De Proveedores\FrmAgregarNuevoProveedor.Designer.cs">
       <DependentUpon>FrmAgregarNuevoProveedor.cs</DependentUpon>
     </Compile>
-    <Compile Include="Formularios De Productos\FrmMenuProductos.cs">
+    <Compile Include="Formularios De Producto\FrmMenuProductos.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Formularios De Productos\FrmMenuProductos.Designer.cs">
+    <Compile Include="Formularios De Producto\FrmMenuProductos.Designer.cs">
       <DependentUpon>FrmMenuProductos.cs</DependentUpon>
     </Compile>
     <Compile Include="Formularios De Proveedores\FrmMenuProveedores.cs">
@@ -142,30 +190,55 @@
       <DependentUpon>FrmModificarSinBoton.cs</DependentUpon>
     </Compile>
     <Compile Include="modulo.cs" />
+    <Compile Include="ModUsuarioActivo.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Formularios de Categoria\FrmAgregarNuevaCategoria.resx">
+      <DependentUpon>FrmAgregarNuevaCategoria.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios de Categoria\FrmEditarCategoriaConboton.resx">
+      <DependentUpon>FrmEditarCategoriaConboton.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Formularios de Categoria\FrmMenuCategorias.resx">
       <DependentUpon>FrmMenuCategorias.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Formularios De Productos\FrmBusqueda-Interna_Categoria.resx">
+    <EmbeddedResource Include="Formularios de Marca\FrmAgregarNuevaMarca.resx">
+      <DependentUpon>FrmAgregarNuevaMarca.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios de Marca\FrmEditarMarca.resx">
+      <DependentUpon>FrmEditarMarca.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios de Marca\FrmMenuMarca.resx">
+      <DependentUpon>FrmMenuMarca.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios De Producto\FrmBusqueda-Interna_Categoria.resx">
       <DependentUpon>FrmBusqueda-Interna_Categoria.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Formularios De Productos\FrmBusqueda-Interna_Marca.resx">
+    <EmbeddedResource Include="Formularios De Producto\FrmBusqueda-Interna_EditarCategoria.resx">
+      <DependentUpon>FrmBusqueda-Interna_EditarCategoria.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios De Producto\FrmBusqueda-Interna_EditarMarca.resx">
+      <DependentUpon>FrmBusqueda-Interna_EditarMarca.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios De Producto\FrmBusqueda-Interna_EditarProveedor.resx">
+      <DependentUpon>FrmBusqueda-Interna_EditarProveedor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios De Producto\FrmBusqueda-Interna_Marca.resx">
       <DependentUpon>FrmBusqueda-Interna_Marca.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Formularios De Productos\FrmBusqueda-Interna_Proveedores.resx">
+    <EmbeddedResource Include="Formularios De Producto\FrmBusqueda-Interna_Proveedores.resx">
       <DependentUpon>FrmBusqueda-Interna_Proveedores.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Formularios De Productos\FrmEditarConBotonProductos.resx">
+    <EmbeddedResource Include="Formularios De Producto\FrmEditarConBotonProductos.resx">
       <DependentUpon>FrmEditarConBotonProductos.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Formularios De Productos\FrmNuevoProducto.resx">
+    <EmbeddedResource Include="Formularios De Producto\FrmNuevoProducto.resx">
       <DependentUpon>FrmNuevoProducto.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios De Proveedores\FrmAgregarNuevoProveedor.resx">
       <DependentUpon>FrmAgregarNuevoProveedor.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Formularios De Productos\FrmMenuProductos.resx">
+    <EmbeddedResource Include="Formularios De Producto\FrmMenuProductos.resx">
       <DependentUpon>FrmMenuProductos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios De Proveedores\FrmMenuProveedores.resx">
@@ -381,5 +454,6 @@
   <ItemGroup>
     <None Include="Resources\fondoEditarNuevoProducto.png" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

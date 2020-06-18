@@ -401,17 +401,7 @@ namespace ModuloCompra
             productoAComprar = new DataSet();
         }
 
-        private void bunifuCustomTextbox1_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (e.KeyChar == (char)Keys.Enter)
-            {
-                if (txtCodigoProducto.Text != "")
-                {
-                    buscarProducto();
-                    e.Handled = true;
-                }
-            }
-        }
+
 
         private void txtCodigoProducto_KeyUp(object sender, KeyEventArgs e)
         {
@@ -468,6 +458,38 @@ namespace ModuloCompra
                 MessageBox.Show("Ingrese Cantidad en numeros");
                 txtCantidad.Text = "";
                 txtCantidad.Focus();
+            }
+        }
+
+        private void txtCodigoProducto_KeyPress_1(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)Keys.Enter)
+            {
+                if (txtCodigoProducto.Text != "")
+                {
+                    buscarProducto();
+                    e.Handled = true;
+                }
+            }
+        }
+
+        private void txtCodigoProducto_KeyUp_2(object sender, KeyEventArgs e)
+        {
+            frmBuscarProducto x = new frmBuscarProducto();
+
+            if ((e.KeyCode == Keys.F6))
+            {
+                AddOwnedForm(x);
+                x.ShowDialog();
+            }
+
+        }
+
+        private void txtCodigoProducto_Leave_1(object sender, EventArgs e)
+        {
+            if (txtCodigoProducto.Text != "")
+            {
+                buscarProducto();
             }
         }
 

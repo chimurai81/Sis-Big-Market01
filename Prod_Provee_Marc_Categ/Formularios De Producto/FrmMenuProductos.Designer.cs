@@ -103,6 +103,7 @@
             this.DataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.DataGridView1.Size = new System.Drawing.Size(1451, 609);
             this.DataGridView1.TabIndex = 0;
+            this.DataGridView1.SelectionChanged += new System.EventHandler(this.DataGridView1_SelectionChanged);
             // 
             // bunifuTransition1
             // 
@@ -197,6 +198,7 @@
             this.lblEliminarProducto.Size = new System.Drawing.Size(151, 21);
             this.lblEliminarProducto.TabIndex = 21;
             this.lblEliminarProducto.Text = "Eliminar Producto";
+            this.lblEliminarProducto.Click += new System.EventHandler(this.lblEliminarProducto_Click);
             this.lblEliminarProducto.MouseEnter += new System.EventHandler(this.lblEliminarProducto_MouseEnter);
             this.lblEliminarProducto.MouseLeave += new System.EventHandler(this.lblEliminarProducto_MouseLeave);
             // 

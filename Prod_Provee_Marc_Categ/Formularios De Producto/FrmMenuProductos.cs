@@ -24,7 +24,7 @@ namespace Prod_Provee_Marc_Categ.Formularios
             string sql;
             MySqlDataAdapter consulta;
             DataSet resultado;
-            sql = "select  a.CodigoProducto, a.Descripcion, b.Descripcion As 'categoria', c.Descripcion As 'Marca', d.RazonSocial As 'Razon Social', a.Stock, a.StockMinimo, a.FechaDeVencimiento, a.Costo, a.CostoMedio, a.Iva, a.PrecioUnitario, a.PrecioMayorista, a.Tipo from db_productos a join db_categoria b ON a.Id_Categoria = b.id " +
+            sql = "select  a.Id, a.CodigoProducto, a.Descripcion, b.Descripcion As 'categoria', c.Descripcion As 'Marca', d.RazonSocial As 'Razon Social', a.Stock, a.StockMinimo, a.FechaDeVencimiento, a.Costo, a.CostoMedio, a.Iva, a.PrecioUnitario, a.PrecioMayorista, a.Tipo from db_productos a join db_categoria b ON a.Id_Categoria = b.id " +
               "join db_marca c On a.Id_Marca = c.id join db_proveedores d On a.Id_Proveedor = d.id" + condicion;
 
             try
@@ -156,6 +156,37 @@ namespace Prod_Provee_Marc_Categ.Formularios
             FrmEditarConBotonProductos frm10 = new FrmEditarConBotonProductos();
             AddOwnedForm(frm10);
             frm10.ShowDialog();
+        }
+
+        public static string valor33;
+        private void DataGridView1_SelectionChanged(object sender, EventArgs e)
+        {
+            valor33 = DataGridView1.CurrentRow.Cells[0].Value.ToString();
+        }
+
+        private void lblEliminarProducto_Click(object sender, EventArgs e)
+        {
+            //MySqlCommand comando;
+            //string sql;
+            //string codigo;
+            //codigo = Convert.ToString(DataGridView1[0, DataGridView1.CurrentRow.Index].Value);
+            //try
+            //{
+            //    modulo.AbrirConexion();
+            //    sql = "delete from db_productos where id=@id";
+            //    comando = new MySqlCommand(sql, modulo.conexion);
+            //    comando.Parameters.AddWithValue("@id", codigo);
+            //    comando.ExecuteNonQuery();
+            //    GetAll("");
+            //    MensajesPersonalizados.MensajeDeCheck frm = new MensajesPersonalizados.MensajeDeCheck();
+            //    frm.ShowDialog();
+            //}
+            //catch (MySqlException ex)
+            //{
+            //    MensajesPersonalizados.MensajeDeError frm = new MensajesPersonalizados.MensajeDeError();
+            //    frm.ShowDialog();
+            //}
+            
         }
     }
 }

@@ -324,44 +324,46 @@ namespace Prod_Provee_Marc_Categ.Formularios_De_Productos
         }
 
         //INGRESAR NUEVO PRODUCTO CON LA ENTIDAD DEL PROVEEDOR, MARCA, CATEGORI
-        public void InsertarProducto()
-        {
-            string sql;
-            //MySqlCommand comando;
-            sql = "insert into db_productos (Descripcion, Costo, PrecioUnitario, FechaDeVencimiento, ImagenDelProducto, CodigoDeBarra, Id_Proveedor, Id_Marca, Id_Categoria, CodigoProducto, Tipo, Iva, PrecioMayorista, CostoMedio, id_usuario_Producto) values (@Descripcion, @Costo, @PrecioUnitario, @FechaDeVencimiento, @ImagenDelProducto, @CodigoDeBarra, @Id_Proveedor, @Id_Marca, @Id_Categoria, @CodigoProducto, @Tipo, @Iva, @PrecioMayorista, @CostoMedio, @id_usuario)";
-            MySqlCommand comando;
-            try
+            public void InsertarProducto()
             {
-                modulo.AbrirConexion();
-                comando = new MySqlCommand(sql, modulo.conexion);
-                comando.Parameters.AddWithValue("@Descripcion", txtDescripcion.Text.ToUpperInvariant().ToString());
-                comando.Parameters.AddWithValue("@Costo", Convert.ToDecimal(txtCosto.Text));
-                comando.Parameters.AddWithValue("@PrecioUnitario", Convert.ToDecimal(txtPrecioUnitario.Text));
-                comando.Parameters.AddWithValue("@FechaDeVencimiento", dtpFechaVencimiento.Value);
-                comando.Parameters.AddWithValue("@ImagenDelProducto", Image2Bytes(ptbImagenProducto.Image));
-                if(txtCodigoDeBarra.Text == "Codigo de Barra")
+                string sql;
+                //MySqlCommand comando;
+                sql = "insert into db_productos (Descripcion, Costo, PrecioUnitario, FechaDeVencimiento, ImagenDelProducto, CodigoDeBarra, Id_Proveedor, Id_Marca, Id_Categoria, CodigoProducto, Tipo, Iva, PrecioMayorista, Estado, CostoMedio, id_usuario_Producto) values (@Descripcion, @Costo, @PrecioUnitario, @FechaDeVencimiento, @ImagenDelProducto, @CodigoDeBarra, @Id_Proveedor, @Id_Marca, @Id_Categoria, @CodigoProducto, @Tipo, @Iva, @PrecioMayorista, @Estado, @CostoMedio, @id_usuario)";
+                MySqlCommand comando;
+                try
                 {
-                    txtCodigoDeBarra.Text = "0";
+                    modulo.AbrirConexion();
+                    comando = new MySqlCommand(sql, modulo.conexion);
+                    comando.Parameters.AddWithValue("@Descripcion", txtDescripcion.Text.ToUpperInvariant().ToString());
+                    comando.Parameters.AddWithValue("@Costo", Convert.ToDecimal(txtCosto.Text));
+                    comando.Parameters.AddWithValue("@PrecioUnitario", Convert.ToDecimal(txtPrecioUnitario.Text));
+                    comando.Parameters.AddWithValue("@FechaDeVencimiento", dtpFechaVencimiento.Value);
+                    comando.Parameters.AddWithValue("@ImagenDelProducto", Image2Bytes(ptbImagenProducto.Image));
+                    if(txtCodigoDeBarra.Text == "Codigo de Barra")
+                    {
+                        txtCodigoDeBarra.Text = "0";
+                    }
+                    comando.Parameters.AddWithValue("@CodigoDeBarra", Convert.ToString(txtCodigoDeBarra.Text));
+                    comando.Parameters.AddWithValue("@Id_Proveedor", int.Parse(txtProveedor.Text));
+                    comando.Parameters.AddWithValue("@Id_Marca", int.Parse(txtMarca.Text));
+                    comando.Parameters.AddWithValue("@Id_Categoria", int.Parse(txtCategoria.Text));
+                    comando.Parameters.AddWithValue("@CodigoProducto", txtCodigoProducto.Text.ToString());
+                    comando.Parameters.AddWithValue("@Tipo", (cbxTipo.selectedValue.ToString()));
+                    comando.Parameters.AddWithValue("@Iva", (cbxIva.selectedValue.ToString()));
+                    comando.Parameters.AddWithValue("@PrecioMayorista", Convert.ToDecimal(txtPrecioMayorista.Text));
+                    comando.Parameters.AddWithValue("@CostoMedio", Convert.ToDecimal(txtCostoMedio.Text));
+                    ModUsuarioActivo modUsuarioActivo = new ModUsuarioActivo();
+                    comando.Parameters.AddWithValue("@id_usuario", Convert.ToString(modUsuarioActivo.VerificarIdUsuarioActivo()));
+                    comando.Parameters.AddWithValue("@Estado", 1);
+
+                    comando.ExecuteNonQuery();
+
                 }
-                comando.Parameters.AddWithValue("@CodigoDeBarra", Convert.ToString(txtCodigoDeBarra.Text));
-                comando.Parameters.AddWithValue("@Id_Proveedor", int.Parse(txtProveedor.Text));
-                comando.Parameters.AddWithValue("@Id_Marca", int.Parse(txtMarca.Text));
-                comando.Parameters.AddWithValue("@Id_Categoria", int.Parse(txtCategoria.Text));
-                comando.Parameters.AddWithValue("@CodigoProducto", txtCodigoProducto.Text.ToString());
-                comando.Parameters.AddWithValue("@Tipo", (cbxTipo.selectedValue.ToString()));
-                comando.Parameters.AddWithValue("@Iva", (cbxIva.selectedValue.ToString()));
-                comando.Parameters.AddWithValue("@PrecioMayorista", Convert.ToDecimal(txtPrecioMayorista.Text));
-                comando.Parameters.AddWithValue("@CostoMedio", Convert.ToDecimal(txtCostoMedio.Text));
-                comando.Parameters.AddWithValue("@id_usuario", 1);
-
-                comando.ExecuteNonQuery();
-
+                catch (MySqlException ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
             }
-            catch (MySqlException ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-        }
         public void limpiar()
         {
             txtCodigoProducto.Text = "Codigo";

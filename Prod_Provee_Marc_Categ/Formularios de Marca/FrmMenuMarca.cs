@@ -9,11 +9,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Prod_Provee_Marc_Categ.Formularios_de_Categoria
+namespace Prod_Provee_Marc_Categ.Formularios_de_Marca
 {
-    public partial class FrmMenuCategorias : Form
+    public partial class FrmMenuMarca : Form
     {
-        public FrmMenuCategorias()
+        public FrmMenuMarca()
         {
             InitializeComponent();
         }
@@ -22,7 +22,7 @@ namespace Prod_Provee_Marc_Categ.Formularios_de_Categoria
             string sql;
             MySqlDataAdapter consulta;
             DataSet resultado;
-            sql = "select * from db_Categoria " + condicion;
+            sql = "select * from db_marca" + condicion;
 
             try
             {
@@ -37,33 +37,22 @@ namespace Prod_Provee_Marc_Categ.Formularios_de_Categoria
                 MessageBox.Show(ex.Message);
             }
         }
-
-        private void FrmMenuCategorias_Load(object sender, EventArgs e)
+        private void FrmMenuMarca_Load(object sender, EventArgs e)
         {
             GetAll("");
             comboBox1.SelectedIndex = 0;
         }
 
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
-        private void txtBuscar_KeyPress(object sender, KeyPressEventArgs e)
-        {
-
-        }
-
         private void btnNuevaCategoria_Click(object sender, EventArgs e)
         {
-            FrmAgregarNuevaCategoria frm = new FrmAgregarNuevaCategoria();
+            FrmAgregarNuevaMarca frm = new FrmAgregarNuevaMarca();
             frm.ShowDialog();
             GetAll("");
         }
 
         private void bunifuFlatButton2_Click(object sender, EventArgs e)
         {
-            FrmEditarCategoriaConboton frm10 = new FrmEditarCategoriaConboton();
+            FrmEditarMarca frm10 = new FrmEditarMarca();
             AddOwnedForm(frm10);
             frm10.ShowDialog();
         }
@@ -98,18 +87,21 @@ namespace Prod_Provee_Marc_Categ.Formularios_de_Categoria
             string condicion;
             condicion = "";
 
+            if (comboBox1.SelectedItem.ToString() == "ID")
+            {
+                condicion = " where id like '%" + txtBuscar.Text + "%'";
+            }
             if (comboBox1.SelectedItem.ToString() == "DESCRIPCION")
             {
                 condicion = " where Descripcion like '%" + txtBuscar.Text.ToUpperInvariant() + "%'";
             }
 
-
-            if (comboBox1.SelectedItem.ToString() == "ID")
-            {
-                condicion = " where id like '%" + txtBuscar.Text + "%'";
-            }
-
             GetAll(condicion);
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

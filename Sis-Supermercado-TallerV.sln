@@ -17,6 +17,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FrmMenuVistaPrincipal", "Fr
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ModuloCompra", "ModuloCompra\ModuloCompra.csproj", "{0B73FDDB-8A19-4FB5-8F10-88F06625B2FB}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ModuloVenta", "ModuloVenta\ModuloVenta.csproj", "{856E32F7-25CC-4855-BC12-A16D9BEBA848}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -51,6 +53,10 @@ Global
 		{0B73FDDB-8A19-4FB5-8F10-88F06625B2FB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0B73FDDB-8A19-4FB5-8F10-88F06625B2FB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0B73FDDB-8A19-4FB5-8F10-88F06625B2FB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{856E32F7-25CC-4855-BC12-A16D9BEBA848}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{856E32F7-25CC-4855-BC12-A16D9BEBA848}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{856E32F7-25CC-4855-BC12-A16D9BEBA848}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{856E32F7-25CC-4855-BC12-A16D9BEBA848}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

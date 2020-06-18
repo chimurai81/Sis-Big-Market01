@@ -32,10 +32,6 @@
             this.txtProveedor2 = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.txtmarca2 = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.txtCategoria2 = new Bunifu.Framework.UI.BunifuMaterialTextbox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.cbxTipo = new Bunifu.Framework.UI.BunifuDropdown();
-            this.cbxIva = new Bunifu.Framework.UI.BunifuDropdown();
             this.bunifuTileButton2 = new Bunifu.Framework.UI.BunifuTileButton();
             this.bunifuTileButton1 = new Bunifu.Framework.UI.BunifuTileButton();
             this.txtCostoMedio = new Bunifu.Framework.UI.BunifuMaterialTextbox();
@@ -53,11 +49,15 @@
             this.txtMarca = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.txtCategoria = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.txtPrecioMayorista = new Bunifu.Framework.UI.BunifuMaterialTextbox();
-            this.txtPrecioUnitario = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.txtDescripcion = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.txtCodigoProducto = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.ptbImagenProducto = new System.Windows.Forms.PictureBox();
             this.dtpFechaVencimiento = new Bunifu.Framework.UI.BunifuDatepicker();
+            this.txtPrecioUnitario = new Bunifu.Framework.UI.BunifuMaterialTextbox();
+            this.cbxIva = new System.Windows.Forms.ComboBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.cbxTipo = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).BeginInit();
@@ -131,65 +131,6 @@
             this.txtCategoria2.TabIndex = 71;
             this.txtCategoria2.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label3.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(968, 649);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(44, 21);
-            this.label3.TabIndex = 70;
-            this.label3.Text = "Tipo";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label2.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(968, 582);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(41, 21);
-            this.label2.TabIndex = 69;
-            this.label2.Text = "IVA";
-            // 
-            // cbxTipo
-            // 
-            this.cbxTipo.BackColor = System.Drawing.Color.Transparent;
-            this.cbxTipo.BorderRadius = 3;
-            this.cbxTipo.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.cbxTipo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(74)))), ((int)(((byte)(127)))));
-            this.cbxTipo.Items = new string[] {
-        "Producto",
-        "Delivery"};
-            this.cbxTipo.Location = new System.Drawing.Point(622, 631);
-            this.cbxTipo.Margin = new System.Windows.Forms.Padding(4);
-            this.cbxTipo.Name = "cbxTipo";
-            this.cbxTipo.NomalColor = System.Drawing.Color.White;
-            this.cbxTipo.onHoverColor = System.Drawing.Color.White;
-            this.cbxTipo.selectedIndex = -1;
-            this.cbxTipo.Size = new System.Drawing.Size(511, 55);
-            this.cbxTipo.TabIndex = 68;
-            // 
-            // cbxIva
-            // 
-            this.cbxIva.BackColor = System.Drawing.Color.Transparent;
-            this.cbxIva.BorderRadius = 3;
-            this.cbxIva.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.cbxIva.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(74)))), ((int)(((byte)(127)))));
-            this.cbxIva.Items = new string[] {
-        "0",
-        "5",
-        "10"};
-            this.cbxIva.Location = new System.Drawing.Point(622, 567);
-            this.cbxIva.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
-            this.cbxIva.Name = "cbxIva";
-            this.cbxIva.NomalColor = System.Drawing.Color.White;
-            this.cbxIva.onHoverColor = System.Drawing.Color.White;
-            this.cbxIva.selectedIndex = -1;
-            this.cbxIva.Size = new System.Drawing.Size(511, 55);
-            this.cbxIva.TabIndex = 67;
-            // 
             // bunifuTileButton2
             // 
             this.bunifuTileButton2.BackColor = System.Drawing.Color.IndianRed;
@@ -249,8 +190,6 @@
             this.txtCostoMedio.TabIndex = 53;
             this.txtCostoMedio.Text = "Costo Medio";
             this.txtCostoMedio.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.txtCostoMedio.Enter += new System.EventHandler(this.txtCostoMedio_Enter);
-            this.txtCostoMedio.Leave += new System.EventHandler(this.txtCostoMedio_Leave);
             // 
             // txtCosto
             // 
@@ -272,8 +211,6 @@
             this.txtCosto.TabIndex = 52;
             this.txtCosto.Text = "Costo";
             this.txtCosto.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.txtCosto.Enter += new System.EventHandler(this.txtCosto_Enter);
-            this.txtCosto.Leave += new System.EventHandler(this.txtCosto_Leave);
             // 
             // label1
             // 
@@ -298,6 +235,7 @@
             this.bunifuImageButton3.TabIndex = 65;
             this.bunifuImageButton3.TabStop = false;
             this.bunifuImageButton3.Zoom = 10;
+            this.bunifuImageButton3.Click += new System.EventHandler(this.bunifuImageButton3_Click);
             // 
             // bunifuImageButton2
             // 
@@ -311,6 +249,7 @@
             this.bunifuImageButton2.TabIndex = 64;
             this.bunifuImageButton2.TabStop = false;
             this.bunifuImageButton2.Zoom = 10;
+            this.bunifuImageButton2.Click += new System.EventHandler(this.bunifuImageButton2_Click);
             // 
             // bunifuImageButton1
             // 
@@ -337,6 +276,7 @@
             this.btnProveedor.TabIndex = 62;
             this.btnProveedor.TabStop = false;
             this.btnProveedor.Zoom = 10;
+            this.btnProveedor.Click += new System.EventHandler(this.btnProveedor_Click);
             // 
             // btnElegirMarca
             // 
@@ -350,6 +290,7 @@
             this.btnElegirMarca.TabIndex = 61;
             this.btnElegirMarca.TabStop = false;
             this.btnElegirMarca.Zoom = 10;
+            this.btnElegirMarca.Click += new System.EventHandler(this.btnElegirMarca_Click);
             // 
             // pictureBox2
             // 
@@ -362,6 +303,7 @@
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 60;
             this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
             // btnElegirCategoria
             // 
@@ -375,6 +317,7 @@
             this.btnElegirCategoria.TabIndex = 59;
             this.btnElegirCategoria.TabStop = false;
             this.btnElegirCategoria.Zoom = 10;
+            this.btnElegirCategoria.Click += new System.EventHandler(this.btnElegirCategoria_Click);
             // 
             // txtCodigoDeBarra
             // 
@@ -396,8 +339,6 @@
             this.txtCodigoDeBarra.TabIndex = 50;
             this.txtCodigoDeBarra.Text = "Codigo De Barra";
             this.txtCodigoDeBarra.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.txtCodigoDeBarra.Enter += new System.EventHandler(this.txtCodigoDeBarra_Enter);
-            this.txtCodigoDeBarra.Leave += new System.EventHandler(this.txtCodigoDeBarra_Leave);
             // 
             // txtProveedor
             // 
@@ -464,8 +405,6 @@
             this.txtCategoria.TabIndex = 47;
             this.txtCategoria.Text = "Categoria";
             this.txtCategoria.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.txtCategoria.Enter += new System.EventHandler(this.txtCategoria_Enter);
-            this.txtCategoria.Leave += new System.EventHandler(this.txtCategoria_Leave);
             // 
             // txtPrecioMayorista
             // 
@@ -487,30 +426,6 @@
             this.txtPrecioMayorista.TabIndex = 58;
             this.txtPrecioMayorista.Text = "Precio Mayorista";
             this.txtPrecioMayorista.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.txtPrecioMayorista.Enter += new System.EventHandler(this.txtPrecioMayorista_Enter);
-            this.txtPrecioMayorista.Leave += new System.EventHandler(this.txtPrecioMayorista_Leave);
-            // 
-            // txtPrecioUnitario
-            // 
-            this.txtPrecioUnitario.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.txtPrecioUnitario.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtPrecioUnitario.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.txtPrecioUnitario.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtPrecioUnitario.HintForeColor = System.Drawing.Color.Empty;
-            this.txtPrecioUnitario.HintText = "";
-            this.txtPrecioUnitario.isPassword = false;
-            this.txtPrecioUnitario.LineFocusedColor = System.Drawing.Color.Blue;
-            this.txtPrecioUnitario.LineIdleColor = System.Drawing.Color.Gray;
-            this.txtPrecioUnitario.LineMouseHoverColor = System.Drawing.Color.Blue;
-            this.txtPrecioUnitario.LineThickness = 3;
-            this.txtPrecioUnitario.Location = new System.Drawing.Point(622, 451);
-            this.txtPrecioUnitario.Margin = new System.Windows.Forms.Padding(4);
-            this.txtPrecioUnitario.Name = "txtPrecioUnitario";
-            this.txtPrecioUnitario.Size = new System.Drawing.Size(511, 55);
-            this.txtPrecioUnitario.TabIndex = 57;
-            this.txtPrecioUnitario.Text = "Precio Unitario";
-            this.txtPrecioUnitario.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.txtPrecioUnitario.Enter += new System.EventHandler(this.txtPrecioUnitario_Enter);
             // 
             // txtDescripcion
             // 
@@ -532,8 +447,6 @@
             this.txtDescripcion.TabIndex = 46;
             this.txtDescripcion.Text = "Descripcion";
             this.txtDescripcion.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.txtDescripcion.Enter += new System.EventHandler(this.txtDescripcion_Enter);
-            this.txtDescripcion.Leave += new System.EventHandler(this.txtDescripcion_Leave);
             // 
             // txtCodigoProducto
             // 
@@ -556,8 +469,6 @@
             this.txtCodigoProducto.TabIndex = 45;
             this.txtCodigoProducto.Text = "Codigo";
             this.txtCodigoProducto.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.txtCodigoProducto.Enter += new System.EventHandler(this.txtCodigoProducto_Enter);
-            this.txtCodigoProducto.Leave += new System.EventHandler(this.txtCodigoProducto_Leave);
             // 
             // ptbImagenProducto
             // 
@@ -583,6 +494,75 @@
             this.dtpFechaVencimiento.TabIndex = 51;
             this.dtpFechaVencimiento.Value = new System.DateTime(2020, 4, 16, 19, 6, 52, 585);
             // 
+            // txtPrecioUnitario
+            // 
+            this.txtPrecioUnitario.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.txtPrecioUnitario.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtPrecioUnitario.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.txtPrecioUnitario.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtPrecioUnitario.HintForeColor = System.Drawing.Color.Empty;
+            this.txtPrecioUnitario.HintText = "";
+            this.txtPrecioUnitario.isPassword = false;
+            this.txtPrecioUnitario.LineFocusedColor = System.Drawing.Color.Blue;
+            this.txtPrecioUnitario.LineIdleColor = System.Drawing.Color.Gray;
+            this.txtPrecioUnitario.LineMouseHoverColor = System.Drawing.Color.Blue;
+            this.txtPrecioUnitario.LineThickness = 3;
+            this.txtPrecioUnitario.Location = new System.Drawing.Point(622, 451);
+            this.txtPrecioUnitario.Margin = new System.Windows.Forms.Padding(4);
+            this.txtPrecioUnitario.Name = "txtPrecioUnitario";
+            this.txtPrecioUnitario.Size = new System.Drawing.Size(511, 55);
+            this.txtPrecioUnitario.TabIndex = 57;
+            this.txtPrecioUnitario.Text = "Precio Unitario";
+            this.txtPrecioUnitario.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            // 
+            // cbxIva
+            // 
+            this.cbxIva.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbxIva.FormattingEnabled = true;
+            this.cbxIva.Items.AddRange(new object[] {
+            "0",
+            "5",
+            "10"});
+            this.cbxIva.Location = new System.Drawing.Point(622, 566);
+            this.cbxIva.Name = "cbxIva";
+            this.cbxIva.Size = new System.Drawing.Size(511, 45);
+            this.cbxIva.TabIndex = 74;
+            this.cbxIva.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label2.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(1024, 575);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(41, 21);
+            this.label2.TabIndex = 69;
+            this.label2.Text = "IVA";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label3.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(1022, 626);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(44, 21);
+            this.label3.TabIndex = 70;
+            this.label3.Text = "Tipo";
+            // 
+            // cbxTipo
+            // 
+            this.cbxTipo.Font = new System.Drawing.Font("Century Gothic", 18F);
+            this.cbxTipo.FormattingEnabled = true;
+            this.cbxTipo.Items.AddRange(new object[] {
+            "Producto",
+            "Delivey"});
+            this.cbxTipo.Location = new System.Drawing.Point(622, 615);
+            this.cbxTipo.Name = "cbxTipo";
+            this.cbxTipo.Size = new System.Drawing.Size(511, 45);
+            this.cbxTipo.TabIndex = 75;
+            // 
             // FrmEditarConBotonProductos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -590,13 +570,13 @@
             this.BackgroundImage = global::Prod_Provee_Marc_Categ.Properties.Resources.fondoEditarNuevoProducto;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1161, 819);
-            this.Controls.Add(this.txtProveedor2);
-            this.Controls.Add(this.txtmarca2);
-            this.Controls.Add(this.txtCategoria2);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.cbxTipo);
             this.Controls.Add(this.cbxIva);
+            this.Controls.Add(this.txtProveedor2);
+            this.Controls.Add(this.txtmarca2);
+            this.Controls.Add(this.txtCategoria2);
             this.Controls.Add(this.bunifuTileButton2);
             this.Controls.Add(this.bunifuTileButton1);
             this.Controls.Add(this.txtCostoMedio);
@@ -625,6 +605,7 @@
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "FrmEditarConBotonProductos";
+            this.Load += new System.EventHandler(this.FrmEditarConBotonProductos_Load);
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).EndInit();
@@ -643,10 +624,6 @@
         public Bunifu.Framework.UI.BunifuMaterialTextbox txtProveedor2;
         public Bunifu.Framework.UI.BunifuMaterialTextbox txtmarca2;
         public Bunifu.Framework.UI.BunifuMaterialTextbox txtCategoria2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label2;
-        private Bunifu.Framework.UI.BunifuDropdown cbxTipo;
-        private Bunifu.Framework.UI.BunifuDropdown cbxIva;
         private Bunifu.Framework.UI.BunifuTileButton bunifuTileButton2;
         private Bunifu.Framework.UI.BunifuTileButton bunifuTileButton1;
         public Bunifu.Framework.UI.BunifuMaterialTextbox txtCostoMedio;
@@ -664,10 +641,14 @@
         public Bunifu.Framework.UI.BunifuMaterialTextbox txtMarca;
         public Bunifu.Framework.UI.BunifuMaterialTextbox txtCategoria;
         private Bunifu.Framework.UI.BunifuMaterialTextbox txtPrecioMayorista;
-        private Bunifu.Framework.UI.BunifuMaterialTextbox txtPrecioUnitario;
         private Bunifu.Framework.UI.BunifuMaterialTextbox txtDescripcion;
         private Bunifu.Framework.UI.BunifuMaterialTextbox txtCodigoProducto;
         private System.Windows.Forms.PictureBox ptbImagenProducto;
         private Bunifu.Framework.UI.BunifuDatepicker dtpFechaVencimiento;
+        private Bunifu.Framework.UI.BunifuMaterialTextbox txtPrecioUnitario;
+        private System.Windows.Forms.ComboBox cbxIva;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.ComboBox cbxTipo;
     }
 }

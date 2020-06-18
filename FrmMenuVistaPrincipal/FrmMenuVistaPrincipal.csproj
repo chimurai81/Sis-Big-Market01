@@ -118,6 +118,8 @@
     <Compile Include="FrmMenuPrincipal3.Designer.cs">
       <DependentUpon>FrmMenuPrincipal3.cs</DependentUpon>
     </Compile>
+    <Compile Include="ModuloDBConexion.cs" />
+    <Compile Include="moduloConsultas.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="FrmMenuPrincipal3.resx">
@@ -382,6 +384,10 @@
       <Project>{0b73fddb-8a19-4fb5-8f10-88f06625b2fb}</Project>
       <Name>ModuloCompra</Name>
     </ProjectReference>
+    <ProjectReference Include="..\ModuloVenta\ModuloVenta.csproj">
+      <Project>{856E32F7-25CC-4855-BC12-A16D9BEBA848}</Project>
+      <Name>ModuloVenta</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Prod_Provee_Marc_Categ\Prod_Provee_Marc_Categ.csproj">
       <Project>{BD07F6CA-134D-4B84-897D-7C141FC73953}</Project>
       <Name>Prod_Provee_Marc_Categ</Name>
@@ -396,6 +402,18 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\shopping-cart %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\update.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\loadingblue.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\loadingblue1.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\update1.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

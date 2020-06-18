@@ -28,7 +28,7 @@ namespace Prod_Provee_Marc_Categ.Formularios_De_Proveedores
         {
             string sql;
             //MySqlCommand comando;
-            sql = "update db_proveedores set RazonSocial=@RazonSocial, NroTelef=@NroTelef, Ruc=@Ruc, Direccion=@Direccion where id=@id";
+            sql = "update db_proveedores set RazonSocial=@RazonSocial, NroTelef=@NroTelef, Ruc=@Ruc, Direccion=@Direccion, Estado=@Estado where id=@id";
             MySqlCommand comando;
             try
             {
@@ -39,6 +39,7 @@ namespace Prod_Provee_Marc_Categ.Formularios_De_Proveedores
                 comando.Parameters.AddWithValue("@NroTelef", txtNroTelef.Text.ToUpperInvariant().ToString());
                 comando.Parameters.AddWithValue("@Ruc", txtRuc.Text.ToString());
                 comando.Parameters.AddWithValue("@Direccion", txtDireccion.Text.ToString());
+                comando.Parameters.AddWithValue("@Estado", estadosw);
                 comando.Parameters.AddWithValue("@id", id);
                 comando.ExecuteNonQuery();
 
@@ -69,7 +70,16 @@ namespace Prod_Provee_Marc_Categ.Formularios_De_Proveedores
                 txtRuc.Text = Convert.ToString(resultado.Tables["rsProveedor"].Rows[0]["Ruc"]);
                 txtNroTelef.Text = Convert.ToString(resultado.Tables["rsProveedor"].Rows[0]["NroTelef"]);
                 txtDireccion.Text = Convert.ToString(resultado.Tables["rsProveedor"].Rows[0]["Direccion"]);
+                string estado = Convert.ToString(resultado.Tables["rsProveedor"].Rows[0]["Estado"]);
 
+                if (estado == "1")
+                {
+                    bunifuiOSSwitch1.Value = true;
+                }
+                else
+                {
+                    bunifuiOSSwitch1.Value = false;
+                }
 
                 modulo.CerraConexion();
             }
@@ -93,6 +103,21 @@ namespace Prod_Provee_Marc_Categ.Formularios_De_Proveedores
         {
             string valordeid = FrmMenuProveedores.valor;
             cargarRegistro(valordeid);
+        }
+
+        public static string estadosw;
+        private void bunifuiOSSwitch1_Click(object sender, EventArgs e)
+        {
+            if (bunifuiOSSwitch1.Value == true)
+            {
+                estadosw = "1";
+            }
+            else if (bunifuiOSSwitch1.Value == false)
+            {
+                estadosw = "0";
+
+            }
+
         }
     }
 }

@@ -39,6 +39,8 @@
             this.bunifuImageButton1 = new Bunifu.Framework.UI.BunifuImageButton();
             this.bunifuDragControl1 = new Bunifu.Framework.UI.BunifuDragControl(this.components);
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
+            this.label2 = new System.Windows.Forms.Label();
+            this.bunifuiOSSwitch2 = new Bunifu.Framework.UI.BunifuiOSSwitch();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).BeginInit();
             this.SuspendLayout();
@@ -189,6 +191,34 @@
             this.bunifuElipse1.ElipseRadius = 5;
             this.bunifuElipse1.TargetControl = this;
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(366, 340);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(79, 25);
+            this.label2.TabIndex = 46;
+            this.label2.Text = "Estado:";
+            // 
+            // bunifuiOSSwitch2
+            // 
+            this.bunifuiOSSwitch2.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuiOSSwitch2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuiOSSwitch2.BackgroundImage")));
+            this.bunifuiOSSwitch2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.bunifuiOSSwitch2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bunifuiOSSwitch2.Location = new System.Drawing.Point(463, 340);
+            this.bunifuiOSSwitch2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bunifuiOSSwitch2.Name = "bunifuiOSSwitch2";
+            this.bunifuiOSSwitch2.OffColor = System.Drawing.Color.Gray;
+            this.bunifuiOSSwitch2.OnColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(202)))), ((int)(((byte)(94)))));
+            this.bunifuiOSSwitch2.Size = new System.Drawing.Size(43, 25);
+            this.bunifuiOSSwitch2.TabIndex = 45;
+            this.bunifuiOSSwitch2.Value = false;
+            this.bunifuiOSSwitch2.Click += new System.EventHandler(this.bunifuiOSSwitch1_Click);
+            // 
             // FrmModificarSinBoton
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -196,6 +226,8 @@
             this.BackgroundImage = global::Prod_Provee_Marc_Categ.Properties.Resources.MODIFICAR_PROVEEDOR;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(890, 500);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.bunifuiOSSwitch2);
             this.Controls.Add(this.txtId);
             this.Controls.Add(this.bunifuImageButton2);
             this.Controls.Add(this.bunifuImageButton1);
@@ -214,6 +246,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -228,5 +261,7 @@
         private Bunifu.Framework.UI.BunifuMaterialTextbox txtNombreProveedor;
         private Bunifu.Framework.UI.BunifuDragControl bunifuDragControl1;
         private Bunifu.Framework.UI.BunifuElipse bunifuElipse1;
+        private System.Windows.Forms.Label label2;
+        public Bunifu.Framework.UI.BunifuiOSSwitch bunifuiOSSwitch2;
     }
 }

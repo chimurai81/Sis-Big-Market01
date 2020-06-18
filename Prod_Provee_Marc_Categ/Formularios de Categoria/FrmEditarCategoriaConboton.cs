@@ -9,14 +9,15 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Prod_Provee_Marc_Categ.Formularios
+namespace Prod_Provee_Marc_Categ.Formularios_de_Categoria
 {
-    public partial class FrmModificarSinBoton : Form
+    public partial class FrmEditarCategoriaConboton : Form
     {
-        public FrmModificarSinBoton()
+        public FrmEditarCategoriaConboton()
         {
             InitializeComponent();
         }
+
         public void cargarRegistro(string id)
         {
 
@@ -27,34 +28,35 @@ namespace Prod_Provee_Marc_Categ.Formularios
             try
             {
                 modulo.AbrirConexion();
-                sql = "select * from db_proveedores where id= " + id;
+                sql = "select * from db_categoria where id = " + id;
                 consulta = new MySqlDataAdapter(sql, modulo.conexion);
                 consulta.Fill(resultado, "rsProveedor");
-                int n;
-                n = resultado.Tables["rsProveedor"].Rows.Count;
-
-                txtId.Text = Convert.ToString(resultado.Tables["rsProveedor"].Rows[0]["id"]);
-                txtNombreProveedor.Text = Convert.ToString(resultado.Tables["rsProveedor"].Rows[0]["RazonSocial"]);
-                txtRuc.Text = Convert.ToString(resultado.Tables["rsProveedor"].Rows[0]["NroTelef"]);
-                txtNroTelef.Text = Convert.ToString(resultado.Tables["rsProveedor"].Rows[0]["Ruc"]);
-                txtDireccion.Text = Convert.ToString(resultado.Tables["rsProveedor"].Rows[0]["Direccion"]);
+                //int n;
+                //n = resultado.Tables["rsProveedor"].Rows.Count;
+                //txtId.Text = Convert.ToString(resultado.Tables["rsProveedor"].Rows[0]["id"]);
+                txtNombreProveedor.Text = Convert.ToString(resultado.Tables["rsProveedor"].Rows[0]["Descripcion"]);
                 string estado = Convert.ToString(resultado.Tables["rsProveedor"].Rows[0]["Estado"]);
                 if (estado == "1")
                 {
-                    bunifuiOSSwitch2.Value = true;
+                    bunifuiOSSwitch1.Value = true;
                 }
                 else
                 {
-                    bunifuiOSSwitch2.Value = false;
+                    bunifuiOSSwitch1.Value = false;
                 }
-
                 modulo.CerraConexion();
             }
             catch (MySqlException ex)
             {
-                MessageBox.Show(ex.Message);
+                MessageBox.Show(ex.StackTrace.ToString());
 
             }
+        }
+
+        private void FrmEditarCategoriaConboton_Load(object sender, EventArgs e)
+        {
+            string valordeid = FrmMenuCategorias.valor;
+            cargarRegistro(valordeid);
         }
 
         private void bunifuImageButton2_Click(object sender, EventArgs e)
@@ -62,28 +64,23 @@ namespace Prod_Provee_Marc_Categ.Formularios
             this.Close();
         }
 
-        private void FrmModificarSinBoton_Load(object sender, EventArgs e)
+        private void pictureBox1_Click(object sender, EventArgs e)
         {
-           string cod = FrmMenuProveedores.valor;
-            cargarRegistro(cod);
+            this.Close();
         }
 
-        //para editar
-        public void EditarProveedor(string id)
+        public void EditarCategoria(string id)
         {
             string sql;
             //MySqlCommand comando;
-            sql = "update db_proveedores set RazonSocial=@RazonSocial, NroTelef=@NroTelef, Ruc=@Ruc, Direccion=@Direccion, Estado=@Estado  where id=@id";
+            sql = "update db_categoria set Descripcion=@Descripcion, Estado=@Estado where id=@id";
             MySqlCommand comando;
             try
             {
                 modulo.AbrirConexion();
                 comando = new MySqlCommand(sql, modulo.conexion);
 
-                comando.Parameters.AddWithValue("@RazonSocial", txtNombreProveedor.Text.ToUpperInvariant().ToString());
-                comando.Parameters.AddWithValue("@NroTelef", txtNroTelef.Text.ToUpperInvariant().ToString());
-                comando.Parameters.AddWithValue("@Ruc", txtRuc.Text.ToString());
-                comando.Parameters.AddWithValue("@Direccion", txtDireccion.Text.ToString());
+                comando.Parameters.AddWithValue("@Descripcion", txtNombreProveedor.Text.ToUpperInvariant().ToString());
                 comando.Parameters.AddWithValue("@Estado", estadosw);
                 comando.Parameters.AddWithValue("@id", id);
                 comando.ExecuteNonQuery();
@@ -96,26 +93,26 @@ namespace Prod_Provee_Marc_Categ.Formularios
         }
         private void bunifuImageButton1_Click(object sender, EventArgs e)
         {
-            string id = txtId.Text;
-            EditarProveedor(id);
-            FrmMenuProveedores frm = (FrmMenuProveedores)Owner;
-            frm.GetAll("");
+            string id = FrmMenuCategorias.valor;
+            EditarCategoria(id);
+            FrmMenuCategorias frm3 = (FrmMenuCategorias)Owner;
+            frm3.GetAll("");
             this.Close();
+     
         }
 
         public static string estadosw;
         private void bunifuiOSSwitch1_Click(object sender, EventArgs e)
         {
-            if (bunifuiOSSwitch2.Value == true)
+            if (bunifuiOSSwitch1.Value == true)
             {
                 estadosw = "1";
             }
-            else if (bunifuiOSSwitch2.Value == false)
+            else if (bunifuiOSSwitch1.Value == false)
             {
                 estadosw = "0";
 
             }
-
         }
     }
 }

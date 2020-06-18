@@ -16,6 +16,9 @@ using MySql.Data.MySqlClient;
 using Sis_Supermercado_TallerV.RegistroUsers;
 using MensajesPersonalizados;
 using ModuloCompra;
+using Prod_Provee_Marc_Categ.Formularios_de_Marca;
+using ModuloVenta;
+using FrmMenuVistaPrincipal;
 
 namespace MenuPrincipal
 {
@@ -93,7 +96,28 @@ namespace MenuPrincipal
         private void FrmMenuPrincipal_Load(object sender, EventArgs e)
         {
             bunifuFormFadeTransition1.ShowAsyc(this);
-            
+           
+            moduloConsultas moduloStockMinimo = new moduloConsultas();
+            DataSet valorDatos;
+            //consulta Stock Minimo
+            valorDatos = moduloStockMinimo.CargarStockMinimoDeProducto("");
+            grillaStockMinimoFrmPrinc.DataSource = valorDatos.Tables["rsProducto"];
+            //consulta cantidad cliente
+            valorDatos = moduloStockMinimo.CantidadClientes("");
+            lblCantClientes.Text= Convert.ToString(valorDatos.Tables["rsProducto"].Rows[0]["cant"]);
+            //consulta cantidad usuarios
+            valorDatos = moduloStockMinimo.CantidadUsuarios("");
+            lblCantUsuarios.Text = Convert.ToString(valorDatos.Tables["rsProducto"].Rows[0]["cant"]);
+            //consulta cantidad proveedores
+            valorDatos = moduloStockMinimo.CantidadProveedores("");
+            lblCantProveedores.Text = Convert.ToString(valorDatos.Tables["rsProducto"].Rows[0]["cant"]);
+            //consulta cantidad productos
+            valorDatos = moduloStockMinimo.CantidadProductos("");
+            lblCantProductos.Text = Convert.ToString(valorDatos.Tables["rsProducto"].Rows[0]["cant"]);
+            //consulta cantidad marcas
+            valorDatos = moduloStockMinimo.CantidadMarcas("");
+            lblCantMarcas.Text = Convert.ToString(valorDatos.Tables["rsProducto"].Rows[0]["cant"]);
+
         }
 
         private void AbrirFormulario<MiForm>() where MiForm : Form, new()
@@ -157,6 +181,7 @@ namespace MenuPrincipal
 
         private void btnVentas_Click(object sender, EventArgs e)
         {
+            AbrirFormulario<FrmMenuVenta>();
             lblTitulodeFormulario.Text = "VENTAS";
             hideSubMenu();//siempre al final de todo
         }
@@ -243,8 +268,7 @@ namespace MenuPrincipal
         public void RECUPERAR_ESTADOS_ACTIVOS_DE_LOS_USUARIOS(string condicion)
         {
             string sql;
-            string passEncrip;
-            
+                        
             sql = "select * from db_usuarios where Activo = '1'" + condicion;
 
 
@@ -321,6 +345,42 @@ namespace MenuPrincipal
             lblTitulodeFormulario.Text = "COMPRAS";
             hideSubMenu();//siempre al final de todo
 
+        }
+
+        private void btnSubMenuMarca_Click(object sender, EventArgs e)
+        {
+            AbrirFormulario<FrmMenuMarca>();
+            lblTitulodeFormulario.Text = "CATEGORIA";
+            hideSubMenu();//siempre al final de todo
+        }
+
+        private void PanelContenedor_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void bunifuImageButton1_Click(object sender, EventArgs e)
+        {
+            moduloConsultas moduloStockMinimo = new moduloConsultas();
+            DataSet valorDatos;
+            //consulta Stock Minimo
+            valorDatos = moduloStockMinimo.CargarStockMinimoDeProducto("");
+            grillaStockMinimoFrmPrinc.DataSource = valorDatos.Tables["rsProducto"];
+            //consulta cantidad cliente
+            valorDatos = moduloStockMinimo.CantidadClientes("");
+            lblCantClientes.Text = Convert.ToString(valorDatos.Tables["rsProducto"].Rows[0]["cant"]);
+            //consulta cantidad usuarios
+            valorDatos = moduloStockMinimo.CantidadUsuarios("");
+            lblCantUsuarios.Text = Convert.ToString(valorDatos.Tables["rsProducto"].Rows[0]["cant"]);
+            //consulta cantidad proveedores
+            valorDatos = moduloStockMinimo.CantidadProveedores("");
+            lblCantProveedores.Text = Convert.ToString(valorDatos.Tables["rsProducto"].Rows[0]["cant"]);
+            //consulta cantidad productos
+            valorDatos = moduloStockMinimo.CantidadProductos("");
+            lblCantProductos.Text = Convert.ToString(valorDatos.Tables["rsProducto"].Rows[0]["cant"]);
+            //consulta cantidad marcas
+            valorDatos = moduloStockMinimo.CantidadMarcas("");
+            lblCantMarcas.Text = Convert.ToString(valorDatos.Tables["rsProducto"].Rows[0]["cant"]);
         }
     }
 }
