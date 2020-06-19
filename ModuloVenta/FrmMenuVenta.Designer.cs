@@ -282,6 +282,7 @@
             this.txtIdCliente.Name = "txtIdCliente";
             this.txtIdCliente.Size = new System.Drawing.Size(209, 31);
             this.txtIdCliente.TabIndex = 45;
+            this.txtIdCliente.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtIdCliente_KeyPress);
             // 
             // bunifuCustomLabel7
             // 
@@ -1011,6 +1012,7 @@
             this.Controls.Add(this.txt);
             this.Name = "FrmMenuVenta";
             this.Text = "frmMenuVenta";
+            this.Load += new System.EventHandler(this.FrmMenuVenta_Load);
             this.GroupBox1.ResumeLayout(false);
             this.GroupBox1.PerformLayout();
             this.GroupBox2.ResumeLayout(false);

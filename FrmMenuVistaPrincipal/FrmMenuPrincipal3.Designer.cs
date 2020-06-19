@@ -33,10 +33,16 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmMenuPrincipal3));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            BunifuAnimatorNS.Animation animation2 = new BunifuAnimatorNS.Animation();
             BunifuAnimatorNS.Animation animation3 = new BunifuAnimatorNS.Animation();
+            BunifuAnimatorNS.Animation animation2 = new BunifuAnimatorNS.Animation();
             this.bunifuTransition1 = new BunifuAnimatorNS.BunifuTransition(this.components);
             this.PanelContenedor = new System.Windows.Forms.Panel();
+            this.lblCantCaja = new System.Windows.Forms.Label();
+            this.lblCantMarcas = new System.Windows.Forms.Label();
+            this.lblCantProductos = new System.Windows.Forms.Label();
+            this.lblCantProveedores = new System.Windows.Forms.Label();
+            this.lblCantUsuarios = new System.Windows.Forms.Label();
+            this.lblCantClientes = new System.Windows.Forms.Label();
             this.lblstockminimo = new System.Windows.Forms.Label();
             this.grillaStockMinimoFrmPrinc = new Bunifu.Framework.UI.BunifuCustomDataGrid();
             this.label3 = new System.Windows.Forms.Label();
@@ -50,12 +56,12 @@
             this.bunifuFormFadeTransition1 = new Bunifu.Framework.UI.BunifuFormFadeTransition(this.components);
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.transicionPanelBtnProductos = new BunifuAnimatorNS.BunifuTransition(this.components);
-            this.lblCantClientes = new System.Windows.Forms.Label();
-            this.lblCantUsuarios = new System.Windows.Forms.Label();
-            this.lblCantProveedores = new System.Windows.Forms.Label();
-            this.lblCantProductos = new System.Windows.Forms.Label();
-            this.lblCantMarcas = new System.Windows.Forms.Label();
-            this.lblCantCaja = new System.Windows.Forms.Label();
+            this.pictureBox13 = new System.Windows.Forms.PictureBox();
+            this.pictureBox12 = new System.Windows.Forms.PictureBox();
+            this.pictureBox11 = new System.Windows.Forms.PictureBox();
+            this.pictureBox10 = new System.Windows.Forms.PictureBox();
+            this.pictureBox9 = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.bunifuImageButton1 = new Bunifu.Framework.UI.BunifuImageButton();
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
@@ -99,6 +105,12 @@
             this.PanelContenedor.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grillaStockMinimoFrmPrinc)).BeginInit();
             this.panelTitleBar.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
@@ -149,6 +161,12 @@
             // PanelContenedor
             // 
             this.PanelContenedor.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.PanelContenedor.Controls.Add(this.pictureBox13);
+            this.PanelContenedor.Controls.Add(this.pictureBox12);
+            this.PanelContenedor.Controls.Add(this.pictureBox11);
+            this.PanelContenedor.Controls.Add(this.pictureBox10);
+            this.PanelContenedor.Controls.Add(this.pictureBox9);
+            this.PanelContenedor.Controls.Add(this.pictureBox1);
             this.PanelContenedor.Controls.Add(this.bunifuImageButton1);
             this.PanelContenedor.Controls.Add(this.lblCantCaja);
             this.PanelContenedor.Controls.Add(this.lblCantMarcas);
@@ -177,6 +195,95 @@
             this.PanelContenedor.Size = new System.Drawing.Size(1130, 900);
             this.PanelContenedor.TabIndex = 8;
             this.PanelContenedor.Paint += new System.Windows.Forms.PaintEventHandler(this.PanelContenedor_Paint);
+            // 
+            // lblCantCaja
+            // 
+            this.lblCantCaja.AutoSize = true;
+            this.transicionPanelBtnProductos.SetDecoration(this.lblCantCaja, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransition2.SetDecoration(this.lblCantCaja, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransition1.SetDecoration(this.lblCantCaja, BunifuAnimatorNS.DecorationType.None);
+            this.lblCantCaja.Font = new System.Drawing.Font("Swis721 Hv BT", 22.2F);
+            this.lblCantCaja.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(60)))), ((int)(((byte)(74)))));
+            this.lblCantCaja.Location = new System.Drawing.Point(827, 285);
+            this.lblCantCaja.Name = "lblCantCaja";
+            this.lblCantCaja.Size = new System.Drawing.Size(42, 46);
+            this.lblCantCaja.TabIndex = 19;
+            this.lblCantCaja.Text = "0";
+            // 
+            // lblCantMarcas
+            // 
+            this.lblCantMarcas.AutoSize = true;
+            this.transicionPanelBtnProductos.SetDecoration(this.lblCantMarcas, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransition2.SetDecoration(this.lblCantMarcas, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransition1.SetDecoration(this.lblCantMarcas, BunifuAnimatorNS.DecorationType.None);
+            this.lblCantMarcas.Font = new System.Drawing.Font("Swis721 Hv BT", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCantMarcas.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(60)))), ((int)(((byte)(74)))));
+            this.lblCantMarcas.Location = new System.Drawing.Point(1015, 283);
+            this.lblCantMarcas.Name = "lblCantMarcas";
+            this.lblCantMarcas.Size = new System.Drawing.Size(44, 48);
+            this.lblCantMarcas.TabIndex = 18;
+            this.lblCantMarcas.Text = "0";
+            this.lblCantMarcas.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // lblCantProductos
+            // 
+            this.lblCantProductos.AutoSize = true;
+            this.transicionPanelBtnProductos.SetDecoration(this.lblCantProductos, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransition2.SetDecoration(this.lblCantProductos, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransition1.SetDecoration(this.lblCantProductos, BunifuAnimatorNS.DecorationType.None);
+            this.lblCantProductos.Font = new System.Drawing.Font("Swis721 Hv BT", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCantProductos.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(60)))), ((int)(((byte)(74)))));
+            this.lblCantProductos.Location = new System.Drawing.Point(646, 284);
+            this.lblCantProductos.Name = "lblCantProductos";
+            this.lblCantProductos.Size = new System.Drawing.Size(44, 48);
+            this.lblCantProductos.TabIndex = 17;
+            this.lblCantProductos.Text = "0";
+            this.lblCantProductos.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // lblCantProveedores
+            // 
+            this.lblCantProveedores.AutoSize = true;
+            this.transicionPanelBtnProductos.SetDecoration(this.lblCantProveedores, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransition2.SetDecoration(this.lblCantProveedores, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransition1.SetDecoration(this.lblCantProveedores, BunifuAnimatorNS.DecorationType.None);
+            this.lblCantProveedores.Font = new System.Drawing.Font("Swis721 Hv BT", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCantProveedores.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(60)))), ((int)(((byte)(74)))));
+            this.lblCantProveedores.Location = new System.Drawing.Point(462, 283);
+            this.lblCantProveedores.Name = "lblCantProveedores";
+            this.lblCantProveedores.Size = new System.Drawing.Size(44, 48);
+            this.lblCantProveedores.TabIndex = 16;
+            this.lblCantProveedores.Text = "0";
+            this.lblCantProveedores.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // lblCantUsuarios
+            // 
+            this.lblCantUsuarios.AutoSize = true;
+            this.transicionPanelBtnProductos.SetDecoration(this.lblCantUsuarios, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransition2.SetDecoration(this.lblCantUsuarios, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransition1.SetDecoration(this.lblCantUsuarios, BunifuAnimatorNS.DecorationType.None);
+            this.lblCantUsuarios.Font = new System.Drawing.Font("Swis721 Hv BT", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCantUsuarios.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(60)))), ((int)(((byte)(74)))));
+            this.lblCantUsuarios.Location = new System.Drawing.Point(282, 282);
+            this.lblCantUsuarios.Name = "lblCantUsuarios";
+            this.lblCantUsuarios.Size = new System.Drawing.Size(44, 48);
+            this.lblCantUsuarios.TabIndex = 15;
+            this.lblCantUsuarios.Text = "0";
+            this.lblCantUsuarios.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // lblCantClientes
+            // 
+            this.lblCantClientes.AutoSize = true;
+            this.transicionPanelBtnProductos.SetDecoration(this.lblCantClientes, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransition2.SetDecoration(this.lblCantClientes, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransition1.SetDecoration(this.lblCantClientes, BunifuAnimatorNS.DecorationType.None);
+            this.lblCantClientes.Font = new System.Drawing.Font("Swis721 Hv BT", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCantClientes.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(60)))), ((int)(((byte)(74)))));
+            this.lblCantClientes.Location = new System.Drawing.Point(94, 282);
+            this.lblCantClientes.Name = "lblCantClientes";
+            this.lblCantClientes.Size = new System.Drawing.Size(44, 48);
+            this.lblCantClientes.TabIndex = 14;
+            this.lblCantClientes.Text = "0";
+            this.lblCantClientes.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // lblstockminimo
             // 
@@ -313,22 +420,22 @@
             // 
             this.bunifuTransition2.AnimationType = BunifuAnimatorNS.AnimationType.HorizSlideAndRotate;
             this.bunifuTransition2.Cursor = null;
-            animation2.AnimateOnlyDifferences = true;
-            animation2.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.BlindCoeff")));
-            animation2.LeafCoeff = 0F;
-            animation2.MaxTime = 1F;
-            animation2.MinTime = 0F;
-            animation2.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.MosaicCoeff")));
-            animation2.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation2.MosaicShift")));
-            animation2.MosaicSize = 0;
-            animation2.Padding = new System.Windows.Forms.Padding(50);
-            animation2.RotateCoeff = 0.3F;
-            animation2.RotateLimit = 0.2F;
-            animation2.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.ScaleCoeff")));
-            animation2.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.SlideCoeff")));
-            animation2.TimeCoeff = 0F;
-            animation2.TransparencyCoeff = 0F;
-            this.bunifuTransition2.DefaultAnimation = animation2;
+            animation3.AnimateOnlyDifferences = true;
+            animation3.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation3.BlindCoeff")));
+            animation3.LeafCoeff = 0F;
+            animation3.MaxTime = 1F;
+            animation3.MinTime = 0F;
+            animation3.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation3.MosaicCoeff")));
+            animation3.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation3.MosaicShift")));
+            animation3.MosaicSize = 0;
+            animation3.Padding = new System.Windows.Forms.Padding(50);
+            animation3.RotateCoeff = 0.3F;
+            animation3.RotateLimit = 0.2F;
+            animation3.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation3.ScaleCoeff")));
+            animation3.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation3.SlideCoeff")));
+            animation3.TimeCoeff = 0F;
+            animation3.TransparencyCoeff = 0F;
+            this.bunifuTransition2.DefaultAnimation = animation3;
             this.bunifuTransition2.Interval = 5;
             this.bunifuTransition2.MaxAnimationTime = 1000;
             // 
@@ -356,111 +463,100 @@
             // 
             this.transicionPanelBtnProductos.AnimationType = BunifuAnimatorNS.AnimationType.Transparent;
             this.transicionPanelBtnProductos.Cursor = null;
-            animation3.AnimateOnlyDifferences = true;
-            animation3.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation3.BlindCoeff")));
-            animation3.LeafCoeff = 0F;
-            animation3.MaxTime = 1F;
-            animation3.MinTime = 0F;
-            animation3.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation3.MosaicCoeff")));
-            animation3.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation3.MosaicShift")));
-            animation3.MosaicSize = 0;
-            animation3.Padding = new System.Windows.Forms.Padding(0);
-            animation3.RotateCoeff = 0F;
-            animation3.RotateLimit = 0F;
-            animation3.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation3.ScaleCoeff")));
-            animation3.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation3.SlideCoeff")));
-            animation3.TimeCoeff = 0F;
-            animation3.TransparencyCoeff = 1F;
-            this.transicionPanelBtnProductos.DefaultAnimation = animation3;
+            animation2.AnimateOnlyDifferences = true;
+            animation2.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.BlindCoeff")));
+            animation2.LeafCoeff = 0F;
+            animation2.MaxTime = 1F;
+            animation2.MinTime = 0F;
+            animation2.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.MosaicCoeff")));
+            animation2.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation2.MosaicShift")));
+            animation2.MosaicSize = 0;
+            animation2.Padding = new System.Windows.Forms.Padding(0);
+            animation2.RotateCoeff = 0F;
+            animation2.RotateLimit = 0F;
+            animation2.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.ScaleCoeff")));
+            animation2.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.SlideCoeff")));
+            animation2.TimeCoeff = 0F;
+            animation2.TransparencyCoeff = 1F;
+            this.transicionPanelBtnProductos.DefaultAnimation = animation2;
             // 
-            // lblCantClientes
+            // pictureBox13
             // 
-            this.lblCantClientes.AutoSize = true;
-            this.transicionPanelBtnProductos.SetDecoration(this.lblCantClientes, BunifuAnimatorNS.DecorationType.None);
-            this.bunifuTransition2.SetDecoration(this.lblCantClientes, BunifuAnimatorNS.DecorationType.None);
-            this.bunifuTransition1.SetDecoration(this.lblCantClientes, BunifuAnimatorNS.DecorationType.None);
-            this.lblCantClientes.Font = new System.Drawing.Font("Swis721 Hv BT", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCantClientes.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(60)))), ((int)(((byte)(74)))));
-            this.lblCantClientes.Location = new System.Drawing.Point(102, 229);
-            this.lblCantClientes.Name = "lblCantClientes";
-            this.lblCantClientes.Size = new System.Drawing.Size(44, 48);
-            this.lblCantClientes.TabIndex = 14;
-            this.lblCantClientes.Text = "0";
-            this.lblCantClientes.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.transicionPanelBtnProductos.SetDecoration(this.pictureBox13, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransition2.SetDecoration(this.pictureBox13, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransition1.SetDecoration(this.pictureBox13, BunifuAnimatorNS.DecorationType.None);
+            this.pictureBox13.Image = global::FrmMenuVistaPrincipal.Properties.Resources.discount;
+            this.pictureBox13.Location = new System.Drawing.Point(988, 200);
+            this.pictureBox13.Name = "pictureBox13";
+            this.pictureBox13.Size = new System.Drawing.Size(94, 79);
+            this.pictureBox13.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox13.TabIndex = 38;
+            this.pictureBox13.TabStop = false;
             // 
-            // lblCantUsuarios
+            // pictureBox12
             // 
-            this.lblCantUsuarios.AutoSize = true;
-            this.transicionPanelBtnProductos.SetDecoration(this.lblCantUsuarios, BunifuAnimatorNS.DecorationType.None);
-            this.bunifuTransition2.SetDecoration(this.lblCantUsuarios, BunifuAnimatorNS.DecorationType.None);
-            this.bunifuTransition1.SetDecoration(this.lblCantUsuarios, BunifuAnimatorNS.DecorationType.None);
-            this.lblCantUsuarios.Font = new System.Drawing.Font("Swis721 Hv BT", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCantUsuarios.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(60)))), ((int)(((byte)(74)))));
-            this.lblCantUsuarios.Location = new System.Drawing.Point(287, 229);
-            this.lblCantUsuarios.Name = "lblCantUsuarios";
-            this.lblCantUsuarios.Size = new System.Drawing.Size(44, 48);
-            this.lblCantUsuarios.TabIndex = 15;
-            this.lblCantUsuarios.Text = "0";
-            this.lblCantUsuarios.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.transicionPanelBtnProductos.SetDecoration(this.pictureBox12, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransition2.SetDecoration(this.pictureBox12, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransition1.SetDecoration(this.pictureBox12, BunifuAnimatorNS.DecorationType.None);
+            this.pictureBox12.Image = global::FrmMenuVistaPrincipal.Properties.Resources.money__1_;
+            this.pictureBox12.Location = new System.Drawing.Point(798, 200);
+            this.pictureBox12.Name = "pictureBox12";
+            this.pictureBox12.Size = new System.Drawing.Size(103, 79);
+            this.pictureBox12.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox12.TabIndex = 37;
+            this.pictureBox12.TabStop = false;
             // 
-            // lblCantProveedores
+            // pictureBox11
             // 
-            this.lblCantProveedores.AutoSize = true;
-            this.transicionPanelBtnProductos.SetDecoration(this.lblCantProveedores, BunifuAnimatorNS.DecorationType.None);
-            this.bunifuTransition2.SetDecoration(this.lblCantProveedores, BunifuAnimatorNS.DecorationType.None);
-            this.bunifuTransition1.SetDecoration(this.lblCantProveedores, BunifuAnimatorNS.DecorationType.None);
-            this.lblCantProveedores.Font = new System.Drawing.Font("Swis721 Hv BT", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCantProveedores.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(60)))), ((int)(((byte)(74)))));
-            this.lblCantProveedores.Location = new System.Drawing.Point(463, 229);
-            this.lblCantProveedores.Name = "lblCantProveedores";
-            this.lblCantProveedores.Size = new System.Drawing.Size(44, 48);
-            this.lblCantProveedores.TabIndex = 16;
-            this.lblCantProveedores.Text = "0";
-            this.lblCantProveedores.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.transicionPanelBtnProductos.SetDecoration(this.pictureBox11, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransition2.SetDecoration(this.pictureBox11, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransition1.SetDecoration(this.pictureBox11, BunifuAnimatorNS.DecorationType.None);
+            this.pictureBox11.Image = global::FrmMenuVistaPrincipal.Properties.Resources.boxes;
+            this.pictureBox11.Location = new System.Drawing.Point(614, 200);
+            this.pictureBox11.Name = "pictureBox11";
+            this.pictureBox11.Size = new System.Drawing.Size(107, 79);
+            this.pictureBox11.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox11.TabIndex = 36;
+            this.pictureBox11.TabStop = false;
             // 
-            // lblCantProductos
+            // pictureBox10
             // 
-            this.lblCantProductos.AutoSize = true;
-            this.transicionPanelBtnProductos.SetDecoration(this.lblCantProductos, BunifuAnimatorNS.DecorationType.None);
-            this.bunifuTransition2.SetDecoration(this.lblCantProductos, BunifuAnimatorNS.DecorationType.None);
-            this.bunifuTransition1.SetDecoration(this.lblCantProductos, BunifuAnimatorNS.DecorationType.None);
-            this.lblCantProductos.Font = new System.Drawing.Font("Swis721 Hv BT", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCantProductos.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(60)))), ((int)(((byte)(74)))));
-            this.lblCantProductos.Location = new System.Drawing.Point(647, 229);
-            this.lblCantProductos.Name = "lblCantProductos";
-            this.lblCantProductos.Size = new System.Drawing.Size(44, 48);
-            this.lblCantProductos.TabIndex = 17;
-            this.lblCantProductos.Text = "0";
-            this.lblCantProductos.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.transicionPanelBtnProductos.SetDecoration(this.pictureBox10, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransition2.SetDecoration(this.pictureBox10, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransition1.SetDecoration(this.pictureBox10, BunifuAnimatorNS.DecorationType.None);
+            this.pictureBox10.Image = global::FrmMenuVistaPrincipal.Properties.Resources.truck;
+            this.pictureBox10.Location = new System.Drawing.Point(431, 200);
+            this.pictureBox10.Name = "pictureBox10";
+            this.pictureBox10.Size = new System.Drawing.Size(104, 79);
+            this.pictureBox10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox10.TabIndex = 35;
+            this.pictureBox10.TabStop = false;
             // 
-            // lblCantMarcas
+            // pictureBox9
             // 
-            this.lblCantMarcas.AutoSize = true;
-            this.transicionPanelBtnProductos.SetDecoration(this.lblCantMarcas, BunifuAnimatorNS.DecorationType.None);
-            this.bunifuTransition2.SetDecoration(this.lblCantMarcas, BunifuAnimatorNS.DecorationType.None);
-            this.bunifuTransition1.SetDecoration(this.lblCantMarcas, BunifuAnimatorNS.DecorationType.None);
-            this.lblCantMarcas.Font = new System.Drawing.Font("Swis721 Hv BT", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCantMarcas.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(60)))), ((int)(((byte)(74)))));
-            this.lblCantMarcas.Location = new System.Drawing.Point(1016, 229);
-            this.lblCantMarcas.Name = "lblCantMarcas";
-            this.lblCantMarcas.Size = new System.Drawing.Size(44, 48);
-            this.lblCantMarcas.TabIndex = 18;
-            this.lblCantMarcas.Text = "0";
-            this.lblCantMarcas.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.transicionPanelBtnProductos.SetDecoration(this.pictureBox9, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransition2.SetDecoration(this.pictureBox9, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransition1.SetDecoration(this.pictureBox9, BunifuAnimatorNS.DecorationType.None);
+            this.pictureBox9.Image = global::FrmMenuVistaPrincipal.Properties.Resources.worker__1_;
+            this.pictureBox9.Location = new System.Drawing.Point(246, 200);
+            this.pictureBox9.Name = "pictureBox9";
+            this.pictureBox9.Size = new System.Drawing.Size(111, 79);
+            this.pictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox9.TabIndex = 34;
+            this.pictureBox9.TabStop = false;
             // 
-            // lblCantCaja
+            // pictureBox1
             // 
-            this.lblCantCaja.AutoSize = true;
-            this.transicionPanelBtnProductos.SetDecoration(this.lblCantCaja, BunifuAnimatorNS.DecorationType.None);
-            this.bunifuTransition2.SetDecoration(this.lblCantCaja, BunifuAnimatorNS.DecorationType.None);
-            this.bunifuTransition1.SetDecoration(this.lblCantCaja, BunifuAnimatorNS.DecorationType.None);
-            this.lblCantCaja.Font = new System.Drawing.Font("Swis721 Hv BT", 22.2F);
-            this.lblCantCaja.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(60)))), ((int)(((byte)(74)))));
-            this.lblCantCaja.Location = new System.Drawing.Point(828, 229);
-            this.lblCantCaja.Name = "lblCantCaja";
-            this.lblCantCaja.Size = new System.Drawing.Size(42, 46);
-            this.lblCantCaja.TabIndex = 19;
-            this.lblCantCaja.Text = "0";
+            this.transicionPanelBtnProductos.SetDecoration(this.pictureBox1, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransition2.SetDecoration(this.pictureBox1, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransition1.SetDecoration(this.pictureBox1, BunifuAnimatorNS.DecorationType.None);
+            this.pictureBox1.Image = global::FrmMenuVistaPrincipal.Properties.Resources.value;
+            this.pictureBox1.Location = new System.Drawing.Point(70, 200);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(104, 79);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 33;
+            this.pictureBox1.TabStop = false;
             // 
             // bunifuImageButton1
             // 
@@ -1411,6 +1507,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.grillaStockMinimoFrmPrinc)).EndInit();
             this.panelTitleBar.ResumeLayout(false);
             this.panelTitleBar.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
@@ -1503,6 +1605,12 @@
         private System.Windows.Forms.Label lblCantUsuarios;
         private System.Windows.Forms.Label lblCantClientes;
         private Bunifu.Framework.UI.BunifuImageButton bunifuImageButton1;
+        private System.Windows.Forms.PictureBox pictureBox13;
+        private System.Windows.Forms.PictureBox pictureBox12;
+        private System.Windows.Forms.PictureBox pictureBox11;
+        private System.Windows.Forms.PictureBox pictureBox10;
+        private System.Windows.Forms.PictureBox pictureBox9;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
 
