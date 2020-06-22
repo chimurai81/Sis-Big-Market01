@@ -197,7 +197,7 @@
             this.cbxCondicion.Name = "cbxCondicion";
             this.cbxCondicion.NomalColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
             this.cbxCondicion.onHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(129)))), ((int)(((byte)(77)))));
-            this.cbxCondicion.selectedIndex = -1;
+            this.cbxCondicion.selectedIndex = 0;
             this.cbxCondicion.Size = new System.Drawing.Size(364, 36);
             this.cbxCondicion.TabIndex = 20;
             // 

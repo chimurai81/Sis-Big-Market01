@@ -26,9 +26,10 @@ namespace Sis_Supermercado_TallerV
         }
 
         private void FrmLogin_Load(object sender, EventArgs e)
-        { 
-            pictureBox1.Visible = false;
-            bunifuTransition1.Show(pictureBox1);
+        {
+            bunifuFormFadeTransition1.ShowAsyc(this);
+            //pictureBox1.Visible = false;
+            //bunifuTransition1.Show(pictureBox1);
         }
 
 

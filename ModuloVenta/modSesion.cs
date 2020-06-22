@@ -22,9 +22,7 @@ namespace ModuloVenta
         public static string config_moneda; // config para venta 
         public static string config_regional;
         public static string xCodigoUser ="1";
-        public static string xNivelUser;
-        public static string xvenderHastaUser;
-        public static string xstockInsuficienteUser;
+
 
         /* METODO DE CONFIGURACION PARA CUANDO SE EJECTUTE EL LOAD DEL FORMULARIO*/
         public void cargarConfiguraciones()

@@ -7,10 +7,47 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace ModuloCompra
+namespace ModuloVenta
 {
     public class modUsuario
     {
+        public DataSet ControlDeAcceso()
+        {
+            MySqlDataAdapter consulta = new MySqlDataAdapter();
+            string sql;
+            DataSet resultado = new DataSet();
+
+            try
+            {
+                Conexion_DB.AbrirConexion();
+
+                sql = "select *, count(*) as 'pendiente' from db_usuarios where Activo=1";
+                consulta = new MySqlDataAdapter(sql, Conexion_DB.conexion);
+                consulta.Fill(resultado, "rsUsuario");
+
+                if (Convert.ToInt32(resultado.Tables["rsUsuario"].Rows[0]["pendiente"]) == 1)
+                {
+                    Conexion_DB.CerraConexion();
+                    return resultado;
+                }
+                else
+                {
+                    Conexion_DB.CerraConexion();
+                    MessageBox.Show("error al intentar retornar el control de acceso de la clase mod usuario");
+
+                    return null;
+                }
+
+
+            }
+            catch (MySqlException ex)
+            {
+                MessageBox.Show("Erorr al control de acceso" + ex.Message);
+                return null;
+            }
+        }
+
+        //
         public string VerificarIdUsuarioActivo()
         {
             MySqlDataAdapter consulta = new MySqlDataAdapter();
@@ -45,7 +82,5 @@ namespace ModuloCompra
                 return "error";
             }
         }
-    
-
     }
 }
