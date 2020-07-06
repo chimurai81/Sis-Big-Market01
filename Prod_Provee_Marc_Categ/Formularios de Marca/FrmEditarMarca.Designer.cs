@@ -152,7 +152,6 @@
             this.bunifuiOSSwitch1.TabIndex = 41;
             this.bunifuiOSSwitch1.Value = false;
             this.bunifuiOSSwitch1.Click += new System.EventHandler(this.bunifuiOSSwitch1_Click);
-            this.bunifuiOSSwitch1.KeyUp += new System.Windows.Forms.KeyEventHandler(this.bunifuiOSSwitch1_KeyUp);
             // 
             // label2
             // 

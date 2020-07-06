@@ -384,6 +384,10 @@
       <Project>{0b73fddb-8a19-4fb5-8f10-88f06625b2fb}</Project>
       <Name>ModuloCompra</Name>
     </ProjectReference>
+    <ProjectReference Include="..\ModuloCotizacion\ModuloCotizacion.csproj">
+      <Project>{827837D0-CA05-4C2D-A957-A4B278CF6041}</Project>
+      <Name>ModuloCotizacion</Name>
+    </ProjectReference>
     <ProjectReference Include="..\ModuloVenta\ModuloVenta.csproj">
       <Project>{856E32F7-25CC-4855-BC12-A16D9BEBA848}</Project>
       <Name>ModuloVenta</Name>

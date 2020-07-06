@@ -19,6 +19,7 @@ using ModuloCompra;
 using Prod_Provee_Marc_Categ.Formularios_de_Marca;
 using ModuloVenta;
 using FrmMenuVistaPrincipal;
+using ModuloCotizacion;
 
 namespace MenuPrincipal
 {
@@ -228,6 +229,7 @@ namespace MenuPrincipal
 
         private void btnCotizaciones_Click(object sender, EventArgs e)
         {
+            AbrirFormulario<FrmMenuCotizacion>();
             lblTitulodeFormulario.Text = "COTIZACION";
             hideSubMenu();//siempre al final de todo
           

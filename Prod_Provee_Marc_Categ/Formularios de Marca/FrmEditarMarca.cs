@@ -98,16 +98,10 @@ namespace Prod_Provee_Marc_Categ.Formularios_de_Marca
             this.Close();
         }
 
+
         public static string estadosw;
         private void bunifuiOSSwitch1_Click(object sender, EventArgs e)
         {
-            
-
-        }
-
-        private void bunifuiOSSwitch1_KeyUp(object sender, KeyEventArgs e)
-        {
-
             if (bunifuiOSSwitch1.Value == true)
             {
                 estadosw = "1";
@@ -117,7 +111,6 @@ namespace Prod_Provee_Marc_Categ.Formularios_de_Marca
                 estadosw = "0";
 
             }
-
         }
     }
 }

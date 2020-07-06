@@ -290,11 +290,11 @@
             // 
             this.bunifuCustomLabel7.AutoSize = true;
             this.bunifuCustomLabel7.Font = new System.Drawing.Font("Futura Bk BT", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuCustomLabel7.Location = new System.Drawing.Point(31, 152);
+            this.bunifuCustomLabel7.Location = new System.Drawing.Point(46, 152);
             this.bunifuCustomLabel7.Name = "bunifuCustomLabel7";
-            this.bunifuCustomLabel7.Size = new System.Drawing.Size(143, 24);
+            this.bunifuCustomLabel7.Size = new System.Drawing.Size(126, 24);
             this.bunifuCustomLabel7.TabIndex = 43;
-            this.bunifuCustomLabel7.Text = "Proveedor - F5:";
+            this.bunifuCustomLabel7.Text = "Clientes - F5:";
             // 
             // cbxfecha
             // 

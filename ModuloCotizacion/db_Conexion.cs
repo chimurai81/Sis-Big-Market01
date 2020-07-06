@@ -7,12 +7,12 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace FrmMenuVistaPrincipal
+namespace ModuloCotizacion
 {
-    public class ModuloDBConexion
+    public class db_Conexion
     {
         public static MySqlConnection conexion;
-        public static string ErrorDB;
+
 
         public static void AbrirConexion()
         {
@@ -26,7 +26,7 @@ namespace FrmMenuVistaPrincipal
                 conexion.Open();
 
             }
-            catch (MySqlException)
+            catch (MySqlException ex)
             {
                 MensajeDeError frmError = new MensajeDeError();
 
