@@ -21,6 +21,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ModuloVenta", "ModuloVenta\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ModuloCotizacion", "ModuloCotizacion\ModuloCotizacion.csproj", "{827837D0-CA05-4C2D-A957-A4B278CF6041}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "moduloCaja", "moduloCaja\moduloCaja.csproj", "{42658ED9-0D1B-43B4-9ED6-E2EFBFE90045}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -63,6 +65,10 @@ Global
 		{827837D0-CA05-4C2D-A957-A4B278CF6041}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{827837D0-CA05-4C2D-A957-A4B278CF6041}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{827837D0-CA05-4C2D-A957-A4B278CF6041}.Release|Any CPU.Build.0 = Release|Any CPU
+		{42658ED9-0D1B-43B4-9ED6-E2EFBFE90045}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{42658ED9-0D1B-43B4-9ED6-E2EFBFE90045}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{42658ED9-0D1B-43B4-9ED6-E2EFBFE90045}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{42658ED9-0D1B-43B4-9ED6-E2EFBFE90045}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

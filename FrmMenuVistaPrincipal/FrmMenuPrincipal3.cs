@@ -20,6 +20,7 @@ using Prod_Provee_Marc_Categ.Formularios_de_Marca;
 using ModuloVenta;
 using FrmMenuVistaPrincipal;
 using ModuloCotizacion;
+using moduloCaja;
 
 namespace MenuPrincipal
 {
@@ -223,7 +224,9 @@ namespace MenuPrincipal
 
         private void BtnCaja_Click(object sender, EventArgs e)
         {
+            AbrirFormulario<frmMenuCaja>();
             lblTitulodeFormulario.Text = "CAJA";
+
             hideSubMenu();//siempre al final de todo
         }
 

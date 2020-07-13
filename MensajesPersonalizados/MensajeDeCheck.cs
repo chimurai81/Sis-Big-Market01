@@ -12,9 +12,11 @@ namespace MensajesPersonalizados
 {
     public partial class MensajeDeCheck : Form
     {
-        public MensajeDeCheck()
+        public string x;
+        public MensajeDeCheck(string xx)
         {
             InitializeComponent();
+            
         }
 
         private void MensajeDeCheck_Load(object sender, EventArgs e)
@@ -22,7 +24,7 @@ namespace MensajesPersonalizados
 
             button1.Visible = false;
             bunifuTransition1.Show(button1);
-
+            
             pictureBox1.Visible = false;
             bunifuTransition2.Show(pictureBox1);
         }
@@ -36,6 +38,11 @@ namespace MensajesPersonalizados
         private void button1_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

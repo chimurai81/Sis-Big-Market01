@@ -380,6 +380,10 @@
       <Project>{69d3f89c-9228-41ea-a159-92729348265e}</Project>
       <Name>MensajesPersonalizados</Name>
     </ProjectReference>
+    <ProjectReference Include="..\moduloCaja\moduloCaja.csproj">
+      <Project>{42658ed9-0d1b-43b4-9ed6-e2efbfe90045}</Project>
+      <Name>moduloCaja</Name>
+    </ProjectReference>
     <ProjectReference Include="..\ModuloCompra\ModuloCompra.csproj">
       <Project>{0b73fddb-8a19-4fb5-8f10-88f06625b2fb}</Project>
       <Name>ModuloCompra</Name>

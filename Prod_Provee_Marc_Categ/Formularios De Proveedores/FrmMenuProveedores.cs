@@ -80,26 +80,7 @@ namespace Prod_Provee_Marc_Categ.Formularios
 
         private void bunifuFlatButton3_Click(object sender, EventArgs e)
         {
-            MySqlCommand comando;
-            string sql;
-            string codigo;
-            codigo = Convert.ToString(dataGridView1[0, dataGridView1.CurrentRow.Index].Value);
-            try
-            {
-                modulo.AbrirConexion();
-                sql = "delete from db_proveedores where id=@id";
-                comando = new MySqlCommand(sql, modulo.conexion);
-                comando.Parameters.AddWithValue("@id", codigo);
-                comando.ExecuteNonQuery();
-                GetAll("");
-
-            }
-            catch (MySqlException ex)
-            {
-
-            }
-            MensajesPersonalizados.MensajeDeCheck frm = new MensajesPersonalizados.MensajeDeCheck();
-            frm.ShowDialog();
+            
         }
 
         private void txtBuscar_OnValueChanged(object sender, EventArgs e)
