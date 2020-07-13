@@ -1,4 +1,5 @@
-﻿using Microsoft.VisualBasic;
+﻿using MensajesPersonalizados;
+using Microsoft.VisualBasic;
 using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
@@ -782,7 +783,9 @@ namespace moduloCaja
                         c = c + 1;
                     }
 
-                    MessageBox.Show("Cobro Procesado");
+                    MensajeDeCheck mensajeDeCheck = new MensajeDeCheck("   Cobro Efectuado con exito");
+                    mensajeDeCheck.ShowDialog();
+
                     transaccion.Commit(); // finaliza procesos y aplica cambios en la base de datos
                     Conexion_DB.CerraConexion();
                     preparaNuevaCaja();

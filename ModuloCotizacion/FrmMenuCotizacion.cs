@@ -60,7 +60,7 @@ namespace ModuloCotizacion
         private void btnRegistrarCotizacion_Click(object sender, EventArgs e)
         {
             InsertarCotizacion();
-            MensajeDeCheck mensajeDeCheck = new MensajeDeCheck();
+            MensajeDeCheck mensajeDeCheck = new MensajeDeCheck("REGISTRO EXITOSO");
             mensajeDeCheck.ShowDialog();
             this.Close();
         }

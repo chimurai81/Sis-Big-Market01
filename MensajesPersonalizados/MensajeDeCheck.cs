@@ -12,20 +12,19 @@ namespace MensajesPersonalizados
 {
     public partial class MensajeDeCheck : Form
     {
-        public string x;
+
         public MensajeDeCheck(string xx)
         {
             InitializeComponent();
-            
+            lblmensajeIntercambio.Text = xx;
         }
 
-        private void MensajeDeCheck_Load(object sender, EventArgs e)
+        public void MensajeDeCheck_Load(object sender, EventArgs e)
         {
 
             button1.Visible = false;
             bunifuTransition1.Show(button1);
-            
-            pictureBox1.Visible = false;
+
             bunifuTransition2.Show(pictureBox1);
         }
 

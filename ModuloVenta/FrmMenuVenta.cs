@@ -1,4 +1,5 @@
-﻿using MySql.Data.MySqlClient;
+﻿using MensajesPersonalizados;
+using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -320,7 +321,8 @@ namespace ModuloVenta
         {
             if (procesarVenta() == true)
             {
-                MessageBox.Show("venta procesada con exito");
+                MensajeDeCheck mensajeDeCheck = new MensajeDeCheck("  venta procesada con exito");
+                mensajeDeCheck.ShowDialog();
                 limpiarVenta();
                 iniciarVenta();
                 txtFactura.Focus();

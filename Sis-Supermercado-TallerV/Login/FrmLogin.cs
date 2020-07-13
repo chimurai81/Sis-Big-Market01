@@ -152,7 +152,7 @@ namespace Sis_Supermercado_TallerV
 
                             FrmMenuPrincipal3 menu = new FrmMenuPrincipal3(txtusuario.Text.ToUpperInvariant());
                             menu.Show();
-                            menu.btnUsuarios.Enabled = false;
+                            menu.btnReportes.Enabled = false;
                             menu.btnReportes.Enabled = false;
                             this.Hide();
                         }

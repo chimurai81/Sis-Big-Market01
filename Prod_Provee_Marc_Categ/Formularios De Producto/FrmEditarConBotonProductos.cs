@@ -147,7 +147,7 @@ namespace Prod_Provee_Marc_Categ.Formularios_De_Productos
 
             string id = valordeid;
             EditatProducto(id);
-            MensajeDeCheck mensajeDeCheck = new MensajeDeCheck();
+            MensajeDeCheck mensajeDeCheck = new MensajeDeCheck("REGISTRO EXITOSO");
             mensajeDeCheck.ShowDialog();
             limpiar();
             FrmMenuProductos frm3 = (FrmMenuProductos)Owner;

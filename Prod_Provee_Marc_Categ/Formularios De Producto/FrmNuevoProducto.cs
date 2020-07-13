@@ -388,7 +388,7 @@ namespace Prod_Provee_Marc_Categ.Formularios_De_Productos
         {
            
             InsertarProducto();
-            MensajeDeCheck mensajeDeCheck = new MensajeDeCheck();
+            MensajeDeCheck mensajeDeCheck = new MensajeDeCheck("REGISTRO EXITOSO");
             mensajeDeCheck.ShowDialog();
             limpiar();
 

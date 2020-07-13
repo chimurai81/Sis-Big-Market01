@@ -39,6 +39,7 @@
             this.transicionForm = new Bunifu.Framework.UI.BunifuFormFadeTransition(this.components);
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.bunifuTransition1 = new BunifuAnimatorNS.BunifuTransition(this.components);
+            this.lblmensajeIntercambio = new System.Windows.Forms.Label();
             this.bunifuTransition2 = new BunifuAnimatorNS.BunifuTransition(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -114,6 +115,19 @@
             animation1.TransparencyCoeff = 0F;
             this.bunifuTransition1.DefaultAnimation = animation1;
             // 
+            // lblmensajeIntercambio
+            // 
+            this.lblmensajeIntercambio.AutoSize = true;
+            this.bunifuTransition1.SetDecoration(this.lblmensajeIntercambio, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransition2.SetDecoration(this.lblmensajeIntercambio, BunifuAnimatorNS.DecorationType.None);
+            this.lblmensajeIntercambio.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.lblmensajeIntercambio.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblmensajeIntercambio.Location = new System.Drawing.Point(12, 235);
+            this.lblmensajeIntercambio.Name = "lblmensajeIntercambio";
+            this.lblmensajeIntercambio.Size = new System.Drawing.Size(79, 29);
+            this.lblmensajeIntercambio.TabIndex = 2;
+            this.lblmensajeIntercambio.Text = "label1";
+            // 
             // bunifuTransition2
             // 
             this.bunifuTransition2.AnimationType = BunifuAnimatorNS.AnimationType.Mosaic;
@@ -141,6 +155,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.ClientSize = new System.Drawing.Size(372, 384);
+            this.Controls.Add(this.lblmensajeIntercambio);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.pictureBox1);
             this.bunifuTransition1.SetDecoration(this, BunifuAnimatorNS.DecorationType.None);
@@ -154,6 +169,7 @@
             this.Load += new System.EventHandler(this.MensajeDeCheck_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -167,5 +183,6 @@
         private System.Windows.Forms.Timer timer1;
         private BunifuAnimatorNS.BunifuTransition bunifuTransition1;
         private BunifuAnimatorNS.BunifuTransition bunifuTransition2;
+        public System.Windows.Forms.Label lblmensajeIntercambio;
     }
 }

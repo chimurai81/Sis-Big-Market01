@@ -1,4 +1,5 @@
-﻿using Microsoft.VisualBasic;
+﻿using MensajesPersonalizados;
+using Microsoft.VisualBasic;
 using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
@@ -323,7 +324,8 @@ namespace ModuloCompra
         {
             if (procesarCompra() == true)
             {
-                MessageBox.Show("Compra procesada con exito");
+                MensajeDeCheck mensajeDeCheck = new MensajeDeCheck("Compra procesada con exito");
+                mensajeDeCheck.ShowDialog();
                 limpiarCompra();
                 iniciarCompra();
                 txtFactura.Focus();
@@ -331,6 +333,7 @@ namespace ModuloCompra
             else
             {
                 MessageBox.Show("Error al processar compra");
+
             }
         }
 

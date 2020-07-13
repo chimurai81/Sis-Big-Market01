@@ -126,7 +126,7 @@ namespace Usuarios.Formularios
         {
             RegistrarClientes();
             this.Close();
-            MensajeDeCheck frm = new MensajeDeCheck();
+            MensajeDeCheck frm = new MensajeDeCheck("REGISTRO EXITOSO");
             frm.ShowDialog();
 
         }

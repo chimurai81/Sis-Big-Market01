@@ -94,7 +94,7 @@ namespace Usuarios.Formularios
                 comando = new MySqlCommand(sql, modulo.conexion);
                 comando.Parameters.AddWithValue("@id", codigo);
                 comando.ExecuteNonQuery();
-                MensajesPersonalizados.MensajeDeCheck frm = new MensajesPersonalizados.MensajeDeCheck();
+                MensajesPersonalizados.MensajeDeCheck frm = new MensajesPersonalizados.MensajeDeCheck("ELIMINADO");
                 frm.ShowDialog();
                 GetAll("");
 
