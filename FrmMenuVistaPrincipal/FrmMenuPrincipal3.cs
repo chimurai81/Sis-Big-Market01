@@ -97,8 +97,7 @@ namespace MenuPrincipal
 
         private void FrmMenuPrincipal_Load(object sender, EventArgs e)
         {
-            bunifuFormFadeTransition1.ShowAsyc(this);
-           
+    
             moduloConsultas moduloStockMinimo = new moduloConsultas();
             DataSet valorDatos;
             //consulta Stock Minimo
@@ -386,6 +385,11 @@ namespace MenuPrincipal
             //consulta cantidad marcas
             valorDatos = moduloStockMinimo.CantidadMarcas("");
             lblCantMarcas.Text = Convert.ToString(valorDatos.Tables["rsProducto"].Rows[0]["cant"]);
+        }
+
+        private void panelTitleBar_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

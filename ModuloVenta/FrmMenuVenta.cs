@@ -1,6 +1,7 @@
 ﻿using MensajesPersonalizados;
 using MySql.Data.MySqlClient;
 using System;
+using moduloCaja;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -56,6 +57,14 @@ namespace ModuloVenta
                 AddOwnedForm(x);
                 x.ShowDialog();
             }
+            if (e.KeyCode == Keys.F1)
+            {
+                frmMenuCaja frmMenuCaja = new frmMenuCaja();
+                frmMenuCaja.Size = new Size(1240, 740);
+                frmMenuCaja.BackColor = Color.Azure;
+                frmMenuCaja.ShowDialog();
+
+            }
         }
 
         private void txtCodigoProducto_Leave(object sender, EventArgs e)
@@ -110,67 +119,6 @@ namespace ModuloVenta
         private void txtCantidad_Leave(object sender, EventArgs e)
         {
             cantidadDobleUso();
-        }
-
-        private void txtPrecio_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            modUsuario modUsuario = new modUsuario();
-            DataSet resultado2 = modUsuario.ControlDeAcceso();
-            modSesion modSesion = new modSesion();
-            if (e.KeyChar == (char)Keys.Enter)
-            {
-                if (IsNumeric(txtPrecio.Text))
-                {
-                   
-                    if (Convert.ToString(resultado2.Tables["rsUsuario"].Rows[0]["venderHasta"]) == "bajoCosto") // verificando permiso si usuario puede vender hasta cero----------------------------------------
-                    {
-                        cargarItem();
-                        e.Handled = true;
-                    }
-                    else if (Convert.ToString(resultado2.Tables["rsUsuario"].Rows[0]["venderHasta"]) == "costo") // verificando permiso si usuario puede vender hasta costo---------------------------------------
-                    {
-                        if (Convert.ToDecimal(modSesion.convertirDecimal(txtPrecio.Text)) >= Convert.ToDecimal(productoAVender.Tables["rsProducto"].Rows[0]["costomedio"]))
-                        {
-                            cargarItem();
-                            e.Handled = true;
-                        }
-                        else
-                        {
-                            MessageBox.Show("Precio fuera de limite, Precio es menor que costo ");
-                        }
-                    }
-                    else if (Convert.ToString(resultado2.Tables["rsUsuario"].Rows[0]["venderHasta"]) == "precioMay") // verificando permiso si usuario puede vender hasta costo-------------------------------------
-                    {
-                        if (Convert.ToDecimal(modSesion.convertirDecimal(txtPrecio.Text)) >= Convert.ToDecimal(productoAVender.Tables["rsProducto"].Rows[0]["precioMayorista"]))
-                        {
-                            cargarItem();
-                            e.Handled = true;
-                        }
-                        else
-                        {
-                            MessageBox.Show("Precio fuera de limite, Precio es menor que Precio Mayorista ");
-                        }
-                    }
-                    else if (Convert.ToString(resultado2.Tables["rsUsuario"].Rows[0]["venderHasta"]) == "precioUni") // verificando permiso si usuario puede vender hasta costo
-                    {
-                        if (Convert.ToDecimal(modSesion.convertirDecimal(txtPrecio.Text)) >= Convert.ToDecimal(productoAVender.Tables["rsProducto"].Rows[0]["PrecioUnitario"]))
-                        {
-                            cargarItem();
-                            e.Handled = true;
-                        }
-                        else
-                        {
-                            MessageBox.Show("Precio fuera de limite, Precio es menor que Precio Unitario ");
-                        }
-                    }
-                }
-                else
-                {
-                    MessageBox.Show("Ingrese costo en numeros");
-                    txtPrecio.Text = "";
-                    txtPrecio.Focus();
-                }
-            }
         }
         //metodo para cargar en la grilla
         private void cargarItem()
@@ -376,6 +324,117 @@ namespace ModuloVenta
             txtIdCliente.Focus();
         }
 
+        private void btnAbrirCaja_Click(object sender, EventArgs e)
+        {
+            frmMenuCaja frmMenuCaja = new frmMenuCaja();
+            frmMenuCaja.Size = new Size(1240, 740);
+            frmMenuCaja.BackColor = Color.Azure;
+            frmMenuCaja.ShowDialog();
+        }
+
+   private void FrmMenuVenta_KeyUp(object sender, KeyEventArgs e)
+        {
+            
+        }
+
+        private void txtPrecio_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            modUsuario modUsuario = new modUsuario();
+            DataSet resultado2 = modUsuario.ControlDeAcceso();
+            modSesion modSesion = new modSesion();
+            if (e.KeyChar == (char)Keys.Enter)
+            {
+                if (IsNumeric(txtPrecio.Text))
+                {
+
+                    if (Convert.ToString(resultado2.Tables["rsUsuario"].Rows[0]["VenderHasta"]) == "bajoCosto") // verificando permiso si usuario puede vender hasta cero----------------------------------------
+                    {
+                        cargarItem();
+                        e.Handled = true;
+                    }
+                    else if (Convert.ToString(resultado2.Tables["rsUsuario"].Rows[0]["VenderHasta"]) == "costo") // verificando permiso si usuario puede vender hasta costo---------------------------------------
+                    {
+                        if (Convert.ToDecimal(modSesion.convertirDecimal(txtPrecio.Text)) >= Convert.ToDecimal(productoAVender.Tables["rsProducto"].Rows[0]["costomedio"]))
+                        {
+                            cargarItem();
+                            e.Handled = true;
+                        }
+                        else
+                        {
+                            MessageBox.Show("Precio fuera de limite, Precio es menor que costo ");
+                        }
+                    }
+                    else if (Convert.ToString(resultado2.Tables["rsUsuario"].Rows[0]["VenderHasta"]) == "precioMay") // verificando permiso si usuario puede vender hasta costo-------------------------------------
+                    {
+                        if (Convert.ToDecimal(modSesion.convertirDecimal(txtPrecio.Text)) >= Convert.ToDecimal(productoAVender.Tables["rsProducto"].Rows[0]["precioMayorista"]))
+                        {
+                            cargarItem();
+                            e.Handled = true;
+                        }
+                        else
+                        {
+                            MessageBox.Show("Precio fuera de limite, Precio es menor que Precio Mayorista ");
+                        }
+                    }
+                    else if (Convert.ToString(resultado2.Tables["rsUsuario"].Rows[0]["VenderHasta"]) == "precioUni") // verificando permiso si usuario puede vender hasta costo
+                    {
+                        if (Convert.ToDecimal(modSesion.convertirDecimal(txtPrecio.Text)) >= Convert.ToDecimal(productoAVender.Tables["rsProducto"].Rows[0]["PrecioUnitario"]))
+                        {
+                            cargarItem();
+                            e.Handled = true;
+                        }
+                        else
+                        {
+                            MessageBox.Show("Precio fuera de limite, Precio es menor que Precio Unitario ");
+                        }
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Ingrese costo en numeros");
+                    txtPrecio.Text = "";
+                    txtPrecio.Focus();
+                }
+            }
+        }
+
+        private void txtFactura_KeyUp(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.F1)
+            {
+                frmMenuCaja frmMenuCaja = new frmMenuCaja();
+                frmMenuCaja.Size = new Size(1240, 740);
+                frmMenuCaja.BackColor = Color.Azure;
+                frmMenuCaja.ShowDialog();
+
+            }
+        }
+
+        private void txtCantidad_KeyUp(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.F1)
+            {
+                frmMenuCaja frmMenuCaja = new frmMenuCaja();
+                frmMenuCaja.Size = new Size(1240, 740);
+                frmMenuCaja.BackColor = Color.Azure;
+                frmMenuCaja.ShowDialog();
+
+            }
+        }
+
+        private void txtPrecio_KeyUp(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.F1)
+            {
+                frmMenuCaja frmMenuCaja = new frmMenuCaja();
+                frmMenuCaja.Size = new Size(1240, 740);
+                frmMenuCaja.BackColor = Color.Azure;
+                frmMenuCaja.ShowDialog();
+
+            }
+        }
+
+
         //inicio metodo actualizar tablas con el total de monedas
         private void actualiarTotalMonedas(decimal valor)
         {
@@ -452,6 +511,15 @@ namespace ModuloVenta
                 AddOwnedForm(frmBuscarCliente);
                 frmBuscarCliente.ShowDialog();
             }
+            if (e.KeyCode == Keys.F1)
+            {
+                frmMenuCaja frmMenuCaja = new frmMenuCaja();
+                frmMenuCaja.Size = new Size(1240, 740);
+                frmMenuCaja.BackColor = Color.Azure;
+                frmMenuCaja.ShowDialog();
+
+            }
+
         }
 
         private void txtIdCliente_Leave(object sender, EventArgs e)

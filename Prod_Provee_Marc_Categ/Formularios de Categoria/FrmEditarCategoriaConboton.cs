@@ -96,6 +96,7 @@ namespace Prod_Provee_Marc_Categ.Formularios_de_Categoria
             string id = FrmMenuCategorias.valor;
             EditarCategoria(id);
             FrmMenuCategorias frm3 = (FrmMenuCategorias)Owner;
+            frm3.bunifuiOSSwitch1.Value = true;
             frm3.GetAll("");
             this.Close();
      

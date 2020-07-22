@@ -413,6 +413,16 @@ namespace FrmMenuVistaPrincipal.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        public static System.Drawing.Bitmap INFOTEACHPERFILYOUTUBE3 {
+            get {
+                object obj = ResourceManager.GetObject("INFOTEACHPERFILYOUTUBE3", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         public static System.Drawing.Bitmap inicioReporteIniciaP1l {
             get {
                 object obj = ResourceManager.GetObject("inicioReporteIniciaP1l", resourceCulture);

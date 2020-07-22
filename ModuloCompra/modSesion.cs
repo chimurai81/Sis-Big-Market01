@@ -24,11 +24,12 @@ namespace ModuloCompra
         public static string xNivelUser;
         public static string xvenderHastaUser;
         public static string xstockInsuficienteUser;
+        public int dec_precio, dec_costo, dec_cantidad;
 
         /* METODO DE CONFIGURACION PARA CUANDO SE EJECTUTE EL LOAD DEL FORMULARIO*/
         public void cargarConfiguraciones()
         {
-            int dec_precio=0, dec_costo=0, dec_cantidad=0;
+            dec_precio = 0; dec_costo = 0; dec_cantidad=0;
             MySqlDataAdapter consulta = new MySqlDataAdapter();
             string sql;
             DataSet resultado = new DataSet();

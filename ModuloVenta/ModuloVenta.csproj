@@ -162,6 +162,10 @@
       <Project>{69D3F89C-9228-41EA-A159-92729348265E}</Project>
       <Name>MensajesPersonalizados</Name>
     </ProjectReference>
+    <ProjectReference Include="..\moduloCaja\moduloCaja.csproj">
+      <Project>{42658ed9-0d1b-43b4-9ed6-e2efbfe90045}</Project>
+      <Name>moduloCaja</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\close %282%29.png" />

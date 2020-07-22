@@ -171,6 +171,8 @@
             this.Controls.Add(this.grilla);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmBuscarProducto";
+            this.ShowInTaskbar = false;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmBuscarProducto";
             this.Load += new System.EventHandler(this.frmBuscarProducto_Load);
             ((System.ComponentModel.ISupportInitialize)(this.grilla)).EndInit();

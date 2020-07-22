@@ -15,21 +15,19 @@ namespace Sis_Supermercado_TallerV
         public FrmLogin()
         {
             InitializeComponent();
+      
         }
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
         private extern static void ReleaseCapture();
         [DllImport("user32.DLL", EntryPoint = "SendMessage")]
         private extern static void SendMessage(System.IntPtr hwnd, int wmsg, int wparam, int lparam);
-        private void pictureBox1_Click(object sender, EventArgs e)
+        private void FrmLogin_Load(object sender, EventArgs e)
         {
 
         }
-
-        private void FrmLogin_Load(object sender, EventArgs e)
+        private void pictureBox1_Click(object sender, EventArgs e)
         {
-            bunifuFormFadeTransition1.ShowAsyc(this);
-            //pictureBox1.Visible = false;
-            //bunifuTransition1.Show(pictureBox1);
+
         }
 
 
@@ -223,5 +221,7 @@ namespace Sis_Supermercado_TallerV
             }
            
         }
+
+       
     }
 }

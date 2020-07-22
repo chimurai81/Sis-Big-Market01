@@ -19,6 +19,7 @@ namespace Prod_Provee_Marc_Categ.Formularios
             InitializeComponent();
         }
         //obtener todos los productos
+        private char estadoActivo;
         public void GetAll(string condicion)
         {
             string sql;
@@ -32,6 +33,7 @@ namespace Prod_Provee_Marc_Categ.Formularios
                 consulta = new MySqlDataAdapter(sql, modulo.conexion);
                 resultado = new DataSet();
                 consulta.Fill(resultado, "rsresultado");
+
                 DataGridView1.DataSource = resultado.Tables["rsresultado"];
             }
             catch (MySqlException ex)
@@ -39,11 +41,43 @@ namespace Prod_Provee_Marc_Categ.Formularios
                 MessageBox.Show(ex.Message);
             }
         }
+        /**OBTERNER LOS PRODUCTOS CON ESTADO 0**/
+
+        public void GetAll2(string condicion)
+        {
+            string sql;
+            MySqlDataAdapter consulta;
+            DataSet resultado;
+            sql = "SELECT * FROM vistaProfuctoEstado0" + condicion;
+
+            try
+            {
+                modulo.AbrirConexion();
+                consulta = new MySqlDataAdapter(sql, modulo.conexion);
+                resultado = new DataSet();
+                consulta.Fill(resultado, "rsresultado");
+
+                DataGridView1.DataSource = resultado.Tables["rsresultado"];
+            }
+            catch (MySqlException ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+       
         private void FrmProductos_Load(object sender, EventArgs e)
         {
-            //panelsuperior.Height = 30;
-            //pictureBox2.Visible = true;
-            GetAll("");
+     
+            if (bunifuiOSSwitch1.Value == true)
+            {
+                GetAll("");
+            }
+            else
+            {
+                GetAll2("");
+            }
+            
         }
 
   
@@ -90,17 +124,7 @@ namespace Prod_Provee_Marc_Categ.Formularios
             lblModificarProducto.Font = new Font("Century Gothic", 14, FontStyle.Bold, GraphicsUnit.Pixel);
         }
 
-        private void lblEliminarProducto_MouseEnter(object sender, EventArgs e)
-        {
-            lblEliminarProducto.ForeColor = Color.LightCyan;
-            lblEliminarProducto.Font = new Font("Century Gothic", 16, FontStyle.Regular, GraphicsUnit.Pixel);
-        }
 
-        private void lblEliminarProducto_MouseLeave(object sender, EventArgs e)
-        {
-            lblEliminarProducto.ForeColor = Color.White;
-            lblEliminarProducto.Font = new Font("Century Gothic", 14, FontStyle.Bold, GraphicsUnit.Pixel);
-        }
 
         private void bunifuCustomLabel1_MouseEnter(object sender, EventArgs e)
         {
@@ -163,29 +187,22 @@ namespace Prod_Provee_Marc_Categ.Formularios
             valor33 = DataGridView1.CurrentRow.Cells[0].Value.ToString();
         }
 
-        private void lblEliminarProducto_Click(object sender, EventArgs e)
+        
+        private void bunifuiOSSwitch1_Click(object sender, EventArgs e)
         {
-            //MySqlCommand comando;
-            //string sql;
-            //string codigo;
-            //codigo = Convert.ToString(DataGridView1[0, DataGridView1.CurrentRow.Index].Value);
-            //try
-            //{
-            //    modulo.AbrirConexion();
-            //    sql = "delete from db_productos where id=@id";
-            //    comando = new MySqlCommand(sql, modulo.conexion);
-            //    comando.Parameters.AddWithValue("@id", codigo);
-            //    comando.ExecuteNonQuery();
-            //    GetAll("");
-            //    MensajesPersonalizados.MensajeDeCheck frm = new MensajesPersonalizados.MensajeDeCheck();
-            //    frm.ShowDialog();
-            //}
-            //catch (MySqlException ex)
-            //{
-            //    MensajesPersonalizados.MensajeDeError frm = new MensajesPersonalizados.MensajeDeError();
-            //    frm.ShowDialog();
-            //}
-            
+            if(bunifuiOSSwitch1.Value == true)
+            {
+                GetAll("");
+            }
+            else
+            {
+                GetAll2("");
+            }
+        }
+
+        private void bunifuiOSSwitch1_OnValueChange(object sender, EventArgs e)
+        {
+
         }
     }
 }

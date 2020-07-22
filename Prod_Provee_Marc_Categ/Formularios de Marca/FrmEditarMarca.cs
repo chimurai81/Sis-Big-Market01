@@ -94,6 +94,7 @@ namespace Prod_Provee_Marc_Categ.Formularios_de_Marca
             string id = FrmMenuMarca.valor;
             EditarMarca(id);
             FrmMenuMarca frm3 = (FrmMenuMarca)Owner;
+            frm3.bunifuiOSSwitch1.Value = true;
             frm3.GetAll("");
             this.Close();
         }

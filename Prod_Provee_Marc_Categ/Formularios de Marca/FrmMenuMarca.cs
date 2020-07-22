@@ -22,7 +22,27 @@ namespace Prod_Provee_Marc_Categ.Formularios_de_Marca
             string sql;
             MySqlDataAdapter consulta;
             DataSet resultado;
-            sql = "select * from db_marca" + condicion;
+            sql = "select * from db_marca where Estado = 1" + condicion;
+
+            try
+            {
+                modulo.AbrirConexion();
+                consulta = new MySqlDataAdapter(sql, modulo.conexion);
+                resultado = new DataSet();
+                consulta.Fill(resultado, "rsresultado");
+                dataGridView1.DataSource = resultado.Tables["rsresultado"];
+            }
+            catch (MySqlException ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+        public void GetAll2(string condicion)
+        {
+            string sql;
+            MySqlDataAdapter consulta;
+            DataSet resultado;
+            sql = "select * from db_marca where Estado = 0" + condicion;
 
             try
             {
@@ -89,19 +109,44 @@ namespace Prod_Provee_Marc_Categ.Formularios_de_Marca
 
             if (comboBox1.SelectedItem.ToString() == "ID")
             {
-                condicion = " where id like '%" + txtBuscar.Text + "%'";
+                condicion = " and id like '%" + txtBuscar.Text + "%'";
             }
             if (comboBox1.SelectedItem.ToString() == "DESCRIPCION")
             {
-                condicion = " where Descripcion like '%" + txtBuscar.Text.ToUpperInvariant() + "%'";
+                condicion = " and Descripcion like '%" + txtBuscar.Text.ToUpperInvariant() + "%'";
             }
 
-            GetAll(condicion);
+            if (bunifuiOSSwitch1.Value == true)
+            {
+                GetAll(condicion);
+            }
+            else
+            {
+                GetAll2(condicion);
+            }
+
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void bunifuiOSSwitch1_Click(object sender, EventArgs e)
+        {
+            if (bunifuiOSSwitch1.Value == true)
+            {
+                GetAll("");
+            }
+            else
+            {
+                GetAll2("");
+            }
+        }
+
+        private void txtBuscar_KeyPress(object sender, KeyPressEventArgs e)
+        {
+
         }
     }
 }

@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmMenuVenta));
             this.Seq = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -110,6 +110,7 @@
             this.costo2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.bunifuThinButton22 = new Bunifu.Framework.UI.BunifuThinButton2();
             this.bunifuThinButton21 = new Bunifu.Framework.UI.BunifuThinButton2();
+            this.btnAbrirCaja = new Bunifu.Framework.UI.BunifuThinButton2();
             this.GroupBox1.SuspendLayout();
             this.GroupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grilla)).BeginInit();
@@ -367,6 +368,7 @@
             this.txtFactura.Size = new System.Drawing.Size(348, 29);
             this.txtFactura.TabIndex = 38;
             this.txtFactura.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.txtFactura.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtFactura_KeyUp);
             // 
             // bunifuCustomLabel1
             // 
@@ -593,6 +595,7 @@
             this.txtCantidad.TabIndex = 60;
             this.txtCantidad.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.txtCantidad.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCantidad_KeyPress);
+            this.txtCantidad.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtCantidad_KeyUp);
             this.txtCantidad.Leave += new System.EventHandler(this.txtCantidad_Leave);
             // 
             // txtPrecio
@@ -614,6 +617,7 @@
             this.txtPrecio.TabIndex = 59;
             this.txtPrecio.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.txtPrecio.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPrecio_KeyPress);
+            this.txtPrecio.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtPrecio_KeyUp);
             // 
             // GroupBox1
             // 
@@ -832,19 +836,19 @@
             // 
             this.grilla.AllowUserToAddRows = false;
             this.grilla.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.grilla.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.grilla.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle5;
             this.grilla.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(249)))), ((int)(((byte)(246)))));
             this.grilla.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.grilla.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(99)))), ((int)(((byte)(12)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.Snow;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.grilla.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(99)))), ((int)(((byte)(12)))));
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.Snow;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.grilla.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle6;
             this.grilla.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.grilla.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.seq2,
@@ -943,10 +947,10 @@
             this.bunifuThinButton22.IdleFillColor = System.Drawing.Color.White;
             this.bunifuThinButton22.IdleForecolor = System.Drawing.Color.IndianRed;
             this.bunifuThinButton22.IdleLineColor = System.Drawing.Color.IndianRed;
-            this.bunifuThinButton22.Location = new System.Drawing.Point(1434, 866);
+            this.bunifuThinButton22.Location = new System.Drawing.Point(1486, 866);
             this.bunifuThinButton22.Margin = new System.Windows.Forms.Padding(5);
             this.bunifuThinButton22.Name = "bunifuThinButton22";
-            this.bunifuThinButton22.Size = new System.Drawing.Size(257, 61);
+            this.bunifuThinButton22.Size = new System.Drawing.Size(205, 61);
             this.bunifuThinButton22.TabIndex = 76;
             this.bunifuThinButton22.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.bunifuThinButton22.Click += new System.EventHandler(this.bunifuThinButton22_Click);
@@ -969,13 +973,39 @@
             this.bunifuThinButton21.IdleFillColor = System.Drawing.Color.White;
             this.bunifuThinButton21.IdleForecolor = System.Drawing.Color.OrangeRed;
             this.bunifuThinButton21.IdleLineColor = System.Drawing.Color.OrangeRed;
-            this.bunifuThinButton21.Location = new System.Drawing.Point(1159, 866);
+            this.bunifuThinButton21.Location = new System.Drawing.Point(1272, 866);
             this.bunifuThinButton21.Margin = new System.Windows.Forms.Padding(5);
             this.bunifuThinButton21.Name = "bunifuThinButton21";
-            this.bunifuThinButton21.Size = new System.Drawing.Size(257, 61);
+            this.bunifuThinButton21.Size = new System.Drawing.Size(204, 61);
             this.bunifuThinButton21.TabIndex = 75;
             this.bunifuThinButton21.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.bunifuThinButton21.Click += new System.EventHandler(this.bunifuThinButton21_Click);
+            // 
+            // btnAbrirCaja
+            // 
+            this.btnAbrirCaja.ActiveBorderThickness = 1;
+            this.btnAbrirCaja.ActiveCornerRadius = 20;
+            this.btnAbrirCaja.ActiveFillColor = System.Drawing.Color.OrangeRed;
+            this.btnAbrirCaja.ActiveForecolor = System.Drawing.Color.White;
+            this.btnAbrirCaja.ActiveLineColor = System.Drawing.Color.OrangeRed;
+            this.btnAbrirCaja.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnAbrirCaja.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnAbrirCaja.BackgroundImage")));
+            this.btnAbrirCaja.ButtonText = "Caja - F1";
+            this.btnAbrirCaja.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAbrirCaja.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAbrirCaja.ForeColor = System.Drawing.Color.SeaGreen;
+            this.btnAbrirCaja.IdleBorderThickness = 1;
+            this.btnAbrirCaja.IdleCornerRadius = 20;
+            this.btnAbrirCaja.IdleFillColor = System.Drawing.Color.White;
+            this.btnAbrirCaja.IdleForecolor = System.Drawing.Color.OrangeRed;
+            this.btnAbrirCaja.IdleLineColor = System.Drawing.Color.OrangeRed;
+            this.btnAbrirCaja.Location = new System.Drawing.Point(1058, 866);
+            this.btnAbrirCaja.Margin = new System.Windows.Forms.Padding(5);
+            this.btnAbrirCaja.Name = "btnAbrirCaja";
+            this.btnAbrirCaja.Size = new System.Drawing.Size(204, 61);
+            this.btnAbrirCaja.TabIndex = 143;
+            this.btnAbrirCaja.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnAbrirCaja.Click += new System.EventHandler(this.btnAbrirCaja_Click);
             // 
             // FrmMenuVenta
             // 
@@ -983,6 +1013,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.ClientSize = new System.Drawing.Size(1769, 941);
+            this.Controls.Add(this.btnAbrirCaja);
             this.Controls.Add(this.grilla);
             this.Controls.Add(this.GroupBox2);
             this.Controls.Add(this.GroupBox1);
@@ -1022,6 +1053,7 @@
             this.Name = "FrmMenuVenta";
             this.Text = "frmMenuVenta";
             this.Load += new System.EventHandler(this.FrmMenuVenta_Load);
+            this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.FrmMenuVenta_KeyUp);
             this.GroupBox1.ResumeLayout(false);
             this.GroupBox1.PerformLayout();
             this.GroupBox2.ResumeLayout(false);
@@ -1113,6 +1145,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Iva2;
         private System.Windows.Forms.DataGridViewTextBoxColumn montoiva2;
         private System.Windows.Forms.DataGridViewTextBoxColumn costo2;
+        private Bunifu.Framework.UI.BunifuThinButton2 btnAbrirCaja;
     }
 }
 

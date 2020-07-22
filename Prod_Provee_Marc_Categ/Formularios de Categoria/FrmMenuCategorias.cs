@@ -22,7 +22,7 @@ namespace Prod_Provee_Marc_Categ.Formularios_de_Categoria
             string sql;
             MySqlDataAdapter consulta;
             DataSet resultado;
-            sql = "select * from db_Categoria " + condicion;
+            sql = "select * from db_Categoria where Estado = 1 " + condicion;
 
             try
             {
@@ -37,7 +37,26 @@ namespace Prod_Provee_Marc_Categ.Formularios_de_Categoria
                 MessageBox.Show(ex.Message);
             }
         }
+        public void GetAll2(string condicion)
+        {
+            string sql;
+            MySqlDataAdapter consulta;
+            DataSet resultado;
+            sql = "select * from db_Categoria where Estado = 0" + condicion;
 
+            try
+            {
+                modulo.AbrirConexion();
+                consulta = new MySqlDataAdapter(sql, modulo.conexion);
+                resultado = new DataSet();
+                consulta.Fill(resultado, "rsresultado");
+                dataGridView1.DataSource = resultado.Tables["rsresultado"];
+            }
+            catch (MySqlException ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
         private void FrmMenuCategorias_Load(object sender, EventArgs e)
         {
             GetAll("");
@@ -100,16 +119,38 @@ namespace Prod_Provee_Marc_Categ.Formularios_de_Categoria
 
             if (comboBox1.SelectedItem.ToString() == "DESCRIPCION")
             {
-                condicion = " where Descripcion like '%" + txtBuscar.Text.ToUpperInvariant() + "%'";
+                condicion = " and  Descripcion like '%" + txtBuscar.Text.ToUpperInvariant() + "%'";
             }
 
 
             if (comboBox1.SelectedItem.ToString() == "ID")
             {
-                condicion = " where id like '%" + txtBuscar.Text + "%'";
+                condicion = " and id like '%" + txtBuscar.Text + "%'";
             }
 
-            GetAll(condicion);
+            if(bunifuiOSSwitch1.Value == true)
+            {
+                GetAll(condicion);
+            }
+            else
+            {
+                GetAll2(condicion);
+            }
+      
+
+        
+        }
+
+        private void bunifuiOSSwitch1_Click(object sender, EventArgs e)
+        {
+            if (bunifuiOSSwitch1.Value == true)
+            {
+                GetAll("");
+            }
+            else
+            {
+                GetAll2("");
+            }
         }
     }
 }

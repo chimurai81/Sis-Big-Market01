@@ -99,6 +99,7 @@ namespace Prod_Provee_Marc_Categ.Formularios
             string id = txtId.Text;
             EditarProveedor(id);
             FrmMenuProveedores frm = (FrmMenuProveedores)Owner;
+            frm.bunifuiOSSwitch1.Value = true;
             frm.GetAll("");
             this.Close();
         }

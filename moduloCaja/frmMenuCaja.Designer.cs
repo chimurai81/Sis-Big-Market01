@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMenuCaja));
@@ -116,6 +117,8 @@
             this.bunifuThinButton23 = new Bunifu.Framework.UI.BunifuThinButton2();
             this.pictureBox16 = new System.Windows.Forms.PictureBox();
             this.txtBuscar = new Bunifu.Framework.UI.BunifuMaterialTextbox();
+            this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
+            this.bunifuDragControl1 = new Bunifu.Framework.UI.BunifuDragControl(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.grillaVentas)).BeginInit();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
@@ -1169,6 +1172,18 @@
             this.txtBuscar.TabIndex = 166;
             this.txtBuscar.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
+            // bunifuElipse1
+            // 
+            this.bunifuElipse1.ElipseRadius = 20;
+            this.bunifuElipse1.TargetControl = this;
+            // 
+            // bunifuDragControl1
+            // 
+            this.bunifuDragControl1.Fixed = true;
+            this.bunifuDragControl1.Horizontal = true;
+            this.bunifuDragControl1.TargetControl = this;
+            this.bunifuDragControl1.Vertical = true;
+            // 
             // frmMenuCaja
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -1192,8 +1207,10 @@
             this.Controls.Add(this.txt);
             this.Controls.Add(this.bunifuThinButton22);
             this.Controls.Add(this.grillaVentas);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmMenuCaja";
             this.ShowInTaskbar = false;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.frmMenuCaja_Load);
             ((System.ComponentModel.ISupportInitialize)(this.grillaVentas)).EndInit();
@@ -1311,6 +1328,8 @@
         private Bunifu.Framework.UI.BunifuThinButton2 bunifuThinButton23;
         private System.Windows.Forms.PictureBox pictureBox16;
         private Bunifu.Framework.UI.BunifuMaterialTextbox txtBuscar;
+        private Bunifu.Framework.UI.BunifuElipse bunifuElipse1;
+        public Bunifu.Framework.UI.BunifuDragControl bunifuDragControl1;
     }
 }
 

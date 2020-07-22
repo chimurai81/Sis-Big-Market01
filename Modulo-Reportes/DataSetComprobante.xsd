@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DataSetComprobante" targetNamespace="http://tempuri.org/DataSetComprobante.xsd" xmlns:mstns="http://tempuri.org/DataSetComprobante.xsd" xmlns="http://tempuri.org/DataSetComprobante.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DataSetComprobante" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="DataSetComprobante" msprop:Generator_UserDSName="DataSetComprobante">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="dtVenta1" msprop:Generator_TableClassName="dtVenta1DataTable" msprop:Generator_TableVarName="tabledtVenta1" msprop:Generator_RowChangedName="dtVenta1RowChanged" msprop:Generator_TablePropName="dtVenta1" msprop:Generator_RowDeletingName="dtVenta1RowDeleting" msprop:Generator_RowChangingName="dtVenta1RowChanging" msprop:Generator_RowEvHandlerName="dtVenta1RowChangeEventHandler" msprop:Generator_RowDeletedName="dtVenta1RowDeleted" msprop:Generator_RowClassName="dtVenta1Row" msprop:Generator_UserTableName="dtVenta1" msprop:Generator_RowEvArgName="dtVenta1RowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="id" msprop:Generator_ColumnVarNameInTable="columnid" msprop:Generator_ColumnPropNameInRow="id" msprop:Generator_ColumnPropNameInTable="idColumn" msprop:Generator_UserColumnName="id" type="xs:string" minOccurs="0" />
+              <xs:element name="FacturaNro" msprop:Generator_ColumnVarNameInTable="columnFacturaNro" msprop:Generator_ColumnPropNameInRow="FacturaNro" msprop:Generator_ColumnPropNameInTable="FacturaNroColumn" msprop:Generator_UserColumnName="FacturaNro" type="xs:string" minOccurs="0" />
+              <xs:element name="Cliente" msprop:Generator_ColumnVarNameInTable="columnCliente" msprop:Generator_ColumnPropNameInRow="Cliente" msprop:Generator_ColumnPropNameInTable="ClienteColumn" msprop:Generator_UserColumnName="Cliente" type="xs:string" minOccurs="0" />
+              <xs:element name="RUC" msprop:Generator_ColumnVarNameInTable="columnRUC" msprop:Generator_ColumnPropNameInRow="RUC" msprop:Generator_ColumnPropNameInTable="RUCColumn" msprop:Generator_UserColumnName="RUC" type="xs:string" minOccurs="0" />
+              <xs:element name="Caja" msprop:Generator_ColumnVarNameInTable="columnCaja" msprop:Generator_ColumnPropNameInRow="Caja" msprop:Generator_ColumnPropNameInTable="CajaColumn" msprop:Generator_UserColumnName="Caja" type="xs:string" minOccurs="0" />
+              <xs:element name="Fecha" msprop:Generator_ColumnVarNameInTable="columnFecha" msprop:Generator_ColumnPropNameInRow="Fecha" msprop:Generator_ColumnPropNameInTable="FechaColumn" msprop:Generator_UserColumnName="Fecha" type="xs:string" minOccurs="0" />
+              <xs:element name="subtotal" msprop:Generator_ColumnVarNameInTable="columnsubtotal" msprop:Generator_ColumnPropNameInRow="subtotal" msprop:Generator_ColumnPropNameInTable="subtotalColumn" msprop:Generator_UserColumnName="subtotal" type="xs:string" minOccurs="0" />
+              <xs:element name="Iva0" msprop:Generator_ColumnVarNameInTable="columnIva0" msprop:Generator_ColumnPropNameInRow="Iva0" msprop:Generator_ColumnPropNameInTable="Iva0Column" msprop:Generator_UserColumnName="Iva0" type="xs:string" minOccurs="0" />
+              <xs:element name="Iva5" msprop:Generator_ColumnVarNameInTable="columnIva5" msprop:Generator_ColumnPropNameInRow="Iva5" msprop:Generator_ColumnPropNameInTable="Iva5Column" msprop:Generator_UserColumnName="Iva5" type="xs:string" minOccurs="0" />
+              <xs:element name="Iva10" msprop:Generator_ColumnVarNameInTable="columnIva10" msprop:Generator_ColumnPropNameInRow="Iva10" msprop:Generator_ColumnPropNameInTable="Iva10Column" msprop:Generator_UserColumnName="Iva10" type="xs:string" minOccurs="0" />
+              <xs:element name="totalneto" msprop:Generator_ColumnVarNameInTable="columntotalneto" msprop:Generator_ColumnPropNameInRow="totalneto" msprop:Generator_ColumnPropNameInTable="totalnetoColumn" msprop:Generator_UserColumnName="totalneto" type="xs:string" minOccurs="0" />
+              <xs:element name="total_iva" msprop:Generator_ColumnVarNameInTable="columntotal_iva" msprop:Generator_ColumnPropNameInRow="total_iva" msprop:Generator_ColumnPropNameInTable="total_ivaColumn" msprop:Generator_UserColumnName="total_iva" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

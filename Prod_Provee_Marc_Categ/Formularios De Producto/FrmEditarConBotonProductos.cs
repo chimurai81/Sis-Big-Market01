@@ -54,7 +54,7 @@ namespace Prod_Provee_Marc_Categ.Formularios_De_Productos
         {
             string sql;
             //MySqlCommand comando;
-            sql = "update db_productos set Descripcion=@Descripcion, Costo=@Costo, PrecioUnitario=@PrecioUnitario, FechaDeVencimiento=@FechaDeVencimiento, ImagenDelProducto=@ImagenDelProducto, CodigoDeBarra=@CodigoDeBarra, Id_Proveedor=@Id_Proveedor, Id_Marca=@Id_Marca, Id_Categoria=@Id_Categoria, CodigoProducto=@CodigoProducto, Tipo=@Tipo, Iva=@Iva, PrecioMayorista=@PrecioMayorista, CostoMedio=@CostoMedio, id_usuario_Producto=@id_usuario where id=@id";
+            sql = "update db_productos set Descripcion=@Descripcion, Costo=@Costo, PrecioUnitario=@PrecioUnitario, FechaDeVencimiento=@FechaDeVencimiento, ImagenDelProducto=@ImagenDelProducto, CodigoDeBarra=@CodigoDeBarra, Id_Proveedor=@Id_Proveedor, Id_Marca=@Id_Marca, Id_Categoria=@Id_Categoria, CodigoProducto=@CodigoProducto, Tipo=@Tipo, Iva=@Iva, PrecioMayorista=@PrecioMayorista, Estado=@Estado,CostoMedio=@CostoMedio, id_usuario_Producto=@id_usuario where id=@id";
             MySqlCommand comando;
             try
             {
@@ -77,6 +77,9 @@ namespace Prod_Provee_Marc_Categ.Formularios_De_Productos
                 comando.Parameters.AddWithValue("@Tipo", (cbxTipo.SelectedItem.ToString()));
                 comando.Parameters.AddWithValue("@Iva", (cbxIva.SelectedItem.ToString()));
                 comando.Parameters.AddWithValue("@PrecioMayorista", Convert.ToDecimal(txtPrecioMayorista.Text));
+                //estado aqui
+                comando.Parameters.AddWithValue("@Estado", switchCambiado.ToString());
+
                 comando.Parameters.AddWithValue("@CostoMedio", Convert.ToDecimal(txtCostoMedio.Text));
                 ModUsuarioActivo modUsuarioActivo = new ModUsuarioActivo();
                 comando.Parameters.AddWithValue("@id_usuario", Convert.ToString(modUsuarioActivo.VerificarIdUsuarioActivo()));
@@ -121,6 +124,15 @@ namespace Prod_Provee_Marc_Categ.Formularios_De_Productos
                 txtCostoMedio.Text = Convert.ToString(resultado.Tables["rsproducto"].Rows[0]["Costomedio"]);
                 txtPrecioUnitario.Text = Convert.ToString(resultado.Tables["rsproducto"].Rows[0]["PrecioUnitario"]);
                 txtPrecioMayorista.Text = Convert.ToString(resultado.Tables["rsproducto"].Rows[0]["PrecioMayorista"]);
+                char valorEstado= Convert.ToChar(resultado.Tables["rsproducto"].Rows[0]["Estado"]);
+                if(valorEstado == 1)
+                {
+                    bunifuiOSSwitch1.Value = true;
+                }
+                else
+                {
+                    bunifuiOSSwitch1.Value = false;
+                }
                 cbxIva.SelectedItem  = Convert.ToString(resultado.Tables["rsproducto"].Rows[0]["Iva"]);
                 cbxTipo.SelectedItem = Convert.ToString(resultado.Tables["rsproducto"].Rows[0]["Tipo"]);
 
@@ -137,6 +149,7 @@ namespace Prod_Provee_Marc_Categ.Formularios_De_Productos
 
         private void FrmEditarConBotonProductos_Load(object sender, EventArgs e)
         {
+            bunifuiOSSwitch1.Value = true;
             string valordeid = FrmMenuProductos.valor33;
             cargarRegistro(valordeid);
         }
@@ -151,6 +164,7 @@ namespace Prod_Provee_Marc_Categ.Formularios_De_Productos
             mensajeDeCheck.ShowDialog();
             limpiar();
             FrmMenuProductos frm3 = (FrmMenuProductos)Owner;
+            frm3.bunifuiOSSwitch1.Value = true;
             frm3.GetAll("");
             this.Close();
 
@@ -209,6 +223,25 @@ namespace Prod_Provee_Marc_Categ.Formularios_De_Productos
             FrmBusqueda_Interna_EditarProveedor frm10 = new FrmBusqueda_Interna_EditarProveedor();
             AddOwnedForm(frm10);
             frm10.ShowDialog();
+        }
+
+        public char switchCambiado;
+        private void bunifuiOSSwitch1_Click(object sender, EventArgs e)
+        {
+            if(bunifuiOSSwitch1.Value == true)
+            {
+                switchCambiado = '1';
+            }
+            else
+            {
+                switchCambiado = '0';
+            }
+        }
+
+        private void FrmEditarConBotonProductos_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            FrmMenuProductos frmMenuProductos = new FrmMenuProductos();
+            frmMenuProductos.bunifuiOSSwitch1.Value = false;
         }
     }
 }

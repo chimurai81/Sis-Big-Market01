@@ -18,7 +18,7 @@ namespace Prod_Provee_Marc_Categ.Formularios
             string sql;
             MySqlDataAdapter consulta;
             DataSet resultado;
-            sql = "select * from db_proveedores " + condicion;
+            sql = "select * from db_proveedores where Estado = 1 " + condicion;
 
             try
             {
@@ -33,10 +33,37 @@ namespace Prod_Provee_Marc_Categ.Formularios
                 MessageBox.Show(ex.Message);
             }
         }
+        public void GetAll2(string condicion)
+        {
+            string sql;
+            MySqlDataAdapter consulta;
+            DataSet resultado;
+            sql = "select * from db_proveedores where Estado = 0 " + condicion;
 
+            try
+            {
+                modulo.AbrirConexion();
+                consulta = new MySqlDataAdapter(sql, modulo.conexion);
+                resultado = new DataSet();
+                consulta.Fill(resultado, "rsresultado");
+                dataGridView1.DataSource = resultado.Tables["rsresultado"];
+            }
+            catch (MySqlException ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+        public static string estadosw;
         private void FrmProveedores_Load(object sender, EventArgs e)
         {
-            GetAll("");
+            if (bunifuiOSSwitch1.Value == true)
+            {
+                GetAll("");
+            }
+            else
+            {
+                GetAll2("");
+            }
             comboBox1.SelectedIndex = 0;
         }
 
@@ -60,15 +87,14 @@ namespace Prod_Provee_Marc_Categ.Formularios
             modifSinBtn.ShowDialog();
         }
 
-        FrmModificarConBoton frm10;
         private void bunifuFlatButton2_Click(object sender, EventArgs e)
         {
-            frm10 = new FrmModificarConBoton();
+            FrmModificarConBoton frm10 = new FrmModificarConBoton();
             AddOwnedForm(frm10);
             frm10.ShowDialog();
         }
 
-        public static string valor;
+
         private void dataGridView1_SelectionChanged(object sender, EventArgs e)
         {
             if (dataGridView1.CurrentRow == null)
@@ -95,16 +121,24 @@ namespace Prod_Provee_Marc_Categ.Formularios
 
             if (comboBox1.SelectedItem.ToString() == "PROVEEDOR")
             {
-                condicion = " where RazonSocial like '%" + txtBuscar.Text.ToUpperInvariant() + "%'";
+                condicion = " and RazonSocial like '%" + txtBuscar.Text.ToUpperInvariant() + "%'";
             }
 
 
             if (comboBox1.SelectedItem.ToString() == "RUC")
             {
-                condicion = " where Ruc like '%" + txtBuscar.Text + "%'";
+                condicion = " and Ruc like '%" + txtBuscar.Text + "%'";
             }
 
-            GetAll(condicion);
+            if (bunifuiOSSwitch1.Value == true)
+            {
+                GetAll(condicion);
+            }
+            else
+            {
+                GetAll2(condicion);
+            }
+
         }
 
         private void txtBuscar_Enter(object sender, EventArgs e)
@@ -120,6 +154,19 @@ namespace Prod_Provee_Marc_Categ.Formularios
             if (txtBuscar.Text == "")
             {
                 txtBuscar.Text = "Buscar";
+            }
+        }
+
+        public static string valor;
+        private void bunifuiOSSwitch1_Click(object sender, EventArgs e)
+        {
+            if (bunifuiOSSwitch1.Value == true)
+            {
+                GetAll("");
+            }
+            else
+            {
+                GetAll2("");
             }
         }
     }

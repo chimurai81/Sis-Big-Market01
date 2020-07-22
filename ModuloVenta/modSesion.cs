@@ -22,12 +22,13 @@ namespace ModuloVenta
         public static string config_moneda; // config para venta 
         public static string config_regional;
         public static string xCodigoUser ="1";
+        public int dec_precio, dec_costo, dec_cantidad;
 
 
         /* METODO DE CONFIGURACION PARA CUANDO SE EJECTUTE EL LOAD DEL FORMULARIO*/
         public void cargarConfiguraciones()
         {
-            int dec_precio=0, dec_costo=0, dec_cantidad=0;
+            dec_precio = 0; dec_costo = 0; dec_cantidad=0;
             MySqlDataAdapter consulta = new MySqlDataAdapter();
             string sql;
             DataSet resultado = new DataSet();
