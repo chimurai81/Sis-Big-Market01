@@ -10,18 +10,21 @@ using System.Windows.Forms;
 
 namespace Modulo_Reportes
 {
-    public partial class Form1 : Form
+    public partial class frmMenuReportes : Form
     {
-        public Form1()
+        public frmMenuReportes()
         {
             InitializeComponent();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            frmComprobante frmComprobante = new frmComprobante();
-            frmComprobante.imprimirVenta("37");
-            frmComprobante.Show();
+            
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

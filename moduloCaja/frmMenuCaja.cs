@@ -1,5 +1,6 @@
 ﻿using MensajesPersonalizados;
 using Microsoft.VisualBasic;
+using Modulo_Reportes;
 using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
@@ -583,6 +584,7 @@ namespace moduloCaja
 
             iniciarCobroVenta();
             mostrarCotizacion();
+
         }
 
         private void mostrarTotalCobrar()
@@ -696,6 +698,9 @@ namespace moduloCaja
         {
             modSesion modSesion = new modSesion();
             modUsuario modUsuario = new modUsuario();
+
+            frmComprobante frmComprobante = new frmComprobante(txtId_operacion.Text);
+
             if (Math.Round(saldoPrincipal, 2) != 0)
             {
                 MessageBox.Show("Complete monto a pagar o verifique vuelto");
@@ -786,7 +791,10 @@ namespace moduloCaja
                     MensajeDeCheck mensajeDeCheck = new MensajeDeCheck("   Cobro Efectuado con exito");
                     mensajeDeCheck.ShowDialog();
 
+                    frmComprobante.ShowDialog();
+
                     transaccion.Commit(); // finaliza procesos y aplica cambios en la base de datos
+
                     Conexion_DB.CerraConexion();
                     preparaNuevaCaja();
                     modCaja.capturarNuevoNumeroCaja();

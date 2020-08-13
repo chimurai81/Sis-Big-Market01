@@ -1,11 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Runtime.InteropServices;
 using Usuarios.Formularios;
@@ -21,6 +16,7 @@ using ModuloVenta;
 using FrmMenuVistaPrincipal;
 using ModuloCotizacion;
 using moduloCaja;
+using Modulo_Reportes;
 
 namespace MenuPrincipal
 {
@@ -239,6 +235,7 @@ namespace MenuPrincipal
 
         private void btnReportes_Click(object sender, EventArgs e)
         {
+            AbrirFormulario<frmMenuReportes>();
             lblTitulodeFormulario.Text = "REPORTES";
             hideSubMenu();//siempre al final de todo
         }

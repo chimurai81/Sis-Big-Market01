@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmComprobante));
             this.contenedorRPT = new Microsoft.Reporting.WinForms.ReportViewer();
             this.SuspendLayout();
@@ -36,9 +35,6 @@
             // contenedorRPT
             // 
             this.contenedorRPT.Dock = System.Windows.Forms.DockStyle.Fill;
-            reportDataSource1.Name = "cdVentas";
-            reportDataSource1.Value = null;
-            this.contenedorRPT.LocalReport.DataSources.Add(reportDataSource1);
             this.contenedorRPT.LocalReport.ReportEmbeddedResource = "Modulo_Reportes.DiseñoComprobante.rdlc";
             this.contenedorRPT.Location = new System.Drawing.Point(0, 0);
             this.contenedorRPT.Name = "contenedorRPT";
@@ -65,6 +61,6 @@
 
         #endregion
 
-        public Microsoft.Reporting.WinForms.ReportViewer contenedorRPT;
+        private Microsoft.Reporting.WinForms.ReportViewer contenedorRPT;
     }
 }
