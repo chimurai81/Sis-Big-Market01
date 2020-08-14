@@ -21,7 +21,7 @@ namespace ModuloCotizacion
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            webBrowser1.Navigate("https://www.cambioschaco.com.py/");
+            webBrowser1.Navigate("https://www.mydcambios.com.py/");
             webBrowser2.Navigate("http://www.lamoneda.com.py/#cotizaciones");
         }
 

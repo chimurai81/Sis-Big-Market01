@@ -26,5 +26,40 @@ namespace Modulo_Reportes
         {
 
         }
+
+        private void bunifuImageButton4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void bunifuImageButton1_Click(object sender, EventArgs e)
+        {
+            frmInformeVenta frmVenta = new frmInformeVenta();
+            frmVenta.ShowDialog();
+        }
+
+        private void bunifuImageButton3_Click(object sender, EventArgs e)
+        {
+            frmInformeCompra frmcompra = new frmInformeCompra();
+            frmcompra.ShowDialog();
+        }
+
+        private void bunifuImageButton2_Click(object sender, EventArgs e)
+        {
+            frmInformeCliente frmcliente = new frmInformeCliente();
+            frmcliente.ShowDialog();
+        }
+
+        private void bunifuImageButton6_Click(object sender, EventArgs e)
+        {
+            frmInformeStock frmstock = new frmInformeStock();
+            frmstock.ShowDialog();
+        }
+
+        private void bunifuImageButton5_Click(object sender, EventArgs e)
+        {
+            frmInformecotizacion frmcotizacion = new frmInformecotizacion();
+            frmcotizacion.ShowDialog();
+        }
     }
 }

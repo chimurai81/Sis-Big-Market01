@@ -122,6 +122,36 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DataSetComprobante.xsd</DependentUpon>
     </Compile>
+    <Compile Include="frmInformeCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmInformeCliente.Designer.cs">
+      <DependentUpon>frmInformeCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmInformeCompra.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmInformeCompra.Designer.cs">
+      <DependentUpon>frmInformeCompra.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmInformecotizacion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmInformecotizacion.Designer.cs">
+      <DependentUpon>frmInformecotizacion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmInformeStock.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmInformeStock.Designer.cs">
+      <DependentUpon>frmInformeStock.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmInformeVenta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmInformeVenta.Designer.cs">
+      <DependentUpon>frmInformeVenta.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmMenuReportes.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -139,6 +169,21 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="DiseñoComprobante.rdlc" />
+    <EmbeddedResource Include="frmInformeCliente.resx">
+      <DependentUpon>frmInformeCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmInformeCompra.resx">
+      <DependentUpon>frmInformeCompra.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmInformecotizacion.resx">
+      <DependentUpon>frmInformecotizacion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmInformeStock.resx">
+      <DependentUpon>frmInformeStock.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmInformeVenta.resx">
+      <DependentUpon>frmInformeVenta.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmMenuReportes.resx">
       <DependentUpon>frmMenuReportes.cs</DependentUpon>
     </EmbeddedResource>
