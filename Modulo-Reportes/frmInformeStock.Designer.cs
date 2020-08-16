@@ -31,9 +31,11 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmInformeStock));
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.bunifuFlatButton1 = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
+            this.contenedorRPT = new Microsoft.Reporting.WinForms.ReportViewer();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.txtNombreCliente = new System.Windows.Forms.TextBox();
+            this.lblStock = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -42,7 +44,7 @@
             // 
             this.pictureBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(184)))), ((int)(((byte)(80)))), ((int)(((byte)(58)))));
             this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(716, 4);
+            this.pictureBox3.Location = new System.Drawing.Point(734, 3);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(22, 19);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -71,7 +73,7 @@
             this.bunifuFlatButton1.IconVisible = true;
             this.bunifuFlatButton1.IconZoom = 90D;
             this.bunifuFlatButton1.IsTab = false;
-            this.bunifuFlatButton1.Location = new System.Drawing.Point(390, 165);
+            this.bunifuFlatButton1.Location = new System.Drawing.Point(156, 144);
             this.bunifuFlatButton1.Name = "bunifuFlatButton1";
             this.bunifuFlatButton1.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
             this.bunifuFlatButton1.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(129)))), ((int)(((byte)(77)))));
@@ -85,14 +87,14 @@
             this.bunifuFlatButton1.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuFlatButton1.Click += new System.EventHandler(this.bunifuFlatButton1_Click);
             // 
-            // reportViewer1
+            // contenedorRPT
             // 
-            this.reportViewer1.Location = new System.Drawing.Point(2, 203);
-            this.reportViewer1.Name = "reportViewer1";
-            this.reportViewer1.ServerReport.BearerToken = null;
-            this.reportViewer1.Size = new System.Drawing.Size(750, 536);
-            this.reportViewer1.TabIndex = 13;
-            this.reportViewer1.Load += new System.EventHandler(this.reportViewer1_Load);
+            this.contenedorRPT.Location = new System.Drawing.Point(0, 203);
+            this.contenedorRPT.Name = "contenedorRPT";
+            this.contenedorRPT.ServerReport.BearerToken = null;
+            this.contenedorRPT.Size = new System.Drawing.Size(771, 543);
+            this.contenedorRPT.TabIndex = 13;
+            this.contenedorRPT.Load += new System.EventHandler(this.reportViewer1_Load);
             // 
             // comboBox1
             // 
@@ -100,12 +102,9 @@
             this.comboBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(81)))), ((int)(((byte)(93)))));
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Items.AddRange(new object[] {
-            "Fecha",
-            "Factura",
-            "Metodo de Pago",
-            "Usuario",
-            "Cliente"});
-            this.comboBox1.Location = new System.Drawing.Point(189, 165);
+            "Menor a 0",
+            "Otro Valor"});
+            this.comboBox1.Location = new System.Drawing.Point(100, 106);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(195, 32);
             this.comboBox1.TabIndex = 12;
@@ -114,21 +113,44 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(-12, -53);
+            this.pictureBox1.Location = new System.Drawing.Point(-21, -95);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(786, 290);
+            this.pictureBox1.Size = new System.Drawing.Size(807, 304);
             this.pictureBox1.TabIndex = 14;
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            // 
+            // txtNombreCliente
+            // 
+            this.txtNombreCliente.Location = new System.Drawing.Point(365, 129);
+            this.txtNombreCliente.Name = "txtNombreCliente";
+            this.txtNombreCliente.Size = new System.Drawing.Size(217, 20);
+            this.txtNombreCliente.TabIndex = 42;
+            this.txtNombreCliente.Visible = false;
+            // 
+            // lblStock
+            // 
+            this.lblStock.AutoSize = true;
+            this.lblStock.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(149)))), ((int)(((byte)(166)))));
+            this.lblStock.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.lblStock.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.lblStock.Location = new System.Drawing.Point(399, 106);
+            this.lblStock.Name = "lblStock";
+            this.lblStock.Size = new System.Drawing.Size(140, 20);
+            this.lblStock.TabIndex = 41;
+            this.lblStock.Text = "Cantidad de Stock";
+            this.lblStock.Visible = false;
             // 
             // frmInformeStock
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(743, 725);
+            this.ClientSize = new System.Drawing.Size(768, 745);
+            this.Controls.Add(this.txtNombreCliente);
+            this.Controls.Add(this.lblStock);
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.bunifuFlatButton1);
-            this.Controls.Add(this.reportViewer1);
+            this.Controls.Add(this.contenedorRPT);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.pictureBox1);
             this.DoubleBuffered = true;
@@ -136,9 +158,11 @@
             this.Name = "frmInformeStock";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "frmInformeStock";
+            this.Load += new System.EventHandler(this.frmInformeStock_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -146,8 +170,10 @@
 
         private System.Windows.Forms.PictureBox pictureBox3;
         private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton1;
-        private Microsoft.Reporting.WinForms.ReportViewer reportViewer1;
+        private Microsoft.Reporting.WinForms.ReportViewer contenedorRPT;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.TextBox txtNombreCliente;
+        private System.Windows.Forms.Label lblStock;
     }
 }

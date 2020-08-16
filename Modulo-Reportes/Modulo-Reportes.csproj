@@ -199,6 +199,11 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="RDLCReporteCliente.rdlc" />
+    <EmbeddedResource Include="RDLCReporteCompra.rdlc" />
+    <EmbeddedResource Include="RDLCReporteCotizacion.rdlc" />
+    <EmbeddedResource Include="RDLCReporteStock.rdlc" />
+    <EmbeddedResource Include="RDLCReporteVenta.rdlc" />
     <None Include="DataSetComprobante.xsc">
       <DependentUpon>DataSetComprobante.xsd</DependentUpon>
     </None>
